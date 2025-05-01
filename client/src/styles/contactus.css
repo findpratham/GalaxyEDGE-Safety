@@ -1,0 +1,90 @@
+
+/* Time Picker (Apple-style circles + wipe hover) */
+.time-picker {
+    margin-top: 2%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    justify-items: center;
+  }
+  
+  /* hide the native radio button */
+  .time-option input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  /* each label becomes a  circle with centered time */
+  .time-option {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-weight: 150; 
+    padding: 0.8rem 2rem; /* Padding inside buttons */
+    font-size: 1.1rem; /* Font size */
+    background-color: rgba(255, 255, 255, 0.201); /* Transparent by default */ /* Blue background with transparency */
+    color: rgb(0, 0, 0); /* Black text color */
+    border: none; /* Remove default border */
+    border-radius: 1.3rem !important;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    width: 9rem;
+    height: 3rem;
+    line-height: 1.45rem;    /* vertically center */
+    text-align: center;   /* horizontally center */
+    margin: 0.5rem;
+    font-family: var(--apple-font-stack);
+
+    color: #000000;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+  }
+  
+  /* the semicircle overlay */
+  .time-option::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 0;
+    height: 200%;
+    background-color: #007aff;
+    border-radius: 0 100% 100% 0;
+    transform: translateY(-50%);
+    transition: width 0.4s ease;
+    z-index: -1;
+  }
+  
+  /* hover = wipe in the semicircle + invert text + slight pop */
+  .time-option:hover::before {
+    width: 200%;
+  }
+  .time-option:hover {
+    color: #fff;
+    transform: scale(1.1);
+  }
+  
+  /* mark selected time with a full fill */
+  .time-option input:checked + span,
+  .time-option input:checked + * {
+    /* if your markup wraps text in a span, or just the text node */
+    color: #fff;
+  }
+  .time-option input:checked::before {
+    /* when checked, fill entire circle immediately */
+    width: 200%;
+    transition: none;
+  }
+  
+  /* make the text white so it shows on the blue wipe */
+.time-option.selected {
+    background-color: #007aff;
+    border-color: #007aff; 
+    color: white;
+  }

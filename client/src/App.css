@@ -1,0 +1,595 @@
+:root {
+    --apple-font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+                        Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+.scroll-up-link {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 10;
+    text-decoration: none;
+  }
+.scroll-up-arrow {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1000;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  .scroll-up-arrow:hover {
+    transform: translateX(-20%) scale(1.1);
+    color: rgba(0, 65, 101, 0.779);
+  }
+  .scroll-up-arrow svg {
+    width: 16px;
+    height: 16px;
+  }
+
+.scroll-down-arrow {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    opacity: 0;
+    transition: transform 0.3s ease, color 0.3s ease;
+    animation: fadeIn 5s ease-out forwards;
+  }
+  
+  .scroll-down-arrow:hover {
+    transform: translateX(-50%) scale(1.1);
+    color: rgba(255,255,255,0.8);
+  }
+  
+  .scroll-down-arrow svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+
+/* 
+-----------------------------------------------------------------------------------------------
+*************************************** PARALLAX STYLING **************************************
+-----------------------------------------------------------------------------------------------
+*/
+
+/* Full-Screen Background for Home Section [PARALLAX EFFECT 1] */
+.full-screen-background {
+    background-size: contain;  /* Ensure background covers the entire screen */
+    background-position: center center; /* Center the image within the container */
+    background-repeat: no-repeat;  /* Prevent repeating the image */
+    background-attachment: fixed;  /* Ensure it stays fixed during scrolling */
+    position: relative;  /* Allows absolute positioning of content */
+    width: 100%;  /* Ensure it covers the full width of the container */
+    height: 100vh;  /* Full viewport height */
+    z-index: 1;  /* Make sure it's behind other content */
+    will-change: transform;  /* Optimize for smoother parallax scrolling */
+   
+}
+
+@media (max-width: 768px) {
+    .full-screen-background {
+        background-size: contain; /* For smaller screens, make the image fit without stretching */
+    }
+}
+
+
+/* Parallax Effect for About Us Section (with Gradient Background) */
+.parallax-content {
+    position: relative;
+    height: 100vh; /* Full screen height */
+    background: white;
+    background-size: cover;  /* Ensure background covers the entire container */
+    background-position: center center; /* Center the background gradient */
+    background-repeat: no-repeat;
+    z-index: 2; /* Ensure the background is behind the content */
+    will-change: transform; /* Optimize for smoother parallax scrolling */
+}
+
+
+/* --------------------- CONTENT INSIDE ABOUT US SECTION STYLING --------------------- */
+
+/* Content inside Parallax */
+.parallax-content {
+    position: relative;
+    font-size: 2rem;
+    z-index: 2; /* Ensures content appears on top of the parallax background */
+    padding: 40px 20px;
+    text-align: left;
+    color: rgb(0, 0, 0);
+}
+
+.text {
+    font-weight: lighter; /* Lighter font weight for subtext */
+    font-size: 1.5rem; /* Smaller font size for subtext */
+    color: rgb(0, 0, 0); /* White color for subtext */
+    letter-spacing: 0.5px; /* Space between letters */
+    line-height: 1.2; /* Line height */
+}
+
+/* Optional: Smooth transition for parallax background */
+.parallax-container img {
+    transition: transform 0.3s ease; /* Ensure smoother transition when resizing */
+}
+
+/* Parallax Image Styling */
+.parallax-image {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Adjust to fit your needs */
+    overflow: hidden;
+    z-index: 700; /* Ensure it's below the content */
+ 
+  }
+  
+  /* Image inside Parallax */
+  .parallax-image-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire area without distortion */
+  }
+
+/* 
+-----------------------------------------------------------------------------------------------
+************************************ COMPANY LOGO STYLING ************************************
+-----------------------------------------------------------------------------------------------
+*/
+/* Logo Styling */
+.logo-img {
+    margin-top: 1%;
+    margin-left: 1%;
+    width: 22%; /* Adjust logo size */
+    height: auto; /* Maintain aspect ratio */
+    position: absolute;
+    top: 0.5rem; /* Space from top */
+    left: 1rem; /* Space from left */
+    animation: scaleIn 3s ease-in-out forwards; /* Logo animation */
+    z-index: 999;
+}
+
+/* Logo animation */
+@keyframes scaleIn {
+    0% {
+        transform: scale(0.9); /* Start smaller */
+    }
+
+    100% {
+        transform: scale(1); /* Scale to normal size */
+    }
+}
+/* Content in Home Section */
+.content {
+    position: absolute;
+    top: 34%; /* Move the content 250px from the top of the parent container */
+    left: 2%; /* Keep the content 2% from the left */
+    transform: translateY(0); /* No vertical translation, let it stay at 250px from top */
+    text-align: left;
+    z-index: 2; /* Ensure content is above the background */
+    width: 90%; /* Adjust the width for the content */
+
+}
+
+/* Heading Styling */
+.heading {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-weight: 550;              /* semibold like Apple’s headlines */
+    letter-spacing: -0.02em;
+    font-size: 3.8rem; /* Slightly smaller font size for better fit */
+    color: rgb(255, 255, 255); /* White color for heading */
+    line-height: 1.1; /* Line height for readability */
+    padding: 10px 10px;
+    opacity: 0;
+    animation: slideInFromLeft 4s ease-out forwards;
+}
+
+/* Subtext Styling */
+.subtext {
+    
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-weight: 150; 
+    font-size: 1.4rem; /* Smaller font size for subtext */
+    color: rgb(255, 255, 255); /* White color for subtext */
+    letter-spacing: 0.5px; /* Space between letters */
+    line-height: 1.1; /* Line height */
+    padding: 10px 10px;
+    opacity: 0;
+    animation: slideInFromLeft 4s ease-out 0.5s forwards;
+}
+/* 
+-----------------------------------------------------------------------------------------------
+************************************ HOME PAGE CTA BUTTONS ************************************
+-----------------------------------------------------------------------------------------------
+*/
+
+/* Button Container Styling */
+.cta-buttons {
+    position: absolute;
+    top: 120%;
+    display: flex; /* Flexbox for buttons */
+    gap: 1.5rem; /* Space between buttons */
+    padding: 0px 10px;
+
+}
+
+/* Individual Button Styling */
+.cta-button {
+    position: relative;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-weight: 350; 
+    padding: 0.8rem 2rem; /* Padding inside buttons */
+    font-size: 1.6rem; /* Font size */
+    background-color: rgba(255, 255, 255, 0.201); /* Transparent by default */ /* Blue background with transparency */
+    color: rgb(0, 0, 0); /* Black text color */
+    border: none; /* Remove default border */
+    border-radius: 1.3rem !important;
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.cta-buttons .cta-button {
+    opacity: 0;
+    animation: fadeIn 2s ease-out forwards;
+  }
+  
+  /* Stagger delays via nth-child */
+  .cta-buttons .cta-button:nth-child(1) {
+    animation-delay: 1s;
+  }
+  .cta-buttons .cta-button:nth-child(2) {
+    animation-delay: 1.5s;
+  }
+
+  
+  /* Keyframes for fade-in */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  .cta-button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 0;
+    height: 200%;
+    background-color: rgb(255, 255, 255);  /* your hover blue */
+    border-radius: 0 100% 100% 0;
+    transform: translateY(-50%);
+    transition: width 0.5s ease;
+    z-index: -1;
+  }
+  .cta-button:hover::before {
+    width: 200%;
+  }
+  
+
+/* Hover Effect for CTA Buttons */
+.cta-button:hover {
+    
+    transform: scale(1.2); /* Slightly enlarge the button */
+}
+
+/* Contact Us and Learn More Button Styling */
+.contact-us, .learn-more {
+    background-color: rgba(255, 255, 255, 0); /* Transparent background */
+    color: rgb(255, 255, 255); /* White text */
+    border: 2px solid rgb(255, 255, 255); /* White border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 0.8rem 2rem; /* Padding */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+/* Hover Effect for Contact Us and Learn More Buttons */
+.contact-us:hover, .learn-more:hover {
+    background-color: rgb(255, 255, 255); /* White background on hover */
+    color: rgb(0, 0, 0); /* Black text on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* 
+-----------------------------------------------------------------------------------------------
+************************************ HEADER STYLING ************************************
+-----------------------------------------------------------------------------------------------
+*/
+
+/* Header Container */
+.header-container {
+    position: absolute;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem 1.2rem;
+    background-color: rgba(255, 255, 255, 0.201); /* Transparent by default */ 
+    top:1%;
+    right: 0.5%;
+    z-index: 1000;
+    width: auto;
+    max-width: 70%;
+    border-radius: 1.3rem;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
+}
+
+.nav-links ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 1.5rem;
+    
+}
+
+/* Navigation link styles */
+.nav-links a {
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    font-weight: 300; 
+    font-weight: light;
+    font-size: 1.3rem;
+    color:#000000; /* Default white color */
+    transition: color 0.3s ease; /* Smooth transition for text color */
+    cursor: pointer;
+    
+}
+
+/* When header text should change to black */
+.header-dark .nav-links a {
+    color: black; /* Change text color to black */
+}
+
+/* When header background is light */
+.header-light {
+    background-color: #ffffff; /* Change background to white */
+}
+
+/* When header text should be white */
+.header-light .nav-links a {
+    color: white; /* Change text color to white */
+}
+    
+.nav-links a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 0;
+    height: 200%;
+    background-color: #0d4b6e;      /* your hover highlight color */
+    border-radius: 0 100% 100% 0;
+    transform: translateY(-50%);
+    transition: width 0.4s ease;
+    z-index: -1;
+  }
+
+  
+  
+/* Hover effect */
+.nav-links a:hover {
+    color: #0d4b6e; /* Highlight color */
+    transform: scale(1.05); /* Slightly enlarge the link */
+    box-shadow: -8px 8px 10px rgba(13, 75, 110, 0.3); /* Add a glowing shadow */
+    padding: 0.5rem 1rem; /* Add some space around the link */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 1.6rem; /* Slightly increase font size on hover */
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    backdrop-filter: blur(5px); /* Apply blur for frosted glass effect */
+}
+
+
+/* 
+-----------------------------------------------------------------------------------------------
+*************************************** ABOUT US SECTION **************************************
+-----------------------------------------------------------------------------------------------
+*/
+
+/* White background, full width */
+.about-us-section {
+    position: relative;
+    margin-left: 2%;
+    margin-right: 4%;
+    margin-top: -2%;
+    margin-bottom: 4%;
+    background-color: #ffffff;
+    padding: 3rem 2rem;
+    display: flex;
+    justify-content: left;
+  }
+  
+  /* Constrain content and center */
+  .about-container {
+    max-width: auto;
+    text-align: left;
+    width: 100%;
+  }
+  
+  /* Apple-style section headline */
+  .typography-section-headline {
+  
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+                  Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-weight: 600;
+    font-size: 3rem;
+    letter-spacing: -0.02em;
+    margin: 0 0 1.5rem;
+    color: #000;
+
+  }
+  
+  /* Body text */
+  .about-text {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+                  Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #333;
+  }
+/* make the About logo small and neatly contained */
+.about-image-container {
+    margin-top: 2%;
+    flex: 0 0 auto;        /* don't grow or shrink beyond max-width */
+    max-width: 200px;      /* adjust this value for your “small” size */
+  }
+  
+  .about-image {
+    display: block;
+    width: 90%;           /* fill the container’s width */
+    height: 100%;          /* maintain aspect ratio */
+    border-radius: 0.5rem; /* optional: soften the corners */
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: slideInFromLeft 2s ease-out forwards;
+  }
+  
+  @keyframes slideInFromLeft {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  
+
+
+  
+  .contact-section {
+    background: #fff;
+    padding: 4rem 2rem;
+  }
+  
+  .contact-container {
+    margin-top: -1%;
+    display: flex;
+    margin-right: 4%;
+    margin-left: 4%;
+    gap: 5rem;
+  }
+  
+  /* Calendar */
+  .contact-calendar {
+    
+    flex: 0 0 300px;
+  }
+  .contact-calendar .react-calendar {
+    margin-top: 8rem;
+
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  }
+  .contact-calendar .react-calendar__tile--active {
+    background: #007aff;
+    color: #fff;
+    border-radius: 50%;
+  }
+  
+  /* Form */
+  .contact-form {
+    flex: 1;
+    font-family: var(--apple-font-stack);
+  }
+  .contact-heading {
+    font-size: 4.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .contact-subheading {
+    font-size: 1.125rem;
+    color: #555;
+    margin-bottom: 2rem;
+  }
+  
+  .contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    font-family: var(--apple-font-stack);
+    box-sizing: border-box;
+  }
+  
+  .contact-submit {
+    background: #007aff;
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  .contact-submit:hover {
+    background: #005bb5;
+  }
+
+/* Constrain content and center */
+.footer-container {
+    position: relative;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-top: 7%;
+    margin-bottom: 5% !important;
+    background-color: #ffffff00;
+    height: 10vh;
+    display: flex;
+    justify-content: left;
+    border-top: 1px solid #474747af;
+    
+}
+
+.footer-text {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+                  Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-weight: 100;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #333;
+    margin-top: 1%;
+    margin-left: 4%;
+    flex-wrap: wrap;
+    align-items: center
+    
+  }
+
+  .footer-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;          /* between icon and its text */
+    line-height: 1;
+  }
+  
+  .footer-item-text {
+    font-size: 1.5rem;
+    line-height: 1.8;
+  }
