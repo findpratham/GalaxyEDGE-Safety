@@ -92,7 +92,7 @@
     text-align: center;
 }
 
-.full-screen-background {
+.full-screen-background1 {
     position: relative;     /* so .vr-content (absolute) sits on it */
     max-width: 80vw auto;           /* full browser width */
     height: 75vh ;          /* full browser height */
@@ -101,7 +101,7 @@
     background-repeat: no-repeat;
     border-radius: 1.5rem;
     margin-left: 1%;
-    margin-right: 3% !important;
+    margin-right: -1% !important;
 }
 /* Hero Section Styling */
 .vr-content {
@@ -200,7 +200,6 @@
   margin-top: 5%;
   margin-left: 42%;
   margin-bottom: -5%;
-
 }
 
 /* Base pill button */
@@ -218,9 +217,9 @@
   font-size: 1.8rem;
   font-weight: 600;
   padding: 0.75rem 1.75rem;
-  border: 2px solid #000;
+  border: 2px solid #00000000;
   border-radius: 999px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.688);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.173);
   transition: color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -254,4 +253,42 @@
 .request-demo-button:active {
   transform: translateY(0);
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+
+/* arrows */
+.vr-arrow {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.7);
+  border: none;
+  font-size: 2rem;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.vr-arrow.left  { left: 3rem; }
+.vr-arrow.right { right: 3.5rem; }
+
+/* dot row */
+.vr-image-index {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* reuse your detail-dot rules */
+.detail-index .detail-dot {
+  width: 8px;
+  height: 8px;
+  margin: 0 .3rem;
+  border-radius: 50%;
+  background: #ccc;
+  cursor: pointer;
+  transition: background-color .2s;
+}
+.detail-index .detail-dot.active {
+  background: #333;
 }

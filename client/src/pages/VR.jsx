@@ -1,15 +1,75 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import '../styles/VR.css'; // You can define additional specific styles for VR if needed
 
 export default function VR() {
+
+  const bgRef = useRef(null);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    if (!sectionRef.current || !bgRef.current) return;
+  
+    const sectionTop  = sectionRef.current.offsetTop;
+    const vh          = window.innerHeight;
+    const delayPx     = 460;          // fixed delay before anything happens
+    const scrollRange = vh * 2;       // span the effect over 2× viewport height
+  
+    // simple “ease‐out‐cubic” easing
+    const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
+  
+    let ticking = false;
+    const handleScroll = () => {
+      // compute raw scroll progress
+      const scrollY   = window.scrollY;
+      const effective = scrollY - (sectionTop + delayPx);
+
+      // raw progress over our longer range
+      let p = effective / scrollRange;
+      p = Math.min(Math.max(p, 0), 1);
+  
+      // apply easing
+      const eased = easeOutCubic(p);
+  
+      // compute your transforms
+      const scale      = 1 - eased * 0.2;   // shrink up to 80%
+      const translateY = -eased * 50;       // move up to -50%
+      const opacity    = 1 - eased;         // fade out
+
+      bgRef.current.style.transform = 
+        `scale(${scale}) translateY(${translateY}%)`;
+      bgRef.current.style.opacity = opacity;
+      
+      ticking = false;
+    };
+  
+    const onScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(handleScroll);
+        ticking = true;
+      }
+    };
+  
+    window.addEventListener('scroll', onScroll, { passive: true });
+    handleScroll(); // in case you land mid-page
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+  
+  
+      
   return (
-    <div className="vr-page-container">
+
+    <div className="vr-page-container" ref={sectionRef}>
+
         <h2 className="take-action-heading">Harnessing Virtual Reality for Workplace Safety</h2>
         <br/>
         <h2 className="vr-subheading">Revolutionize your safety training with immersive VR solutions designed to engage employees and minimize risks</h2>
         
-      {/* Full-Screen Background for VR section with Parallax Effect */}
-      <div className="full-screen-background" style={{ backgroundImage: "url('/assets/VR-background.jpg')" }}>
+        <div
+          ref={bgRef}
+          className="full-screen-background1"
+          style={{ backgroundImage: "url('/assets/VR-background.jpg')" }}
+        >
+
         <div className="vr-content">
           <p className="subtext">
           </p>

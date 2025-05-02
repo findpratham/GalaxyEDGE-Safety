@@ -202,7 +202,7 @@ export default function TakeAction() {
               {sections.length > 1 && (
                 <button className="detail-arrow left" onClick={prev}>‹</button>
               )}
-              
+
                 <h3>{detailText}</h3>
 
                 {/* Image + list side by side */}
@@ -224,6 +224,16 @@ export default function TakeAction() {
               {sections.length > 1 && (
                 <button className="detail-arrow right" onClick={next}>›</button>
               )}
+
+                {/* — index dots — */}
+                <div className="detail-index">
+                  {sections.map((_, idx) => (
+                    <span
+                      key={idx}
+                      className={`detail-dot${idx === subIndex ? " active" : ""}`}
+                    />
+                  ))}
+                </div>
 
               <button
                 className="close-details"

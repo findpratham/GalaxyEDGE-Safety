@@ -152,7 +152,7 @@
   
   .card-content p {
     margin: 0 0 1.5rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #555;
     line-height: 1.4;
   }
@@ -302,4 +302,22 @@
 .fade-out {
   opacity: 0 !important;
   transition: opacity 0.3s ease;
+}
+
+
+.detail-index {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.detail-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ccc;
+  transition: background-color 0.2s;
+}
+.detail-dot.active {
+  background-color: #333;
 }
