@@ -10,7 +10,6 @@ export default function Header() {
       <nav className="nav-links">
         <ul>
 
-
           <li>
           <NavLink to="/home" end>
               Home
@@ -19,9 +18,9 @@ export default function Header() {
           
           {/* ABOUT US TAB */}
           <li>
-            <Link to="about-us" smooth={true} duration={500}>
+            <NavLink to="/about-us" smooth={true} duration={900} end>
               About Us
-            </Link>
+            </NavLink>
           </li>
           
           {/* PRODUCT/SERVICES TAB */}

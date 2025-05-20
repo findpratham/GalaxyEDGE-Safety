@@ -1,17 +1,20 @@
 import React, { useEffect, useRef } from 'react';
 import '../styles/VR.css'; // You can define additional specific styles for VR if needed
+import { Link } from 'react-scroll'; // Ensure you import Link from 'react-scroll'
 
 export default function VR() {
 
   const bgRef = useRef(null);
   const sectionRef = useRef(null);
 
+     
+
   useEffect(() => {
     if (!sectionRef.current || !bgRef.current) return;
   
     const sectionTop  = sectionRef.current.offsetTop;
     const vh          = window.innerHeight;
-    const delayPx     = 460;          // fixed delay before anything happens
+    const delayPx     = 398;          // fixed delay before anything happens
     const scrollRange = vh * 2;       // span the effect over 2× viewport height
   
     // simple “ease‐out‐cubic” easing
@@ -33,11 +36,12 @@ export default function VR() {
       // compute your transforms
       const scale      = 1 - eased * 0.2;   // shrink up to 80%
       const translateY = -eased * 50;       // move up to -50%
-      const opacity    = 1 - eased;         // fade out
+      const minOpacity = 0.2;
+      const opacity    = 1 - eased * (1 - minOpacity);  // fade to 0.2
 
       bgRef.current.style.transform = 
         `scale(${scale}) translateY(${translateY}%)`;
-      bgRef.current.style.opacity = opacity;
+      bgRef.current.style.opacity   = opacity;
       
       ticking = false;
     };
@@ -58,8 +62,22 @@ export default function VR() {
       
   return (
 
-    <div className="vr-page-container" ref={sectionRef}>
-
+    <div id="vr-section" className="vr-page-container" ref={sectionRef}>
+        
+        {/* ── UP ARROW (only lives inside this section) ── */}
+        <Link to="home" smooth duration={1000} className="scroll-up-link">
+          <div className="scroll-up-arrow">
+            <svg viewBox="0 0 16 16" aria-hidden="true">
+              <path 
+                d="M4 10l4-4 4 4" 
+                fill="none" 
+                stroke="currentColor" 
+                strokeWidth="2"
+              />
+            </svg>
+          </div>
+        </Link>
+        
         <h2 className="take-action-heading">Harnessing Virtual Reality for Workplace Safety</h2>
         <br/>
         <h2 className="vr-subheading">Revolutionize your safety training with immersive VR solutions designed to engage employees and minimize risks</h2>

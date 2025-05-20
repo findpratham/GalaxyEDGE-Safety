@@ -6,12 +6,6 @@ import { FaInstagram } from 'react-icons/fa';   // Instagram icon
 
 export default function Footer() {
   return (
-
-
-
-
-
-
     <div className="footer-container">
 
     <p className="footer-text">
@@ -25,7 +19,11 @@ export default function Footer() {
         </span>
         <span className="footer-item">
             <FaTwitter size={24} />
-            <span className="footer-item-text">@galaxyedgesafety</span>
+            <span className="footer-item-text">@galaxyedgesafety</span>          
+        </span>
+        <span className="footer-item">
+            <span className="footer-item-copyright" >  Copyright © 2024 Galaxy Edge Safety - All Rights Reserved.
+        </span>          
         </span>
     </p>
 

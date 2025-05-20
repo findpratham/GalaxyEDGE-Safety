@@ -1,5 +1,4 @@
 import react, { useEffect,useState } from "react";
-import React from "react";
 import { Link } from 'react-scroll'; // Ensure you import Link from 'react-scroll'
 import '../App.css';
 import { NavLink } from 'react-router-dom';  // ← pull in NavLink
@@ -38,7 +37,7 @@ const Home = () => {
 
       {/* SCROLL DOWN ARROW */}
 
-      <Link to="about-us" smooth={true} duration={1000}>
+      <Link to="vr-section" smooth={true} duration={1000}>
         <div className="scroll-down-arrow">
           {/* minimalist down‐chevron */}
           <svg viewBox="0 0 16 16" aria-hidden="true">

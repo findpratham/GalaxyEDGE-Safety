@@ -316,86 +316,78 @@
 
 /* Header Container */
 .header-container {
-    position: absolute;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 1rem 1.2rem;
-    background-color: rgba(255, 255, 255, 0.201); /* Transparent by default */ 
-    top:1%;
-    right: 0.5%;
-    z-index: 1000;
-    width: auto;
-    max-width: 70%;
-    border-radius: 1.3rem;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
+  position: absolute;
+  top: 1%;
+  right: 0.5%;
+  z-index: 1000;
+  width: auto;
+  max-width: 70%;
+  padding: 1rem 1.2rem;
+  border-radius: 1.3rem;
+  background-color: rgba(255, 255, 255, 0);
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
+/* Navigation list */
 .nav-links ul {
-    display: flex;
-    list-style: none;
+  display: flex;
+  list-style: none;
 }
 
 .nav-links li {
-    margin-left: 1.5rem;
-    
+  margin-left: 1.6rem;
 }
 
 /* Navigation link styles */
 .nav-links a {
-    position: relative;
-    overflow: hidden;
-    text-decoration: none;
-    font-weight: 300; 
-    font-weight: light;
-    font-size: 1.3rem;
-    color:#000000; /* Default white color */
-    transition: color 0.3s ease; /* Smooth transition for text color */
-    cursor: pointer;
-    
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 1.5rem;
+  color: #000;
+  transition: color 0.3s ease;
+  cursor: pointer;
 }
 
-/* When header text should change to black */
+/* Header theme variations */
 .header-dark .nav-links a {
-    color: black; /* Change text color to black */
+  color: black;
 }
 
-/* When header background is light */
 .header-light {
-    background-color: #ffffff; /* Change background to white */
+  background-color: #ffffff;
 }
 
-/* When header text should be white */
 .header-light .nav-links a {
-    color: white; /* Change text color to white */
+  color: white;
 }
-    
-.nav-links a::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 0;
-    height: 200%;
-    background-color: #0d4b6e;      /* your hover highlight color */
-    border-radius: 0 100% 100% 0;
-    transform: translateY(-50%);
-    transition: width 0.4s ease;
-    z-index: -1;
-  }
+
+/* Underline grow on hover */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #000;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #000;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
 
   
-  
-/* Hover effect */
-.nav-links a:hover {
-    color: #0d4b6e; /* Highlight color */
-    transform: scale(1.05); /* Slightly enlarge the link */
-    box-shadow: -8px 8px 10px rgba(13, 75, 110, 0.3); /* Add a glowing shadow */
-    padding: 0.5rem 1rem; /* Add some space around the link */
-    border-radius: 10px; /* Rounded corners */
-    font-size: 1.6rem; /* Slightly increase font size on hover */
-    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
-    backdrop-filter: blur(5px); /* Apply blur for frosted glass effect */
-}
 
 
 /* 
@@ -593,3 +585,223 @@
     font-size: 1.5rem;
     line-height: 1.8;
   }
+  .footer-item-copyright{
+    position: absolute;
+    font-size: 1.1rem;
+    line-height: 2.8;
+    margin-top: 10% !important;
+    margin-top: 10% !important;
+    margin-left: 60.1% !important;
+  }
+
+
+
+/* 
+-----------------------------------------------------------------------------------------------
+*************************************** REACHOUT SECTION **************************************
+-----------------------------------------------------------------------------------------------
+*/
+
+
+.reachout-container {
+  position: fixed;
+  bottom: 100px;
+  right: 10px;
+  z-index: 200;
+  display: inline-block;
+  overflow: visible; 
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+               Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+
+
+
+
+.reachout-toggle {
+  /* make the bubble itself black */
+  background-color: #ffffff00;
+  color: #fff;
+
+  /* center the icon inside */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  /* size & shape */
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: none;
+  overflow: hidden;
+  cursor: pointer;
+
+  /* position it dead-center in the viewport */
+  position: fixed;
+  top: 70%;
+  right: -1.05%;
+  transform: translate(-50%, -50%);
+
+  /* optional shadow & hover */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.139);
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+.reachout-toggle svg {
+  /* Feather icons use stroke for the outlines */
+  transform-origin: center center;
+  transition: transform 0.3s ease;
+  transition: transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.reachout-toggle:hover svg {
+  stroke: #fff;    /* explicitly make the icon stroke white */
+  transform: rotate(360deg);
+}
+.reachout-toggle:hover {
+  transform: translate(-50%, -50%) scale(1.25);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  background-color: #000000;
+}
+
+/* — Panel container — */
+.reachout-widget {
+  width: 320px;
+  max-width: 90vw;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  animation: slideIn 0.3s cubic-bezier(.26,.09,.31,1) forwards;
+}
+
+/* — Slide-up animation — */
+@keyframes slideIn {
+  from { transform: translateY(100%); opacity: 0; }
+  to   { transform: translateY(0);       opacity: 1; }
+}
+
+/* — Header bar — */
+.reachout-header {
+  background-color: #1d1d1f;
+  color: #fff;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.reachout-header h3 {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 500;
+}
+.reachout-close {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+.reachout-close:hover {
+  opacity: 1;
+}
+
+/* — Body & form — */
+.reachout-body {
+  padding: 20px;
+}
+.reachout-intro {
+  background-color: #f5f5f7;
+  color: #1d1d1f;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+.reachout-form input,
+.reachout-form textarea {
+  width: 100%;
+  border: 1px solid #d2d2d7;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 15px;
+  margin-bottom: 16px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+.reachout-form input:focus,
+.reachout-form textarea:focus {
+  border-color: #0071e3;
+}
+
+/* — Send button — */
+.reachout-send {
+  position: relative;       /* contain the ::before */
+  display: inline-block;    /* shrink–wrap to its own width */
+  width: 100%;
+  padding: 8px 0;
+  background-color: #0071e300;  /* keep your transparent blue */
+  color: #000;              /* start with black text */
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  overflow: hidden;         /* clip the ::before */
+  z-index: 0;               /* sit above the pseudo-element */
+  transition: color 0.4s ease, transform 0.2s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.173);
+}
+
+
+/* The semicircle overlay */
+.reachout-send::before {
+  content: "";
+  color: #ffffff;
+  border-radius: 8px;
+  position: absolute;
+  top: 50%;
+  left: -1%;
+  width: 0;
+  height: 100%;
+  max-height: 101% !important;
+  background-color: #000000;
+  transform: translateY(-50%);
+  transition: width 0.4s ease;
+  z-index: -1;
+  overflow: hidden;
+}
+
+/* Hover state: expand the semicircle & invert text color */
+.reachout-send:hover::before {
+  width: 100%;               /* grow the half-circle to cover the whole pill */
+  max-height: 100% !important;
+  overflow: hidden;
+}
+
+/* and at the same time flip the text to white */
+.reachout-send:hover {
+  color: #fff;
+}
+
+
+.reachout-send:hover {
+  background-color: #005bb500;
+  transform: translateY(-1px);
+}
+
+/* — reCAPTCHA notice — */
+.reachout-recaptcha {
+  font-size: 11px;
+  color: #6e6e73;
+  text-align: center;
+  margin-top: 12px;
+  line-height: 1.3;
+}

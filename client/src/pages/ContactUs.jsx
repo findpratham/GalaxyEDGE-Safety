@@ -33,7 +33,7 @@ export default function ContactUs() {
   
     const gmailUrl =
       `https://mail.google.com/mail/?view=cm&fs=1` +
-      `&to=prathampaliwal02@gmail.com` +
+      `&to=lamboferrari2025@gmail.com` +
       `&su=${subject}` +
       `&body=${body}`;
   
