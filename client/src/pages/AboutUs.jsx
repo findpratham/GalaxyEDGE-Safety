@@ -9,11 +9,12 @@ export default class AboutUS extends Component {
       <div className="aboutus-container">
         {/* Hero / Intro */}
         <header className="aboutus-hero">
-        <img
-          src={`${process.env.PUBLIC_URL}/assets/AboutUsImages/tablogo.jpg`}
-          alt="GalaxyEDGE Safety Logo"
-          className="aboutus-logo"
-        />
+       
+          <img
+            src={`${process.env.PUBLIC_URL}/assets/tablogo.jpg`}
+            alt="GalaxyEDGE Safety Logo"
+            className="aboutus-logo"
+          />
         
         {/* right: all hero text */}
         <div className="aboutus-hero-content"> 
