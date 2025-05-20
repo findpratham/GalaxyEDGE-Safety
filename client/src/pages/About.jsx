@@ -7,7 +7,7 @@ export default function About() {
           
 
     <img
-      src="/assets/AboutUsImages/tab_logo.jpg"
+      src="/assets/AboutUsImages/tablogo.jpg"
       alt="GalaxyEDGE logo"
       className="about-image"
     />
