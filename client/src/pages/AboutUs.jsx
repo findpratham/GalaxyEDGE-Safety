@@ -9,7 +9,11 @@ export default class AboutUS extends Component {
       <div className="aboutus-container">
         {/* Hero / Intro */}
         <header className="aboutus-hero">
-        <img src="/assets/AboutUsImages/tablogo.jpg" alt="GalaxyEDGE Safety Logo" className="aboutus-logo" />
+        <img
+          src={`${process.env.PUBLIC_URL}/assets/AboutUsImages/tablogo.jpg`}
+          alt="GalaxyEDGE Safety Logo"
+          className="aboutus-logo"
+        />
         
         {/* right: all hero text */}
         <div className="aboutus-hero-content"> 
@@ -85,72 +89,72 @@ export default class AboutUS extends Component {
 
         {/* Mission / Vision / Values & More */}
         <section className="aboutus-highlights">
-  <div className="highlight-card">
-    <h3>Mission</h3>
-    <p>
-      Integrate AI-powered safety solutions, cutting-edge digital tools, and accessible
-      training programs to create safer, smarter workplaces worldwide.
-    </p>
-    <ul>
-      <li>
-        Predictive hazard modeling using real-time operational data streams to flag emerging risks
-      </li>
-      <li>
-        Immersive VR/AR scenarios that simulate both routine and emergency procedures for hands-on practice
-      </li>
-      <li>
-        Mobile micro-learning modules—videos, quizzes, checklists—with push reminders for just-in-time reinforcement
-      </li>
-      <li>
-        Automated certification tracking, email reminders, and exportable compliance reports for audits
-      </li>
-    </ul>
-  </div>
+          <div className="highlight-card">
+            <h3>Mission</h3>
+            <p>
+              Integrate AI-powered safety solutions, cutting-edge digital tools, and accessible
+              training programs to create safer, smarter workplaces worldwide.
+            </p>
+            <ul>
+              <li>
+                Predictive hazard modeling using real-time operational data streams to flag emerging risks
+              </li>
+              <li>
+                Immersive VR/AR scenarios that simulate both routine and emergency procedures for hands-on practice
+              </li>
+              <li>
+                Mobile micro-learning modules—videos, quizzes, checklists—with push reminders for just-in-time reinforcement
+              </li>
+              <li>
+                Automated certification tracking, email reminders, and exportable compliance reports for audits
+              </li>
+            </ul>
+          </div>
 
-  <div className="highlight-card">
-    <h3>Vision</h3>
-    <p>
-      Empower businesses, professionals, and workers with the tools and knowledge needed to
-      navigate the rapidly evolving safety landscape.
-    </p>
-    <ul>
-      <li>
-        Unified real-time KPI dashboards with drill-down from corporate to site-level metrics
-      </li>
-      <li>
-        AI-driven risk alerts and “what-if” simulations that stress-test process changes under varied conditions
-      </li>
-      <li>
-        Seamless integration with ERP, HMIS, IoT sensors, and third-party data sources for a holistic safety ecosystem
-      </li>
-      <li>
-        Scalable, cloud-native platform accessible on desktop, tablet, and mobile—anywhere, anytime
-      </li>
-    </ul>
-  </div>
+          <div className="highlight-card">
+            <h3>Vision</h3>
+            <p>
+              Empower businesses, professionals, and workers with the tools and knowledge needed to
+              navigate the rapidly evolving safety landscape.
+            </p>
+            <ul>
+              <li>
+                Unified real-time KPI dashboards with drill-down from corporate to site-level metrics
+              </li>
+              <li>
+                AI-driven risk alerts and “what-if” simulations that stress-test process changes under varied conditions
+              </li>
+              <li>
+                Seamless integration with ERP, HMIS, IoT sensors, and third-party data sources for a holistic safety ecosystem
+              </li>
+              <li>
+                Scalable, cloud-native platform accessible on desktop, tablet, and mobile—anywhere, anytime
+              </li>
+            </ul>
+          </div>
 
-  <div className="highlight-card">
-    <h3>Values</h3>
-    <p>
-      Innovation · Integrity · Collaboration · Excellence in delivering high-impact, scalable
-      safety solutions.
-    </p>
-    <ul>
-      <li>
-        Data-driven decision making powered by advanced analytics, machine learning, and heatmaps
-      </li>
-      <li>
-        Commitment to ESG and sustainability through transparent metrics and continuous improvement
-      </li>
-      <li>
-        Iterative enhancement via user feedback loops, adaptive content, and performance scoring
-      </li>
-      <li>
-        Audit-ready, exportable reporting with automated logs, version control, and stakeholder notifications
-      </li>
-    </ul>
-  </div>
-</section>
+          <div className="highlight-card">
+            <h3>Values</h3>
+            <p>
+              Innovation · Integrity · Collaboration · Excellence in delivering high-impact, scalable
+              safety solutions.
+            </p>
+            <ul>
+              <li>
+                Data-driven decision making powered by advanced analytics, machine learning, and heatmaps
+              </li>
+              <li>
+                Commitment to ESG and sustainability through transparent metrics and continuous improvement
+              </li>
+              <li>
+                Iterative enhancement via user feedback loops, adaptive content, and performance scoring
+              </li>
+              <li>
+                Audit-ready, exportable reporting with automated logs, version control, and stakeholder notifications
+              </li>
+            </ul>
+          </div>
+        </section>
 
 
 
