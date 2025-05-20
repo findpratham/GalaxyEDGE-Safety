@@ -105,17 +105,46 @@ export default function VR() {
         <div className="vr-details">
           <div className="vr-item">
             <h3>Interactive Safety Simulations</h3>
-            <p>VR allows employees to interact with real-world scenarios in a controlled environment. From handling hazardous materials to learning emergency evacuation procedures, immersive simulations make training more effective and memorable.</p>
+            <p>
+              VR allows employees to interact with real-world scenarios in a controlled environment.
+              From handling hazardous materials to learning emergency evacuation procedures, immersive
+              simulations make training more effective and memorable.
+            </p>
+            <ul>
+              <li>High-fidelity replicas of equipment and facilities for hands-on practice</li>
+              <li>Customizable emergency-response drills with adjustable severity levels</li>
+              <li>Scenario branching based on trainee decisions for deeper engagement</li>
+              <li>Performance scoring, session replay, and detailed debrief reports</li>
+            </ul>
           </div>
+
           <div className="vr-item">
             <h3>Scalable and Flexible Training</h3>
-            <p>Virtual reality enables scalable training programs that can be accessed anywhere, anytime. It's a cost-effective solution for large teams and businesses with remote workers.</p>
+            <p>
+              Virtual reality enables scalable training programs that can be accessed anywhere, anytime.
+              It’s a cost-effective solution for large teams and businesses with remote workers.
+            </p>
+            <ul>
+              <li>Cloud-hosted lesson plans accessible from any location</li>
+              <li>Modular course design for quick updates and new content</li>
+              <li>Multi-user sessions to train dispersed teams together</li>
+              <li>Offline playback mode for environments without reliable internet</li>
+            </ul>
           </div>
+
           <div className="vr-item">
-            <h3>Real-Time Feedback</h3>         
-            <p>Employees receive instant feedback during training sessions, helping them improve their decision-making skills and become more confident in handling various situations.</p>
+            <h3>Real-Time Feedback</h3>
+            <p>
+              Employees receive instant feedback during training sessions, helping them improve their
+              decision-making skills and become more confident in handling various situations.
+            </p>
+            <ul>
+              <li>In-session prompts for correct procedure adherence</li>
+              <li>Immediate scoring on task completion and errors</li>
+              <li>Voice-over guidance and corrective tips in the headset</li>
+              <li>Automated progress tracking with exportable analytics</li>
+            </ul>
           </div>
-          
         </div>
       </div>
 

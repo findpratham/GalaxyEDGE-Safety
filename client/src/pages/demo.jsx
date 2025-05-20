@@ -5,6 +5,8 @@ import '../styles/VR.css';``
 export default function RequestDemo() {
   return (
     <div className="request-demo-container">
+      <h2>Ready to Take Your Safety Training to the Next Level?</h2>
+      <br />
       <Link to="/contact" className="request-demo-button">
         Request a Demo
       </Link>

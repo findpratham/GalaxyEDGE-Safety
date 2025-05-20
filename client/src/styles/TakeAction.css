@@ -104,7 +104,7 @@
   
   .card-details {
     grid-column: 1 / -1;
-    background: #f7faff;
+    color: #f1f1f1;
     padding: 1.5rem 2rem;
     margin-top: 1rem;
     border-radius: 0.5rem;
@@ -204,7 +204,7 @@
 
   .card-cta.active {
     background-color: #000;
-    color: #fff;
+    color: #f5f5f7;
     transform: scale(1.4) rotate(45deg);
   }
   
@@ -248,7 +248,7 @@
     gap: 2rem;
     position: relative;
     font-family: var(--sf-stack);
-    background: #ffffff;           /* soft, off-white panel */
+    background: #f5f5f7;           /* soft, off-white panel */
     margin: 2rem auto 0;           /* centered under cards */
     padding: 1rem;
     border-radius: 1rem;
@@ -291,7 +291,7 @@
     width: 32px;
     height: 32px;
     
-    background: rgba(255,255,255,0.25);
+    background: rgba(152, 152, 152, 0.25);
     display: flex;
     align-items: center;
     justify-content: center;
