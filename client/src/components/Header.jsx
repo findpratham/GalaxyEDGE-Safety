@@ -1,11 +1,36 @@
-import React from 'react';
-import { Link } from 'react-scroll';  // Importing react-scroll for smooth scroll behavior
-import { NavLink } from 'react-router-dom';  // ← pull in NavLink
-
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-scroll';
+import { NavLink } from 'react-router-dom';
 
 export default function Header() {
+
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setScrolled(window.scrollY > 450);
+    };
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+
   return (
-    <header className="header-container">
+    <header className={`header-container${scrolled ? ' scrolled' : ''}`}>
+      <div className="logo">
+          <img
+            src="/assets/tablogo.jpg"
+            alt="GalaxyEDGE Safety Inc."
+            className="tablogo-img"
+          />
+        </div>
+        <div className="logo">
+          <img
+            src="/assets/logo updated.jpg"
+            alt="GalaxyEDGE Safety Inc."
+            className="tablogo_text-img"
+          />
+        </div>
       {/* NAVIGATION LINKS */}
       <nav className="nav-links">
         <ul>
@@ -47,7 +72,7 @@ export default function Header() {
           {/* RESOURCES TAB */}
           <li>
             <Link to="resources" smooth={true} duration={500}>
-              Resources
+              Prototype
             </Link>
           </li>
 

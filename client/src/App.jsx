@@ -31,7 +31,7 @@ export default function App() {
         <Route path="/home" element={
           <>
           <div id="home"><Home/></div>
-          {/* <div id="about-us"><About/></div> */}
+          <div id="about-us"><About/></div>
           
           <div id="learn_more"><VR/></div>
           <div id="learn_more"><ReachOutNow/></div> 
@@ -44,8 +44,7 @@ export default function App() {
 
 
           </>
-        } />
-
+        }/>
 
       {/* STANDALONE ABOUT-US PAGE */}
       <Route path="/about-us" element={<AboutUS />} />

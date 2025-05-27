@@ -1,12 +1,29 @@
 // src/pages/AboutUS.jsx
 import React, { Component } from 'react';
 import '../styles/AboutUS.css';
+import '../App.css';
 
 
 export default class AboutUS extends Component {
   render() {
     return (
       <div className="aboutus-container">
+
+      <div className="parallax-image full-screen-image">
+        <img
+          src="/assets/AboutUSImages/heroImage.jpg"
+          alt="Main background"
+          className="aboutUS-image-img"
+        />
+      </div>
+
+      <div className="contentAboutUS">
+          <h1 className="heading">
+          About GalaxyEDGE Safety Inc. <br />
+            
+          </h1>
+      </div>
+      <div className="margins">
         {/* Hero / Intro */}
         <header className="aboutus-hero">
        
@@ -18,7 +35,7 @@ export default class AboutUS extends Component {
         
         {/* right: all hero text */}
         <div className="aboutus-hero-content"> 
-            <h1>About Us</h1>
+            <h1>Pioneering the Future of Workplace Safety...</h1>
             <h2>GalaxyEDGE Safety Inc.</h2>
             
         </div>
@@ -170,6 +187,7 @@ export default class AboutUS extends Component {
             <span className="contact-value">604-308-4537</span>
           </div>
         </footer>
+      </div>
       </div>
     );
   }

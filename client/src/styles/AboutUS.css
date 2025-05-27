@@ -9,17 +9,22 @@
                  Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     color: #1d1d1f;
     background: #ffffff;
-    margin-left: 4%;
-    margin-right: 4%;
+    
     margin-top: 3% !important;
     margin-bottom: 4%;
-    padding: 2rem 1rem;
+    
   }
 
   .aboutus-hero-content{
     font-size: 1.4rem;
     line-height: 1.4;
     font-weight: 500;
+  }
+
+  .margins{
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-top: 3% !important;
   }
   
   /* Hero / Intro */
@@ -40,7 +45,7 @@
   }
   
   .aboutus-hero h1 {
-    font-size: 4.5rem;
+    font-size: 3.5rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
   }
@@ -203,6 +208,15 @@
     }
   }
   
+  /* Parallax Image Styling */
+.parallax-image {
+  position: relative;
+  width: 100%;
+  height: 80vh; /* Adjust to fit your needs */
+  overflow: hidden;
+  z-index: 700; /* Ensure it's below the content */
+  
+}
   /* Additional helper */
   .founder-profile-card {
     display: flex;
@@ -210,3 +224,52 @@
     align-items: center;
   }
   
+  .aboutUS-image-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire area without distortion */
+  }
+
+
+  .parallax-image::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    /* Use half your pseudo-element’s height here */
+    bottom: 0vh;
+    width: 100%;
+    /* Total “diameter” of the half-circle = 20vh */
+    height: 10vh;
+    background: white; /* Or whatever your next section’s bg is */
+    /* perfect semi-ellipse: 50% of width, 100% of height */
+    border-top-left-radius: 50% 100% ;
+    border-top-right-radius: 50% 100%;
+    border-top: 6px solid rgb(255, 111, 0);
+  }
+
+
+  /* Content in Home Section */
+.contentAboutUS {
+  position: absolute;
+  top: 17%; /* Move the content 250px from the top of the parent container */
+  left: 1%; /* Keep the content 2% from the left */
+  transform: translateY(0); /* No vertical translation, let it stay at 250px from top */
+  text-align: left;
+  z-index: 1000; /* Ensure content is above the background */
+  width: 90%; /* Adjust the width for the content */
+
+}
+
+/* Heading Styling */
+.heading {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+  Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 550;              /* semibold like Apple’s headlines */
+  letter-spacing: -0.02em;
+  font-size: 4.5rem; /* Slightly smaller font size for better fit */
+  color: rgb(255, 255, 255); /* White color for heading */
+  line-height: 1.1; /* Line height for readability */
+  padding: 10px 10px;
+  opacity: 0;
+  animation: slideInFromLeft 4s ease-out forwards;
+}
