@@ -4,8 +4,8 @@ import React, { useEffect, useState, useRef } from "react";
 const cards = [
   // ********************************************************** CARD 1 **********************************************************
   {
-    title: "VR/AR Training Simulations",
-    text: "Immerse teams in realistic scenarios—from heavy-equipment operation to emergency response—using high-fidelity VR environments and AR procedural overlays. Mobile micro-learning modules (videos, quizzes, checklists) deliver just-in-time reinforcement and certify competencies.",
+    title: "Innovation",
+    text: "We embrace technology and forward-thinking solutions to revolutionize occupational health and safety. By leveraging AI, immersive training, and automation, we drive continuous improvement and set new industry standards.",
     img: "/assets/TakeActionImages/Proactive-risk.jpg",
 
     // 1️⃣ Pre-Shift Inspections
@@ -41,8 +41,8 @@ const cards = [
   
  // ********************************************************** CARD 2 **********************************************************
  {
-  title: "AI-Powered Risk Management",
-  text: "Leverage machine-learning to forecast incident hotspots and prioritize preventative actions with intuitive KPI dashboards. Automated reporting workflows capture root-cause analytics and integrate with your ERP/HMIS for unified, real-time safety insights.",
+  title: "Safety & Well-being",
+  text: "Safety is at the core of everything we do. We are dedicated to developing solutions that reduce workplace risks, protect employees, and create a culture of proactive safety and well-being.",
   img: "/assets/TakeActionImages/workforce-resilience1.jpg",
 
   // 1️⃣ Predictive Hazard Analysis
@@ -76,10 +76,10 @@ const cards = [
   image3: "/assets/TakeActionImages/AdditionalinfoImages/resilience3.jpg",
 },
 
- // ********************************************************** CARD 1 **********************************************************
+ // ********************************************************** CARD 3 **********************************************************
  {
-  title: "Regulatory Compliance",
-  text: "GalaxyEDGE crafts harmonized OHS frameworks that seamlessly align with provincial, federal, and international standards—eliminating gaps and reducing admin overhead. Our cross-border advisory guides you through permit filings, audit prep, and real-time regulatory alerts for Canada, the U.S., and Mexico.",
+  title: "Accessibility",
+  text: "We believe that safety knowledge should be available to everyone—from executives to frontline workers. Our commitment is to provide cost-effective, engaging, and inclusive training that ensures equal access to safety resources worldwide.",
   img: "/assets/TakeActionImages/safety-gear.jpg",
 
   // 1️⃣ Harmonized OHS Frameworks
@@ -112,42 +112,7 @@ const cards = [
   ],
   image3: "/assets/TakeActionImages/AdditionalinfoImages/risk3.jpg",
 },
-// ********************************************************** CARD 2 **********************************************************
-{
-  title: "Global Market Expansion",
-  text: "Navigate international trade requirements and certification (ISO 45001, OHSAS) with end-to-end audit support, from gap analysis through on-site approval. Our ESG integration roadmaps and localized guidance ensure compliant, sustainable entry into Europe, North America, APAC, and beyond.",
-  img: "/assets/TakeActionImages/safety-champion.jpg",
 
-  // 1️⃣ Trade-Readiness Assessments
-  detail1: "Trade-Readiness Assessments",
-  info1: [
-    "Diagnostic gap analysis against target-market OHS, HR, and trade requirements for readiness evaluation.",
-    "Roadmaps prioritizing certifications, documentation, and training with timelines and resource allocation.",
-    "Cost-benefit projections for phased entry strategies, weighing compliance costs against revenue gains.",
-    "Stakeholder workshops, including risk assessments, to build consensus and secure sponsorship."
-  ],
-  image1: "/assets/TakeActionImages/AdditionalinfoImages/resilience11.jpg",
-
-  // 2️⃣ Certification & Audit Support
-  detail2: "Certification & Audit Support",
-  info2: [
-    "Project management for ISO 45001 and OHSAS 18001 certification covering documentation, audits, and corrective actions.",
-    "On-site audit facilitation, auditor liaison, and evidence preparation with structured follow-up.",
-    "Liaison services with certifiers and authorities to streamline audit scheduling and approvals.",
-    "Post-audit remediation plans with timeline tracking and monitoring milestones for sustained compliance."
-  ],
-  image2: "/assets/TakeActionImages/AdditionalinfoImages/certification.jpg",
-
-  // 3️⃣ ESG & Local Adaptation
-  detail3: "ESG & Local Adaptation",
-  info3: [
-    "Integration of environmental and social-governance metrics into safety systems for sustainable operations.",
-    "Templates and frameworks for GRI, SASB, and other standards with customizable executive dashboards.",
-    "Cultural guides for localized training, signage, communications, and stakeholder engagement.",
-    "Translation and localization of manuals, e-learning modules, and documentation for clarity and relevance."
-  ],
-  image3: "/assets/TakeActionImages/AdditionalinfoImages/esg.jpg",
-}
 // // ********************************************************** CARD 3 **********************************************************
 // {
 //   title: "Safety Champion Ecosystem",
@@ -232,48 +197,49 @@ export default function TakeAction() {
     setSubIndex((subIndex + sections.length - 1) % sections.length);
   };
 
+  // RETURN STATEMENT:
   return (
+    <div className="take-action-container">
     <section ref={sectionRef} className="take-action-section">
-      <h2 className="take-action-heading">Products & Services</h2>
+      <h2 className="take-action-heading">Our Core Values</h2>
         <p>
-          Explore our cutting-edge solutions designed to enhance workplace safety,
-          streamline compliance, and empower your teams.
+        Fundamental beliefs that shape our culture, guide every decision, and drive our success.
         </p>
 
       {/* Cards Grid */}
-<div className="cards-container">
-  {cards.map((card, i) => {
-    const isActive = expandedIndex === i;
-    return (
-      <div
-        key={i}
-        className={[
-          "card",
-          visible && "fade-in",
-          isActive && "hovered"
-        ]
-          .filter(Boolean)
-          .join(" ")}
-        style={{ animationDelay: `${i * 0.5}s` }}
-      >
-        <div
-          className="card-image"
-          style={{ backgroundImage: `url(${card.img})` }}
-        />
-        <div className="card-content">
-          <h3>{card.title}</h3>
-          <p>{card.text}</p>
-          <button
-            className={`card-cta${isActive ? " active" : ""}`}
-            onClick={() => openCard(i)}
-          >
-            ＋
-          </button>
+        <div className="cards-container">
+          {cards.map((card, i) => {
+            const isActive = expandedIndex === i;
+            return (
+              <div
+                key={i}
+                className={[
+                  "card",
+                  visible && "fade-in",
+                  isActive && "hovered"
+                ]
+                  .filter(Boolean)
+                  .join(" ")}
+                style={{ animationDelay: `${i * 0.5}s` }}
+              >
+                <div
+                  className="card-image"
+                  style={{ backgroundImage: `url(${card.img})` }}
+                />
+                <div className="card-content">
+                  <h3>{card.title}</h3>
+                  <p>{card.text}</p>
+                  <button
+                    className={`card-cta${isActive ? " active" : ""}`}
+                    onClick={() => openCard(i)}
+                  >
+                    ＋
+                  </button>
+                </div>
+              </div>
+            );
+          })}
         </div>
-      </div>
-    );
-  })}
-</div>
 
         {/* Details Panel */}
         {current && (() => {
@@ -329,5 +295,6 @@ export default function TakeAction() {
           );
         })()}
     </section>
+    </div>
   );
 }

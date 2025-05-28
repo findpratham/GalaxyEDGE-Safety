@@ -19,9 +19,10 @@ import RequestDemo from "./pages/demo";
 import ReachOutNow from "./pages/ReachOut";
 import AboutUS from "./pages/AboutUs";  
 import ProductServices from "./pages/productServirces";   
-
+import Mission from "./pages/Mission";
 
 export default function App() {
+  
   return (
     <>
       <Header />
@@ -38,7 +39,7 @@ export default function App() {
           {/* <div id="product-services"><ProductServices/></div> */}
           <div id="product-services"><TakeAction/></div>
           {/* <div id="learn_more"><TakeAction1/></div> */}
-          <div id= "learn_more"><SuccessStories/></div>
+          {/* <div id= "learn_more"><SuccessStories/></div> */}
           <div id="learn_more"><RequestDemo/></div>
           <div id = "resources"><Footer/></div>
 
@@ -48,6 +49,7 @@ export default function App() {
 
       {/* STANDALONE ABOUT-US PAGE */}
       <Route path="/about-us" element={<AboutUS />} />
+      <Route path="/our-mission" element={<Mission />} />
       <Route path="/contact" element={
           <div id="contact-us"> 
             <ContactUs />

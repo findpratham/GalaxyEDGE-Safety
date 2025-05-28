@@ -2,13 +2,54 @@
 import React, { Component } from 'react';
 import '../styles/AboutUS.css';
 import '../App.css';
+import { Link } from 'react-scroll'; // Ensure you import Link from 'react-scroll'
+import { animateScroll as scroll } from 'react-scroll';
 
 
-export default class AboutUS extends Component {
+export default class Mission extends Component {
+  componentDidMount() {
+    // as soon as this page renders, jump the viewport to the top
+    window.scrollTo(0, 0);
+  }
+  // ① scroll‐to‐top handler
+  scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+  
   render() {
     return (
       <div className="aboutus-container">
+        {/* SCROLL UP ARROW */}
+        <button
+          className="scroll-up-arrow"
+          onClick={this.scrollToTop}
+          aria-label="Scroll to top"
+        >
+          <svg viewBox="0 0 16 16" aria-hidden="true">
+            <path
+              d="M4 10l4-4 4 4"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+            />
+          </svg>
+        </button>
 
+        {/* SCROLL DOWN ARROW */}
+        <button
+          className="scroll-down-arrow"
+          onClick={() => scroll.scrollMore(600, { smooth: true, duration: 1000 })}
+          aria-label="Scroll down 500px"
+        >
+          <svg viewBox="0 0 16 16" aria-hidden="true">
+            <path
+              d="M4 6l4 4 4-4"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+            />
+          </svg>
+        </button>
       <div className="parallax-image full-screen-image">
         <img
           src="/assets/AboutUSImages/heroImage.jpg"

@@ -2,15 +2,41 @@
 :root {
     --apple-font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
                         Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-    --ps-blue: #0071e3;
-    --ps-grey-0: #f5f5f7;
-    --ps-grey-1: #d2d2d7;
-    --ps-grey-6: #48484a;
+
   }
   
   .ps-page {
     font-family: var(--apple-font-stack);
     color: var(--ps-grey-6);
+  }
+
+  .ps-container {
+    position: relative;
+    margin: 3% 4% 0 4%;
+    padding-top: 4vh;
+    overflow: visible;
+    outline: 2px dashed red;
+    
+  }
+
+  /* draw the semi-circle at the top edge */
+  .ps-container::before {
+    content: "";
+    position: absolute;
+    top: -5vh;                       /* half the circle height */
+    left: -4%;                       /* undo your 4% left margin */
+    width: calc(100% + 8%);          /* 100% + 4% left + 4% right */
+    height: 10vh;                    /* diameter */
+  
+    background: white;               /* hide the image above */
+    
+    /* carve out a perfect downward bulge */
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius:50% 100%;
+    border-top: 6px solid rgb(255,111,0);
+    
+    z-index: 701;                    /* sit just above z-index:700 */
+    pointer-events: none;
   }
   
   /* Hero */

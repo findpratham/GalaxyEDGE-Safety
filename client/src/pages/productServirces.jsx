@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from '../components/Header';
 import '../styles/ProductServices.css';
 
 const features = [
@@ -27,8 +26,8 @@ const features = [
 
 export default function ProductServices() {
   return (
-    <>
-      <Header />
+    <div className="ps-container">
+     
 
       <main className="ps-page">
         {/* Hero */}
@@ -68,6 +67,6 @@ export default function ProductServices() {
           <small>© {new Date().getFullYear()} GalaxyEDGE Safety Inc.</small>
         </footer> */}
       </main>
-    </>
+    </div>
   );
 }

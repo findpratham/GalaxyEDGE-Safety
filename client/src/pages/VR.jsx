@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import '../styles/VR.css'; // You can define additional specific styles for VR if needed
 import { Link } from 'react-scroll'; // Ensure you import Link from 'react-scroll'
+import { NavLink } from "react-router-dom";
 
 export default function VR() {
 
@@ -110,12 +111,7 @@ export default function VR() {
               From handling hazardous materials to learning emergency evacuation procedures, immersive
               simulations make training more effective and memorable.
             </p>
-            <ul>
-              <li>High-fidelity replicas of equipment and facilities for hands-on practice</li>
-              <li>Customizable emergency-response drills with adjustable severity levels</li>
-              <li>Scenario branching based on trainee decisions for deeper engagement</li>
-              <li>Performance scoring, session replay, and detailed debrief reports</li>
-            </ul>
+            
           </div>
 
           <div className="vr-item">
@@ -124,12 +120,7 @@ export default function VR() {
               Virtual reality enables scalable training programs that can be accessed anywhere, anytime.
               It’s a cost-effective solution for large teams and businesses with remote workers.
             </p>
-            <ul>
-              <li>Cloud-hosted lesson plans accessible from any location</li>
-              <li>Modular course design for quick updates and new content</li>
-              <li>Multi-user sessions to train dispersed teams together</li>
-              <li>Offline playback mode for environments without reliable internet</li>
-            </ul>
+           
           </div>
 
           <div className="vr-item">
@@ -138,13 +129,13 @@ export default function VR() {
               Employees receive instant feedback during training sessions, helping them improve their
               decision-making skills and become more confident in handling various situations.
             </p>
-            <ul>
-              <li>In-session prompts for correct procedure adherence</li>
-              <li>Immediate scoring on task completion and errors</li>
-              <li>Voice-over guidance and corrective tips in the headset</li>
-              <li>Automated progress tracking with exportable analytics</li>
-            </ul>
+            
           </div>
+          <NavLink to="/our-mission" end>
+              <button className="margin-button">
+                Our Mission
+              </button>
+            </NavLink>
         </div>
       </div>
 

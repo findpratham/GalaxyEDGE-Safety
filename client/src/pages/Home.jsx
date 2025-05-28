@@ -1,15 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-scroll";
 import { NavLink } from "react-router-dom";
 import "../App.css";
 
 export default function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="home-container">
       {/* Top scroll arrow */}
-      <Link to="vr-section" smooth duration={1000}>
+      <Link to="about-us" smooth duration={1000}>
         <div className="scroll-down-arrow">
-          <svg viewBox="0 0 16 16" aria-hidden="true">
+          <svg viewBox="0 0 16 16" aria-hidden="false">
             <path
               d="M4 6l4 4 4-4"
               fill="none"
@@ -66,19 +69,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Bottom scroll arrow */}
-      <Link to="about-us" smooth duration={1000}>
-        <div className="scroll-down-arrow">
-          <svg viewBox="0 0 16 16" aria-hidden="true">
-            <path
-              d="M4 6l4 4 4-4"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            />
-          </svg>
-        </div>
-      </Link>
+      
     </div>
   );
 }
