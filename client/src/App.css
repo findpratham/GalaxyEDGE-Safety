@@ -13,6 +13,9 @@
   .mission-container {
     padding-top: 3.2rem !important;            /* match your header height */
   }
+  .contact-container {
+    padding-top: 5rem !important;            /* match your header height */
+  }
 .scroll-up-link {
     position: absolute;
     top: 1rem;
