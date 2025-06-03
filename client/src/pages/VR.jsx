@@ -15,7 +15,7 @@ export default function VR() {
   
     const sectionTop  = sectionRef.current.offsetTop;
     const vh          = window.innerHeight;
-    const delayPx     = 398;          // fixed delay before anything happens
+    const delayPx     = 300;          // fixed delay before anything happens
     const scrollRange = vh * 2;       // span the effect over 2× viewport height
   
     // simple “ease‐out‐cubic” easing
@@ -79,7 +79,7 @@ export default function VR() {
           </div>
         </Link>
         
-        <h2 className="take-action-heading">Harnessing Virtual Reality for Workplace Safety</h2>
+        <div className="take-action-heading">Harnessing Virtual Reality for Workplace Safety</div>
         <br/>
         <h2 className="vr-subheading">Revolutionize your safety training with immersive VR solutions designed to engage employees and minimize risks</h2>
         
@@ -138,14 +138,6 @@ export default function VR() {
             </NavLink>
         </div>
       </div>
-
-      
-
-      
-      {/*<div className="cta-section">
-        <h2>Ready to Take Your Safety Training to the Next Level?</h2>
-        <button className="cta-button">Request a Demo</button>
-      </div> */}
     </div>
   );
 }

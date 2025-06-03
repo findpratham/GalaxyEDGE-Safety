@@ -9,16 +9,14 @@ import './styles/TakeAction.css';
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import TakeAction from "./pages/TakeAction";
-import TakeAction1 from "./pages/TakeAction1";
 import VR from "./pages/VR";
+import ActionApproach from "./pages/ActionApproach";
 import ContactUs from "./pages/ContactUs";
 import Footer from "./pages/footer";
 import SuccessStories from "./pages/successStories";
 import RequestDemo from "./pages/demo";
 import ReachOutNow from "./pages/ReachOut";
 import AboutUS from "./pages/AboutUs";  
-import ProductServices from "./pages/productServirces";   
 import Mission from "./pages/Mission";
 
 export default function App() {
@@ -32,12 +30,13 @@ export default function App() {
         <Route path="/home" element={
           <>
           <div id="home"><Home/></div>
-          <div id="about-us"><About/></div>
           
+          <div id="about-us"><About/></div>
           <div id="learn_more"><VR/></div>
+          <ActionApproach/>
           <div id="learn_more"><ReachOutNow/></div> 
           {/* <div id="product-services"><ProductServices/></div> */}
-          <div id="product-services"><TakeAction/></div>
+          {/* <div id="product-services"><TakeAction/></div> */}
           {/* <div id="learn_more"><TakeAction1/></div> */}
           {/* <div id= "learn_more"><SuccessStories/></div> */}
           <div id="learn_more"><RequestDemo/></div>

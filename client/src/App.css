@@ -152,24 +152,27 @@
     transition: transform 0.3s ease; /* Ensure smoother transition when resizing */
 }
 
-/* Parallax Image Styling */
+/* 1) The wrapper holds the 16∶9 ratio */
 .parallax-image {
-    position: relative;
-    width: 100%;
-   
-    overflow: hidden;
-    z-index: 700; /* Ensure it's below the content */
-    aspect-ratio: 16 / 9;
-    
-  }
-  
-  /* Image inside Parallax */
-  .parallax-image-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensure the image covers the entire area without distortion */
-    
-  }
+  position: relative;
+  width: 100%;
+  /* native aspect-ratio support */
+  aspect-ratio: 16 / 9;
+  /* fallback for older browsers */
+  /* padding-bottom: 56.25%;  /* 9/16 = 0.5625 = 56.25% */ 
+  overflow: hidden;
+}
+
+/* 2) The img fills the wrapper exactly */
+.parallax-image-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;    /* covers whole area without distortion */
+  object-position: center; /* keeps focus centered */
+}
 
   .parallax-image::after {
     content: "";
@@ -725,8 +728,8 @@
 /* Constrain content and center */
 .footer-container {
     position: relative;
-    margin-left: 4%;
-    margin-right: 4%;
+    margin-left: 4% !important;
+    margin-right: 4% !important;
     margin-top: 7%;
     margin-bottom: 5% !important;
     background-color: #ffffff00;

@@ -9,7 +9,6 @@
                  Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     color: #1d1d1f;
     background: #ffffff;
-    
     margin-top: 3% !important;
     margin-bottom: 4%;
     
@@ -171,6 +170,8 @@
     justify-content: space-between;
     padding-top: 2rem;
     border-top: 1px solid #e1e1e1;
+    margin-left: 4%;
+    margin-right: 4%;
   }
   
   .contact-item {

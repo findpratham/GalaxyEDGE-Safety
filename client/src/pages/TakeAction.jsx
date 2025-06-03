@@ -2,166 +2,56 @@
 import React, { useEffect, useState, useRef } from "react";
 
 const cards = [
-  // ********************************************************** CARD 1 **********************************************************
   {
     title: "Innovation",
-    text: "We embrace technology and forward-thinking solutions to revolutionize occupational health and safety. By leveraging AI, immersive training, and automation, we drive continuous improvement and set new industry standards.",
     img: "/assets/TakeActionImages/Proactive-risk.jpg",
-
-    // 1️⃣ Pre-Shift Inspections
-    detail1: "VR Scenario Modules",
+    detail1: "We embrace cutting-edge technology to transform occupational health and safety. By leveraging AI-driven risk analytics, immersive VR/AR simulations, smart wearable integrations, and automated workflows, we continuously improve hazard prevention, streamline compliance, and deliver personalized, data-driven training. ",
     info1: [
-      "High-fidelity replicas of equipment, plant layouts, and hazards for immersive operator training.",
-      "Customizable emergency drills (fire, spill, lockout/tagout) with variable severity and random triggers.",
-      "Instructor-led virtual classrooms and self-paced VR simulations to suit diverse learning preferences.",
-      "Performance scoring, session replay, and debrief capabilities with time-stamped feedback.",
-    ],
+      "Cutting-edge, photorealistic 3D replicas of equipment and facilities that let operators practice in truly immersive VR environments.",
+      "Adaptive emergency-response drills that dynamically adjust scenarios (fire, spill, lockout/tagout) on the fly, powered by real-time analytics and AI-driven randomness.",
+      "Blended learning options—live, instructor-led virtual seminars plus self-paced VR modules—designed to maximize engagement and retention across any learning style.",
+      "Next-generation performance analytics with AI-backed scoring, instant session playback, and timestamped insights to continuously refine training effectiveness."
+    ],    
     image1: "/assets/TakeActionImages/AdditionalinfoImages/risk11.jpg",
-
-    // 2️⃣ Smart Wearables
-    detail2: "AR Procedural Overlays",
-    info2: [
-      "Step-by-step guidance overlays for machinery start-up, maintenance, and shutdown via AR glasses.",
-      "Hazard call-outs highlight pinch points, high-voltage areas, and restricted zones via spatial recognition.",
-      "Voice-command navigation and hands-free operation for uninterrupted procedural guidance.",
-      "Real-time feedback on compliance, posture, and protocol adherence with on-the-spot prompts.",
-    ],
-    image2: "/assets/TakeActionImages/AdditionalinfoImages/risk22.jpg",
-
-    // 3️⃣ Near-Miss Reporting
-    detail3: "Mobile Micro-Learning",
-    info3: [
-      "Short video lessons (2–5 minutes) on essential safety topics, accessible on mobile and desktop.",
-      "Interactive quizzes with instant scoring, remediation, and feedback to reinforce concepts.",
-      "Digital checklists for equipment inspections, toolbox talks, and safety briefings.",
-      "Dashboards track completion rates, certification statuses, and areas needing additional training.",
-    ],
-    image3: "/assets/TakeActionImages/AdditionalinfoImages/risk33.jpg",
   },
-  
- // ********************************************************** CARD 2 **********************************************************
- {
-  title: "Safety & Well-being",
-  text: "Safety is at the core of everything we do. We are dedicated to developing solutions that reduce workplace risks, protect employees, and create a culture of proactive safety and well-being.",
-  img: "/assets/TakeActionImages/workforce-resilience1.jpg",
+  {
+    title: "Safety & Well-being",
+    img: "/assets/TakeActionImages/workforce-resilience1.jpg",
 
-  // 1️⃣ Predictive Hazard Analysis
-  detail1: "Predictive Hazard Analysis",
-  info1: [
-    "Machine-learning models trained on incident, environmental, and operational data to predict hazards before they escalate.",
-    "“What-if” simulations that stress-test process changes, layouts, and staffing levels under varying conditions.",
-    "Heatmaps pinpoint emerging risk hotspots on floor plans, machinery zones, and workflow areas for targeted interventions.",
-    "Customizable risk triggers and automated alerts notify stakeholders when conditions exceed safety parameters."
-  ],
-  image1: "/assets/TakeActionImages/AdditionalinfoImages/resilience1.jpg",
+    detail1: "Safety is at the core of everything we do. We are dedicated to developing solutions that reduce workplace risks, protect employees, and create a culture of proactive safety and well-being.",
+    info1:[
+      "Machine learning–driven analytics leveraging incident, environmental, and operational data to forecast and prevent hazards before they occur.",
+      "Interactive “what-if” simulations that evaluate process modifications, facility layouts, and staffing scenarios under diverse operational conditions.",
+      "Dynamic risk heatmaps highlighting emerging hotspots on floor plans, equipment zones, and workflow areas to guide targeted safety interventions.",
+      "Configurable risk thresholds and real-time alerts that automatically notify stakeholders when safety or well-being parameters are exceeded.",
+    ],
+    image1: "/assets/TakeActionImages/AdditionalinfoImages/resilience1.jpg",
+  },
+  {
+    title: "Accessibility",
+    img: "/assets/TakeActionImages/safety-gear.jpg",
 
-  // 2️⃣ Smart Dashboards & Alerts
-  detail2: "Smart Dashboards & Alerts",
-  info2: [
-    "Unified dashboards combining leading and lagging indicators for real-time safety performance monitoring.",
-    "Drill-down from corporate overview to site metrics for granular analysis of incident trends and root causes.",
-    "Configurable email, SMS, and push notifications for out-of-tolerance events with escalation rules.",
-    "Integration connectors for ERP, HMIS, IoT sensors, and third-party data sources for a holistic safety ecosystem."
-  ],
-  image2: "/assets/TakeActionImages/AdditionalinfoImages/resilience2.jpg",
-
-  // 3️⃣ Incident Automation & Analytics
-  detail3: "Incident Automation & Analytics",
-  info3: [
-    "Digital incident-report forms with mobile capture, voice-to-text, and multimedia attachments for comprehensive data collection.",
-    "Root-cause analysis workflows that suggest corrective actions, assign responsibilities, and track progress.",
-    "Trend-analysis charts to visualize incident types, frequencies, and resolution times over customizable periods.",
-    "Closed-loop verification processes confirm corrective steps, update compliance status, and document follow-up."
-  ],
-  image3: "/assets/TakeActionImages/AdditionalinfoImages/resilience3.jpg",
-},
-
- // ********************************************************** CARD 3 **********************************************************
- {
-  title: "Accessibility",
-  text: "We believe that safety knowledge should be available to everyone—from executives to frontline workers. Our commitment is to provide cost-effective, engaging, and inclusive training that ensures equal access to safety resources worldwide.",
-  img: "/assets/TakeActionImages/safety-gear.jpg",
-
-  // 1️⃣ Harmonized OHS Frameworks
-  detail1: "Harmonized OHS Frameworks",
-  info1: [
-    "Designed to map and reconcile provincial, federal, and international safety standards into a unified framework, ensuring consistent regulatory alignment.",
-    "Centralized policy library with version control, audit trails, and permission-based access to track changes and preserve records.",
-    "Role-based workflows for document approvals and distribution, streamlining collaboration across departments and remote sites.",
-    "Template-driven procedures and checklists that accelerate implementation and reduce customization overhead."
-  ],
-  image1: "/assets/TakeActionImages/AdditionalinfoImages/risk1.jpg",
-
-  // 2️⃣ Cross-Border Advisory Services
-  detail2: "Cross-Border Advisory Services",
-  info2: [
-    "End-to-end permit-filing assistance and liaison with regulatory agencies in Canada, the U.S., and Mexico, including follow-up submissions.",
-    "On-demand expert consultations and guidance to clarify legal interpretations, resolve queries, and minimize approval delays.",
-    "Playbooks and templates for multi-site deployment of safety programs with best-practice checklists and timelines.",
-    "Semi-annual compliance health checks with gap analyses, risk-scoring reports, and prioritized action plans."
-  ],
-  image2: "/assets/TakeActionImages/AdditionalinfoImages/risk2.jpg",
-
-  // 3️⃣ Compliance Monitoring & Reporting
-  detail3: "Compliance Monitoring & Reporting",
-  info3: [
-    "Real-time regulatory alerts delivered to dashboards, email, and mobile notifications for immediate legislative update awareness.",
-    "Automated compliance scorecards highlighting at-risk areas with traffic-light visuals, benchmarks, and trend indicators.",
-    "Audit kits with evidence checklists, document templates, and guidance notes to simplify preparation.",
-    "Scheduled report exports in PDF, Excel, or CSV for stakeholders, insurers, and regulators with auto-delivery."
-  ],
-  image3: "/assets/TakeActionImages/AdditionalinfoImages/risk3.jpg",
-},
-
-// // ********************************************************** CARD 3 **********************************************************
-// {
-//   title: "Safety Champion Ecosystem",
-//   text: "Empower your team with immersive training, safety ambassadors, and real-time alerts—fostering agility and confidence throughout.",
-//   img: "/assets/TakeActionImages/safety-champion.jpg",
-
-//   // 1️⃣ Safety Ambassadors
-//   detail1: "Promote Safety Culture Ambassadors",
-//   info1: [
-//     "Select volunteers from each department to champion safety best practices and mentor peers.",
-//     "Train ambassadors in advanced hazard recognition and motivational communication.",
-//     "Host quarterly “safety showcases” where ambassadors share wins and lessons learned.",
-//     "Recognize top ambassadors with awards, reinforcing peer-driven accountability.",
-//   ],
-//   image1: "/assets/TakeActionImages/AdditionalinfoImages/resilience11.jpg",
-
-//   // 2️⃣ VR Simulations
-//   detail2: "Integrate Virtual Reality (VR) Safety Training",
-//   info2: [
-//     "Develop immersive VR modules that simulate high-risk scenarios—equipment failures, spill responses, evacuations.",
-//     "Tailor lessons to specific roles for maximum relevance and engagement.",
-//     "Capture performance metrics in-session and provide instant, actionable feedback.",
-//     "Refresh VR scenarios quarterly to reflect new processes, regulations, or equipment.",
-//   ],
-//   image2: "/assets/TakeActionImages/AdditionalinfoImages/resilience2.jpg",
-
-//   // 3️⃣ Real-Time Alerts
-//   detail3: "Implement Real-Time Hazard Alert Systems",
-//   info3: [
-//     "Deploy IoT sensors on machinery and in work zones to detect gas leaks, fire, or overheating.",
-//     "Configure mobile push notifications for on-site personnel to get instant warnings.",
-//     "Aggregate alerts on a central dashboard to coordinate rapid incident response.",
-//     "Review alert resolution times and false positives regularly to fine-tune the system.",
-//   ],
-//   image3: "/assets/TakeActionImages/AdditionalinfoImages/resilience3.jpg",
-// },
+    detail1: "We believe that safety knowledge should be available to everyone—from executives to frontline workers. Our commitment is to provide cost-effective, engaging, and inclusive training that ensures equal access to safety resources worldwide.",
+    info1: [
+      "Unified training framework that maps and reconciles provincial, federal, and international safety standards into a single, accessible curriculum for all users.",
+      "Centralized knowledge repository with version control, audit trails, and permission-based access to ensure transparent record-keeping and equal access to safety resources.",
+      "Role-specific training workflows and automated distribution channels that streamline collaboration and engagement from executives to frontline workers, regardless of location.",
+      "Modular, template-driven training modules and interactive checklists designed to accelerate deployment, minimize customization, and guarantee inclusive access to safety knowledge worldwide.",
+    ],
+    image1: "/assets/TakeActionImages/AdditionalinfoImages/risk1.jpg",
+  },
 ];
 
 export default function TakeAction() {
   const sectionRef = useRef(null);
   const [visible, setVisible] = useState(false);
   const [expandedIndex, setExpandedIndex] = useState(null);
-  const [subIndex, setSubIndex] = useState(0);
-  const [isSwitching, setIsSwitching] = useState(false);
 
+  // Fade-in when scrolled into view
   useEffect(() => {
     const obs = new IntersectionObserver(
-      ([e]) => {
-        if (e.isIntersecting) {
+      ([entry]) => {
+        if (entry.isIntersecting) {
           setTimeout(() => setVisible(true), 500);
           obs.disconnect();
         }
@@ -172,41 +62,21 @@ export default function TakeAction() {
     return () => obs.disconnect();
   }, []);
 
+  // Open/close a card’s detail
   const openCard = (i) => {
-    if (expandedIndex === i) {
-      setExpandedIndex(null);
-    } else {
-      setExpandedIndex(i);
-      setSubIndex(0);
-    }
+    setExpandedIndex((prev) => (prev === i ? null : i));
   };
 
+  // If a card is expanded, fetch its detail1/info1/image1
   const current = expandedIndex !== null ? cards[expandedIndex] : null;
-  const sections = current
-    ? current.detail1
-      ? [1, 2, 3]
-      : current.details
-      ? [1]
-      : []
-    : [];
 
-  const next = () => {
-    setSubIndex((subIndex + 1) % sections.length);
-  };
-  const prev = () => {
-    setSubIndex((subIndex + sections.length - 1) % sections.length);
-  };
-
-  // RETURN STATEMENT:
   return (
     <div className="take-action-container">
-    <section ref={sectionRef} className="take-action-section">
-      <h2 className="take-action-heading">Our Core Values</h2>
-        <p>
-        Fundamental beliefs that shape our culture, guide every decision, and drive our success.
-        </p>
+      <section ref={sectionRef} className="take-action-section">
+        <h2 className="take-action-heading">Our Core Values</h2>
+        <p>Fundamental beliefs that shape our culture, guide every decision, and drive our success.</p>
 
-      {/* Cards Grid */}
+        {/* Cards Grid */}
         <div className="cards-container">
           {cards.map((card, i) => {
             const isActive = expandedIndex === i;
@@ -216,7 +86,7 @@ export default function TakeAction() {
                 className={[
                   "card",
                   visible && "fade-in",
-                  isActive && "hovered"
+                  isActive && "hovered",
                 ]
                   .filter(Boolean)
                   .join(" ")}
@@ -228,12 +98,34 @@ export default function TakeAction() {
                 />
                 <div className="card-content">
                   <h3>{card.title}</h3>
-                  <p>{card.text}</p>
+                  {card.text && <p>{card.text}</p>}
+
                   <button
                     className={`card-cta${isActive ? " active" : ""}`}
                     onClick={() => openCard(i)}
                   >
-                    ＋
+                    <span className="icon">
+                      {isActive ? (
+                        /* When active, show the “+” sign (rotated via CSS) */
+                        "+"
+                      ) : (
+                        /* When not active, show your SVG‐based scroll button instead */
+                        <button
+                          className="scroll-down-arrow-card"
+                          
+                          aria-label="Scroll down 600px"
+                        >
+                          <svg viewBox="0 0 16 16" aria-hidden="true">
+                            <path
+                              d="M4 6l4 4 4-4"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                            />
+                          </svg>
+                        </button>
+                      )}
+                    </span>
                   </button>
                 </div>
               </div>
@@ -241,60 +133,29 @@ export default function TakeAction() {
           })}
         </div>
 
-        {/* Details Panel */}
-        {current && (() => {
-          // compute once, before you return your JSX
-          const key   = `image${subIndex + 1}`;
-          const image = current[key];
-
-          const detailKey = `detail${subIndex + 1}`;
-          const infoKey   = `info${subIndex + 1}`;
-          const detailText = current[detailKey] || current.details;
-          const infoList   = current[infoKey]   || current.info  || [];
-
-          return (
-            <div className="card-detail-section">
-              {sections.length > 1 && (
-                <button className="detail-arrow left" onClick={prev}>‹</button>
-              )}
-
-                <h3>{detailText}</h3>
-
-                {/* Image + list side by side */}
-                <div className="card-detail-row">
-                  <img
-                    src={image}
-                    alt={current.title}
-                    className="card-detail-image"
-                  />
-                  <ul className="card-detail-list">
-                    {infoList.map((pt, idx) => (
-                      <li key={idx}>{pt}</li>
-                    ))}
-                  </ul>
-                </div>
-
-              
-
-              {sections.length > 1 && (
-                <button className="detail-arrow right" onClick={next}>›</button>
-              )}
-
-                {/* — index dots — */}
-                <div className="detail-index">
-                  {sections.map((_, idx) => (
-                    <span
-                      key={idx}
-                      className={`detail-dot${idx === subIndex ? " active" : ""}`}
-                    />
-                  ))}
-                </div>
-
-              
+        {/* Detail Section: only shows detail1/info1/image1 */}
+        {current && (
+          <div className="card-detail-section">
+            <div className="card-detail-header">
+              {current.detail1}
             </div>
-          );
-        })()}
-    </section>
+
+            <div className="card-detail-row">
+              <img
+                src={current.image1}
+                alt={current.title}
+                className="card-detail-image"
+              />
+              <ul className="card-detail-list">
+                {current.info1.map((pt, idx) => (
+                  <li key={idx}>{pt}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        )}
+      </section>
     </div>
   );
 }
+

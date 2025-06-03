@@ -5,6 +5,10 @@ import '../App.css';
 import { Link } from 'react-scroll'; // Ensure you import Link from 'react-scroll'
 import { animateScroll as scroll } from 'react-scroll';
 
+// CLASS IMPORTS:
+import TakeAction from "./TakeAction";
+import TakeAction1 from "./TakeAction1";
+import Footer from './footer';
 
 export default class Mission extends Component {
   componentDidMount() {
@@ -50,6 +54,7 @@ export default class Mission extends Component {
             />
           </svg>
         </button>
+
       <div className="parallax-image full-screen-image">
         <img
           src="/assets/AboutUSImages/heroImage.jpg"
@@ -146,7 +151,7 @@ export default class Mission extends Component {
           </div>
         </section>
 
-        {/* Mission / Vision / Values & More */}
+        {/* Mission / Vision / Values & More
         <section className="aboutus-highlights">
           <div className="highlight-card">
             <h3>Mission</h3>
@@ -213,23 +218,18 @@ export default class Mission extends Component {
               </li>
             </ul>
           </div>
-        </section>
+        </section> */}
 
-
-
-        {/* Footer Contact */}
-        <footer className="aboutus-footer">
-          <div className="contact-item">
-            <span className="contact-label">Email</span>
-            <span className="contact-value">l.mcguire@galaxyedgesafety.com</span>
-          </div>
-          <div className="contact-item">
-            <span className="contact-label">Phone</span>
-            <span className="contact-value">604-308-4537</span>
-          </div>
-        </footer>
+        
       </div>
+      <TakeAction />
+      <TakeAction1 />
+
+      {/* Footer Contact */}
+        <Footer />
       </div>
+
+      
     );
   }
 }
