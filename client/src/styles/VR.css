@@ -1,16 +1,10 @@
-/* Success Stories Section */
-.vr-case-studies {
-  margin: 3% 4%;
-  font-family: var(--apple-font-stack);
-  position: relative;
-}
 
 .vr-page-container {
-  padding-top: 4vh; 
+  padding-top: 4vh;
   position: relative;
-  overflow: visible;       /* hide the bottom half of the circle */
+  overflow: visible;  /* allow the semi-circle to show */
   font-family: var(--apple-font-stack);
-  margin: 3% 4% 8% 4% ;
+  margin: 3% 4% 8% 4%;
   height: auto;
 }
 
@@ -18,18 +12,14 @@
 .vr-page-container::before {
   content: "";
   position: absolute;
-  top: -5vh;              /* lift it half its height so only the bottom half shows */
+  top: -5vh;
   left: -4.5%;
-  
-  width: calc(100% + 9%);         /* span container width + both 4% margins */
-  height: 10vh;           /* diameter = 2 × desired depth (5vh) */
-  background: white;      /* match the container’s bg */
-
-  /* carve a perfect downward bulge */
+  width: calc(100% + 9%);  /* span container width + both 4% margins */
+  height: 10vh;            /* diameter = 2 × desired depth (5vh) */
+  background: white;
   border-top-left-radius: 50% 100%;
   border-top-right-radius: 50% 100%;
-  border-top: 6px solid rgb(255, 111, 0) !important;
-
+  border-top: 6px solid rgb(255, 111, 0);
 }
 
 /* Subheading */
@@ -47,8 +37,8 @@
 /* Full-screen background */
 .full-screen-background1 {
   position: relative;
-  width: 100vw auto;
-  height: 550px;
+  width: 90vw;            /* keeps your existing 90vw */
+  aspect-ratio: 16 / 7;   /* exactly 16∶6 = 8∶3 */
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -56,48 +46,111 @@
   margin: 0 1%;
 }
 
-/* Hero content overlay */
-.vr-content {
-  position: absolute;
-  top: 30%;
-  left: 5%;
-  width: 90%;
-  color: #fff;
-  text-align: left;
-  z-index: 2;
-}
+
 
 /* Parallax-content section */
 .vr-section-parallax-content {
   height: auto;
 }
 
-/* VR Details grid */
-.vr-section {
-  background: rgba(255, 255, 255, 0.7);
-  padding: 4rem 2rem;
-}
+
 
 .vr-details {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  justify-content: space-around;
 }
 
 .vr-item {
   flex: 0 1 30%;
+  position: relative;
+  overflow: hidden;
   background-color: #f4f4f4;
-  padding: 1.5rem;
+  padding: 0 !important;             /* image will fill corner-to-corner */
   border-radius: 1rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.09);
+  aspect-ratio: 4 / 5;
 }
 
-.vr-item h3 {
-  font-size: 2rem;
-  font-weight: 500;
-  margin-bottom: 1rem;
+.vr-item-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
 
+.vr-item-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.vr-item-text {
+  position: absolute;              /* allow precise placement */
+  top: 46%;                        /* 30% down from the top of .vr-item */
+  bottom:0;
+  left: 50%;                       /* center‐point horizontally */
+  transform: translateX(-50%);     /* shift back by half its own width */
+  background-color: #fff;          /* white box */
+  border-radius: 0.5rem 0.5rem 0 0;           /* rounded corners, tweak as needed */
+  padding: 0.5rem;                   /* inner spacing */
+  width: 85%;                      /* make the box 80% of the card’s width—adjust as desired */
+  box-sizing: border-box;          /* include padding in that width */
+  z-index: 1;                      /* sit above the image */
+}
+
+/* Once the viewport is wider than ≈1440px (e.g. a 14″ MacBook Pro or larger), 
+   bump the text box down to 56% from the top. Adjust 1440px if you need a slightly different cutoff. */
+   @media (min-width: 1520px) {
+    .vr-item-text {
+      top: 58%;
+    }
+  }
+  
+  /* On very small screens, let it expand full‐width */
+  @media (max-width: 600px) {
+    .vr-item-text {
+      width: 100%;
+      top: 10%; /* you can tweak this for phones */
+    }
+    
+  }
+.vr-item-text h3 {
+  font-size: 1.6rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 1rem !important;
+  line-height: 1.2 !important;
+  margin-top: 1rem;
+  margin-left:0.3rem;
+  margin-right:0.3rem;
+  
+
+}
+
+.vr-item-text p {
+  font-size: 1.2rem;
+  color: #000000 !important;
+  margin-left:0.3rem;
+  margin-right:0.3rem;  
+}
+
+
+
+/* BULLET POINTS */
+.vr-item ul {
+  list-style-type: disc;
+  list-style-position: outside;
+  margin: 1rem 0 0;
+  padding-left: 1.25rem;
+  color: #333;
+}
+
+.vr-item li {
+  margin-bottom: 1rem;
+  line-height: 1.4;
 }
 
 .take-action-heading {
@@ -110,96 +163,57 @@
   margin: 0 auto 2rem;
   max-width: 90%;
   color: #000;
-  text-align: center !important;
-}
-
-.vr-item p {
-  font-size: 1.2rem;
-  color: #333;
-}
-
-/* BULLET POINTS   */
-
-.vr-item ul {
-  list-style-type: disc;         /* use solid disc bullets */
-  list-style-position: OUTSIDE;   /* place bullets inside the text block */
-  margin: 1rem 0 0;              /* spacing above the list */
-  padding-left: 1.25rem;         /* indent the list items */
-  color: #333;                   /* match paragraph text color */
-}
-
-.vr-item li {
-  margin-bottom: 1rem;        /* space between each bullet point */
-  line-height: 1.4;              /* improve readability */
-}
-
-.request-demo-container {
-  display: flex;
-  margin-left: 4% !important;
-  margin-right: 4% !important;
-  flex-direction: column;
-  align-items: center;
   text-align: center;
-  background: linear-gradient(135deg, #ffffff00, #e5e5e500);
-  padding: 4rem 2rem;
-  margin: 3rem 0;
-  box-shadow: 0 10px 90px rgba(0, 0, 0, 0.007);
-  font-family: var(--apple-font-stack);
-  font-size: 2.5rem;
-  font-weight: 600;
-  line-height: 1.2;
-  color: #1d1d1f;
-  
-  margin-bottom: 2rem;
-  letter-spacing: -0.02rem;
-  
 }
 
-.request-demo-button {
-  font-family: var(--apple-system-stack);
-  display: inline-block;
-  position: relative;
+
+.margin-button {
+  position: absolute;      /* changed from relative */
+  bottom: 0;               /* stick to the bottom of the parent */
   overflow: hidden;
-  background: transparent;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 450;
+  padding: 0.8rem 6rem;
+  font-size: 2rem;
+  background-color: #fff;
   color: #000;
-  font-size: 1.8rem;
-  font-weight: 600;
-  padding: 0.75rem 1.75rem;
-  border: none;
-  border-radius: 999px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.173);
-  transition: color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  border: 2px solid #000;
+  border-radius: 1.3rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.09);
 }
 
-.request-demo-button::before {
+
+.margin-button::before {
   content: "";
   position: absolute;
   top: 50%;
   left: 0;
-  height: 200%;
   width: 0;
+  height: 200%;
   background-color: #000;
   border-radius: 0 100% 100% 0;
   transform: translateY(-50%);
-  transition: width 0.4s ease;
+  transition: width 0.5s ease;
   z-index: -1;
 }
 
-.request-demo-button:hover::before {
+.margin-button:hover::before {
   width: 200%;
 }
 
-.request-demo-button:hover {
+.margin-button:hover {
   color: #fff;
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
-.request-demo-button:active {
+.margin-button:active {
   transform: translateY(0);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
-
 
 /* Carousel arrows */
 .vr-arrow {
@@ -251,27 +265,18 @@
   margin-bottom: 1.5rem;
 }
 
-
-/* 
------------------------------------------------------------------------------------------------
-*************************************** SUCCESS STORIES ***************************************
------------------------------------------------------------------------------------------------
-*/
-
-
-/* Container: two columns, independent heights */
+/* Testimonials */
 .vr-testimonials {
   column-count: 2;
-  column-gap: 2rem;      /* horizontal gap between columns */
+  column-gap: 2rem;
   margin-top: 1.5rem;
 }
 
-/* Each bubble becomes an inline-block in the column flow */
 .vr-testimonial {
   display: inline-block;
   width: 100%;
-  margin-bottom: 1rem;   /* vertical gap between items */
-  break-inside: avoid;   /* keep the entire bubble together */
+  margin-bottom: 1rem;
+  break-inside: avoid;
   padding: 1rem 1.5rem;
   line-height: 1.5;
   font-size: 1.125rem;
@@ -280,52 +285,49 @@
   max-width: 100%;
 }
 
-
-/* Left bubbles (items 1–3) land in col 1, rows auto 1–3 */
 .vr-testimonial:nth-child(-n+3) {
   grid-column: 1;
 }
 
-/* Right bubbles (item 4 → row 1, item 5 → row 2) */
 .vr-testimonial:nth-child(4) {
   grid-column: 2;
   grid-row: 1;
 }
+
 .vr-testimonial:nth-child(5) {
   grid-column: 2;
   grid-row: 2;
 }
 
-/* Odd (left) bubbles */
 .vr-testimonial:nth-child(odd) {
-  background: linear-gradient(35deg, #0482ff3f 0%, #ffffff 100%);
+  background: linear-gradient(35deg, #0482ff3f 0%, #fff 100%);
   color: #1d1d1f;
 }
+
 .vr-testimonial:nth-child(odd)::before {
   content: "";
   position: absolute;
   top: 1rem;
   left: -0.75rem;
   border: 0.75rem solid transparent;
-  border-right-color: #f5f5f700;
+  border-right-color: transparent;
 }
 
-/* Even (right) bubbles */
 .vr-testimonial:nth-child(even) {
-  background: linear-gradient(35deg, #0482ff3f 0%, #ffffff 100%);
-  color: #000000;
+  background: linear-gradient(35deg, #0482ff3f 0%, #fff 100%);
+  color: #000;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
 .vr-testimonial:nth-child(even)::before {
   content: "";
   position: absolute;
   top: 1rem;
   right: -0.75rem;
   border: 0.75rem solid transparent;
-  border-left-color: #0a84ff00;
+  border-left-color: transparent;
 }
 
-/* Author text */
 .vr-testimonial span {
   display: block;
   margin-top: 0.5rem;
@@ -340,57 +342,173 @@
   }
 }
 
-
 /* Collapse to one column on small screens */
 @media (max-width: 600px) {
   .vr-testimonials {
-    grid-template-columns: 1fr;
+    column-count: 1;
   }
   .vr-testimonial {
     max-width: 100%;
   }
 }
 
-/* OUR MISSION BUTTON */
 
-.margin-button {
-  position: relative;
-  overflow: hidden;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  font-weight: 450;
-  padding: 0.8rem 6rem;
-  font-size: 2rem;
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-  border: 2px solid black;    /* ← added solid black border */
-  border-radius: 1.3rem;
+/* OUR MISSION BUTTON */
+/* CARD 1: */
+.mission-buttons1 {
+  position: absolute;       /* allow bottom positioning */
+  bottom: 0.5rem;             /* 1rem up from the parent’s bottom */
+  left: 50%;                /* center horizontally */
+  transform: translateX(-50%);
+  width: 3rem;
+  height: 3rem;
+  background-color: #fff;
+  color: #000;
+
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  margin-top: 5%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.09);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+               Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 250;
+  font-size: 2rem;
+  overflow: hidden;
+  transition:
+    width 0.4s ease,
+    border-radius 0.4s ease,
+    background-color 0.4s ease,
+    box-shadow 0.1s ease;
 }
 
-/* Sweep-over hover effect */
-.margin-button::before {
-  content: "";
+
+.mission-buttons1::after {
+  content: "Learn more about our mission....";
   position: absolute;
   top: 50%;
-  left: 0;
-  width: 0;
-  height: 200%;
-  background-color: rgb(255, 136, 0);
-  border-radius: 0 100% 100% 0;
-  transform: translateY(-50%);
-  transition: width 0.5s ease;
-  z-index: -1;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  white-space: nowrap;
+  transition: opacity 0.3s ease;
+  font-size: 1.3rem;
+  color: white;
+  font-weight: 450;
+  
 }
 
-.margin-button:hover::before {
-  width: 200%;
+.mission-buttons1:hover {
+  width: 21rem;
+  border-radius: 2rem;
+  background-color: #000;
 }
 
-/* Scale up on hover */
-.margin-button:hover {
-  transform: scale(1.01);
+.mission-buttons1:hover::after {
+  opacity: 1;
+}
+
+/* CARD 2 */
+.mission-buttons2 {
+  position: absolute;       /* allow bottom positioning */
+  bottom: 0.5rem;             /* 1rem up from the parent’s bottom */
+  left: 50%;                /* center horizontally */
+  transform: translateX(-50%);
+  width: 3rem;
+  height: 3rem;
+  background-color: #fff;
+  color: #000;
+
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+               Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 250;
+  font-size: 2rem;
+  overflow: hidden;
+  transition:
+    width 0.4s ease,
+    border-radius 0.4s ease,
+    background-color 0.4s ease,
+    box-shadow 0.1s ease;
+}
+
+
+.mission-buttons2::after {
+  content: "Learn more about our Founder....";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  white-space: nowrap;
+  transition: opacity 0.3s ease;
+  font-size: 1.3rem;
+  color: white;
+  font-weight: 450;
+  
+}
+
+.mission-buttons2:hover {
+  width: 21rem;
+  border-radius: 2rem;
+  background-color: #000;
+}
+
+.mission-buttons2:hover::after {
+  opacity: 1;
+}
+
+/* CARD 3 */
+.mission-buttons3 {
+  position: absolute;       /* allow bottom positioning */
+  bottom: 0.5rem;             /* 1rem up from the parent’s bottom */
+  left: 50%;                /* center horizontally */
+  transform: translateX(-50%);
+  width: 3rem;
+  height: 3rem;
+  background-color: #fff;
+  color: #000;
+
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+               Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 250;
+  font-size: 2rem;
+  overflow: hidden;
+  transition:
+    width 0.4s ease,
+    border-radius 0.4s ease,
+    background-color 0.4s ease,
+    box-shadow 0.1s ease;
+}
+
+
+.mission-buttons3::after {
+  content: "Contact Us today !!!";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  white-space: nowrap;
+  transition: opacity 0.3s ease;
+  font-size: 1.3rem;
+  color: white;
+  font-weight: 450;
+  
+}
+
+.mission-buttons3:hover {
+  width: 14rem;
+  border-radius: 2rem;
+  background-color: #000;
+}
+
+.mission-buttons3:hover::after {
+  opacity: 1;
 }

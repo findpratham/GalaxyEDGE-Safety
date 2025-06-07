@@ -30,11 +30,10 @@ export default function App() {
         <Route path="/home" element={
           <>
           <div id="home"><Home/></div>
-          
           <div id="about-us"><About/></div>
           <div id="learn_more"><VR/></div>
-          <ActionApproach/>
-          <div id="learn_more"><ReachOutNow/></div> 
+          <ActionApproach/> 
+          <ReachOutNow/>
           {/* <div id="product-services"><ProductServices/></div> */}
           {/* <div id="product-services"><TakeAction/></div> */}
           {/* <div id="learn_more"><TakeAction1/></div> */}

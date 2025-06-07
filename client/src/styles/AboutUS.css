@@ -1,276 +1,354 @@
 :root {
-    --apple-font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-                        Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  }
+  --apple-font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+                      Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+/* system font, generous whitespace */
+.aboutus-container {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+               Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  color: #1d1d1f;
+  background: #ffffff;
+  margin-top: 3% !important;
+  margin-bottom: 4%;
   
-  /* system font, generous whitespace */
-  .aboutus-container {
+}
+
+.hero-heading {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+  /* Heading Styling */
+  .hero-heading h1{
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-                 Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-    color: #1d1d1f;
-    background: #ffffff;
-    margin-top: 3% !important;
-    margin-bottom: 4%;
+    Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-weight: 550;              /* semibold like Apple’s headlines */
+    letter-spacing: -0.02em;
+    font-size: 4rem; /* Slightly smaller font size for better fit */
+    color: rgb(0, 0, 0); /* White color for heading */
+    line-height: 1.1; /* Line height for readability */
+    padding: 10px 10px;
+    opacity: 0;
+    animation: slideInFromLeft 4s ease-out forwards;
     
   }
 
-  .aboutus-hero-content{
-    font-size: 1.4rem;
-    line-height: 1.4;
-    font-weight: 500;
-  }
 
-  .margins{
-    margin-left: 4%;
-    margin-right: 4%;
-    margin-top: 1% !important;
-  }
-  
-  /* Hero / Intro */
-  .aboutus-hero {
-    display: flex;
-    align-items: flex-start;   /* logo tops align with text */
-    gap: 2rem;
-    padding: 2rem 1rem;
-    text-align: left;          /* override any centering */
-  }
-
-  .aboutus-logo {
-    flex-shrink: 0;
-    max-width: 140px;              /* tweak this to your ideal logo width */
-    height: auto;
-    display: block;
-    align-self: top;
-  }
-  
-  .aboutus-hero h1 {
-    font-size: 3.5rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-  }
-  
-  .aboutus-hero h2 {
-    font-size: 2rem;
-    font-weight: 500;
-    margin-bottom: 1rem;
-  }
-  
-  .aboutus-hero p {
-    font-size: 1.5rem;
-    line-height: 1.4;
-    font-weight: 300;
-  }
-  
-  /* Mission / Vision / Values cards */
-  .aboutus-highlights {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-bottom: 3rem;
-  }
-  
-  .highlight-card {
-    flex: 1;
-    background: #f5f5f7;
-    border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.05);
-
-  }
-.highlight-card ul {
-    list-style-type: disc;
-    list-style-position: outside;
-    margin: 1rem 0 0;
-    padding-left: 1.5rem;
+.margins{
+  margin-left: 4%;
+  margin-right: 4%;
+  margin-top: 1% !important;
 }
-  .highlight-card li {
-    margin-bottom: 0.5rem;
-  }
-  
-  .highlight-card h3 {
-    font-size: 2rem;
-    margin-bottom: 0.75rem;
-    color: #000000;
-    font-weight: 600;
-  }
-  
-  .highlight-card p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #1d1d1f;
-  }
-  
-  /* Founder Profile */
-  .aboutus-founder {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    margin-bottom: 3rem;
-  }
-  
-  .founder-text {
-    flex: 2;
-  }
-  
-  .founder-text h3 {
-    font-size: 1.9rem;
-    font-weight: 600;
-    color: #000000;
-    margin-bottom: 1rem;
-  }
 
-  .founder-text h4 {
-    margin-top: -1%;
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: #000000;
-    margin-bottom: 1rem;
+/* Hero / Intro */
+.aboutus-hero {
+  display: flex;
+  align-items: flex-start;   /* logo tops align with text */
+  gap: 2rem;
+  padding: 2rem 1rem;
+  text-align: left;          /* override any centering */
+}
+
+/* Mission / Vision / Values cards */
+.aboutus-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.highlight-card {
+  flex: 1;
+  background: #f5f5f7;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+
+}
+.highlight-card ul {
+  list-style-type: disc;
+  list-style-position: outside;
+  margin: 1rem 0 0;
+  padding-left: 1.5rem;
+}
+.highlight-card li {
+  margin-bottom: 0.5rem;
+}
+
+.highlight-card h3 {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  color: #000000;
+  font-weight: 600;
+}
+
+.highlight-card p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #1d1d1f;
+}
+
+/* Founder Profile */
+.aboutus-founder {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.founder-text {
+  flex: 2;
+}
+
+.founder-text h2 {
+  font-size: 4.5rem;
+  font-weight: 600;
+  color: #000000;
+  margin-left: 40%
+
+}
+
+.founder-text h3 {
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 0.5rem;
+}
+
+.founder-text h4 {
+  margin-top: -1%;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #000000;
+  margin-bottom: 1rem;
+}
+
+.founder-text p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+.founder-stats {
+  display: flex;
+  gap: 2rem;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #6e6e73;
+}
+
+.founder-image img {
+  display: block;
+  width: 500px;
+  max-width: 550px;
+  height: auto;
+  aspect-ratio: 1/1;
+  margin: 25% auto 1rem;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.373);
+}
+
+/* Footer Contact */
+.aboutus-footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2rem;
+  border-top: 1px solid #e1e1e1;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-label {
+  font-size: 1.2rem;
+  color: #6e6e73;
+  margin-bottom: 0.25rem;
+}
+
+.contact-value {
+  font-size: 1.2rem;
+  color: #1d1d1f;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .aboutus-highlights {
+    flex-direction: column;
   }
-  
-  .founder-text p {
-    font-size: 1.4rem;
-    line-height: 1.6;
-  }
-  
-  .founder-stats {
-    display: flex;
-    gap: 2rem;
-  }
-  
-  .stat {
+  .aboutus-founder {
+    flex-direction: column;
     text-align: center;
   }
-  
-  .stat-number {
-    display: block;
-    font-size: 2rem;
-    font-weight: 600;
-  }
-  
-  .stat-label {
-    font-size: 0.9rem;
-    color: #6e6e73;
-  }
-  
   .founder-image img {
-    display: block;
-    width: 350px;
-    max-width: 500px;
-    height: auto;
-    aspect-ratio: 1/1;
-    margin: 25% auto 1rem;
-    object-fit: cover;
-    border-radius: 50%;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.373);
+    margin: 0 auto;
   }
-  
-  /* Footer Contact */
   .aboutus-footer {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 2rem;
-    border-top: 1px solid #e1e1e1;
-    margin-left: 4%;
-    margin-right: 4%;
-  }
-  
-  .contact-item {
-    display: flex;
     flex-direction: column;
+    gap: 1rem;
+    text-align: center;
   }
-  
-  .contact-label {
-    font-size: 1.2rem;
-    color: #6e6e73;
-    margin-bottom: 0.25rem;
-  }
-  
-  .contact-value {
-    font-size: 1.2rem;
-    color: #1d1d1f;
-  }
-  
-  /* Responsive tweaks */
-  @media (max-width: 768px) {
-    .aboutus-highlights {
-      flex-direction: column;
-    }
-    .aboutus-founder {
-      flex-direction: column;
-      text-align: center;
-    }
-    .founder-image img {
-      margin: 0 auto;
-    }
-    .aboutus-footer {
-      flex-direction: column;
-      gap: 1rem;
-      text-align: center;
-    }
-  }
-  
-  /* Parallax Image Styling */
-.parallax-image {
-  position: relative;
-  width: 100%;
-  height: 80vh; /* Adjust to fit your needs */
-  overflow: hidden;
-  z-index: 700; /* Ensure it's below the content */
-  
 }
-  /* Additional helper */
-  .founder-profile-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .aboutUS-image-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensure the image covers the entire area without distortion */
-  }
 
 
-  .parallax-image::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    /* Use half your pseudo-element’s height here */
-    bottom: 0vh;
-    width: 100%;
-    /* Total “diameter” of the half-circle = 20vh */
-    height: 10vh;
-    background: white; /* Or whatever your next section’s bg is */
-    /* perfect semi-ellipse: 50% of width, 100% of height */
-    border-top-left-radius: 50% 100% ;
-    border-top-right-radius: 50% 100%;
-    border-top: 6px solid rgb(255, 111, 0);
-  }
-
+/* Additional helper */
+.founder-profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
   /* Content in Home Section */
 .contentAboutUS {
   position: absolute;
-  top: 17%; /* Move the content 250px from the top of the parent container */
-  left: 1%; /* Keep the content 2% from the left */
-  transform: translateY(0); /* No vertical translation, let it stay at 250px from top */
+  top: 13%; /* Move the content 250px from the top of the parent container */
+  left: 50%;              /* position midpoint at 50% */
+  transform: translateX(-50%);  /* shift left by half its own width */
   text-align: left;
   z-index: 1000; /* Ensure content is above the background */
-  width: 90%; /* Adjust the width for the content */
-
+ 
+}
+.Logo-image {
+  position: relative;
+  /* You no longer need width/height here */
+  display: block;
+  
 }
 
-/* Heading Styling */
+.Logo-image img.aboutus-logo {
+  width: 60% !important;   /* scale the image to 150% of its parent’s width */
+  height: auto;             /* keep aspect ratio */
+  max-width: none !important;
+  display: block;           /* remove any inline spacing */
+  
+}
+
+.Hero-text{
+  position: absolute;
+  top: 45%; /* Move the content 250px from the top of the parent container */
+  left: 50%;          /* center horizontally */
+  transform: translateX(-50%);  /* shift left by half its own width */
+  text-align: left;
+  display: inline-block;
+  white-space: nowrap;
+  z-index: 1000; /* Ensure content is above the background */
+}
+
+  /* Heading Styling */
 .heading {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
   Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-weight: 550;              /* semibold like Apple’s headlines */
   letter-spacing: -0.02em;
-  font-size: 4.5rem; /* Slightly smaller font size for better fit */
+  font-size: 5rem; /* Slightly smaller font size for better fit */
   color: rgb(255, 255, 255); /* White color for heading */
   line-height: 1.1; /* Line height for readability */
   padding: 10px 10px;
   opacity: 0;
   animation: slideInFromLeft 4s ease-out forwards;
+}
+
+
+.aboutUS-image-img {
+  position: absolute;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;    /* covers whole area without distortion */
+  object-position: botom; /* keeps focus centered */
+}
+
+
+.parallax-image::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  /* Use half your pseudo-element’s height here */
+  bottom: 0vh;
+  width: 100%;
+  /* Total “diameter” of the half-circle = 20vh */
+  height: 10vh;
+  background: white; /* Or whatever your next section’s bg is */
+  /* perfect semi-ellipse: 50% of width, 100% of height */
+  border-top-left-radius: 50% 100% ;
+  border-top-right-radius: 50% 100%;
+  border-top: 6px solid rgb(255, 111, 0);
+}
+
+
+
+
+
+
+
+
+.mission-button {
+  display: block;
+  margin: 5% auto 0 auto;
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  background-color: #fff;
+  color: #000;
+  border: 0px solid #000;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+               Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 350;
+  font-size: 2.5rem;
+  overflow: hidden;
+  transition:
+  width 0.4s ease,
+  border-radius 0.4s ease,
+  background-color 0.4s ease,
+  box-shadow 0.1s ease;
+  margin-top: 10%;
+}
+
+
+.mission-button::after {
+  content: "Learn more About our mission";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  white-space: nowrap;
+  transition: 
+    opacity 0.3s ease
+    transform 0.3s ease;
+  font-size: 1.6rem;
+  color: white;
+  font-weight: 450;
+}
+
+.mission-button:hover {
+  width: 31rem;
+  border-radius: 2rem;
+  background-color: #000;
+  transform: scale(1.6);
+}
+
+.mission-button:hover::after {
+  opacity: 1;
+  
 }

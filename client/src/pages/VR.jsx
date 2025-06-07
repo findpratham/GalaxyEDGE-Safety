@@ -15,7 +15,7 @@ export default function VR() {
   
     const sectionTop  = sectionRef.current.offsetTop;
     const vh          = window.innerHeight;
-    const delayPx     = 300;          // fixed delay before anything happens
+    const delayPx     = 500;          // fixed delay before anything happens
     const scrollRange = vh * 2;       // span the effect over 2× viewport height
   
     // simple “ease‐out‐cubic” easing
@@ -89,10 +89,7 @@ export default function VR() {
           style={{ backgroundImage: "url('/assets/VR-background.jpg')" }}
         >
 
-        <div className="vr-content">
-          <p className="subtext">
-          </p>
-        </div>
+        
       </div>
 
       {/* VR Section for Employee Safety Training */}
@@ -100,44 +97,122 @@ export default function VR() {
         <div className="section-header">
             <br/>
             <br/>
-          <h2 className="typography-section-headline">Transform Safety Training with Virtual Reality</h2>
+          <h2 className="typography-section-headline">Transform Safety Training with the pioneers of workplace safety</h2>
           <br/>
         </div>
         <div className="vr-details">
-          <div className="vr-item">
-            <h3>Interactive Safety Simulations</h3>
-            <p>
-              VR allows employees to interact with real-world scenarios in a controlled environment.
-              From handling hazardous materials to learning emergency evacuation procedures, immersive
-              simulations make training more effective and memorable.
-            </p>
-            
+          {/* ── CARD 1 ── */}
+          <div className="vr-item" >
+            <div className="vr-item-image-wrapper">
+              <img src="/assets/VR-image1.jpg" alt = "" className="vr-item-image" />
+              <div className="vr-item-text">
+                <h3>Redefining Safety Through Tomorrow’s Innovations</h3>
+                <p>
+                Empowering workplaces worldwide with cutting-edge safety solutions that protect people and drive progress
+                </p>
+                <NavLink to="/our-mission" end>
+                  <button className="mission-buttons1">↓</button>
+                </NavLink>
+              </div>
+            </div>
           </div>
 
+          {/* ── CARD 2 ── */}
           <div className="vr-item">
-            <h3>Scalable and Flexible Training</h3>
-            <p>
-              Virtual reality enables scalable training programs that can be accessed anywhere, anytime.
-              It’s a cost-effective solution for large teams and businesses with remote workers.
-            </p>
-           
+            <div className="vr-item-image-wrapper">
+              <img
+                src="/assets/image2.jpg"
+                alt="Scalable and Flexible Training"
+                className="vr-item-image"
+              />
+              <div className="vr-item-text">
+                <h3>The Visionary Shaping Tomorrow’s Workplaces</h3>
+                <p>
+                Lisa McGuire, ICD.D, CRSP: a safety visionary who slashed injury rates by 40% and grew an alliance from 800 to 3,000 members.                </p>
+                <NavLink to="/about-us" end>
+                  <button className="mission-buttons2">↓</button>
+                </NavLink>
+              </div>
+            </div>
           </div>
 
+          {/* ── CARD 3 ── */}
           <div className="vr-item">
-            <h3>Real-Time Feedback</h3>
-            <p>
-              Employees receive instant feedback during training sessions, helping them improve their
-              decision-making skills and become more confident in handling various situations.
-            </p>
-            
+            <div className="vr-item-image-wrapper">
+              <img
+                src="/assets/image3.jpg"
+                alt="Real-Time Feedback"
+                className="vr-item-image"
+              />
+              <div className="vr-item-text">
+                <h3>Transform Your Safety Training Today</h3>
+                <p>
+                Take the first step toward a safer, smarter workplace—partner with us to revolutionize your safety training and protect what matters most!
+                </p>
+                <NavLink to="/contact" end>
+                  <button className="mission-buttons3">↓</button>
+                </NavLink>
+              </div>
+            </div>
           </div>
-          <NavLink to="/our-mission" end>
-              <button className="margin-button">
-                Our Mission
-              </button>
-            </NavLink>
+          {/* ── CARD 1 ── */}
+          <div className="vr-item" >
+            <div className="vr-item-image-wrapper">
+              <img src="/assets/VR-image1.jpg" alt = "" className="vr-item-image" />
+              <div className="vr-item-text">
+                <h3>Redefining Safety Through Tomorrow’s Innovations</h3>
+                <p>
+                Empowering workplaces worldwide with cutting-edge safety solutions that protect people and drive progress
+                </p>
+                <NavLink to="/our-mission" end>
+                  <button className="mission-buttons1">↓</button>
+                </NavLink>
+              </div>
+            </div>
+          </div>
+
+          {/* ── CARD 2 ── */}
+          <div className="vr-item">
+            <div className="vr-item-image-wrapper">
+              <img
+                src="/assets/image2.jpg"
+                alt="Scalable and Flexible Training"
+                className="vr-item-image"
+              />
+              <div className="vr-item-text">
+                <h3>The Visionary Shaping Tomorrow’s Workplaces</h3>
+                <p>
+                Lisa McGuire, ICD.D, CRSP: a safety visionary who slashed injury rates by 40% and grew an alliance from 800 to 3,000 members.                </p>
+                <NavLink to="/about-us" end>
+                  <button className="mission-buttons2">↓</button>
+                </NavLink>
+              </div>
+            </div>
+          </div>
+
+          {/* ── CARD 3 ── */}
+          <div className="vr-item">
+            <div className="vr-item-image-wrapper">
+              <img
+                src="/assets/image3.jpg"
+                alt="Real-Time Feedback"
+                className="vr-item-image"
+              />
+              <div className="vr-item-text">
+                <h3>Transform Your Safety Training Today</h3>
+                <p>
+                Take the first step toward a safer, smarter workplace—partner with us to revolutionize your safety training and protect what matters most!
+                </p>
+                <NavLink to="/contact" end>
+                  <button className="mission-buttons3">↓</button>
+                </NavLink>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   );
 }
+
+
