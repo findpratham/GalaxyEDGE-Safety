@@ -50,8 +50,6 @@
   animation: fadeIn 2s ease-out forwards;
   transform-origin: center center;
   transition: transform 0.3s ease;
-
-  
 }
 .card.hovered {
   transform: scale(1.09);

@@ -29,7 +29,10 @@ export default function App() {
         {/* HOME ROUTE WITH HOME, ABOUT $ TAKEACTION */}
         <Route path="/home" element={
           <>
+          
           <div id="home"><Home/></div>
+          
+          
           <div id="about-us"><About/></div>
           <div id="learn_more"><VR/></div>
           <ActionApproach/> 

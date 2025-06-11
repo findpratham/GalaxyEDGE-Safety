@@ -9,7 +9,6 @@ export default function Home() {
   }, []);
   return (
     <div className="home-container">
-      {/* Top scroll arrow */}
       <Link to="about-us" smooth duration={1000}>
         <div className="scroll-down-arrow">
           <svg viewBox="0 0 16 16" aria-hidden="false">
@@ -22,24 +21,33 @@ export default function Home() {
           </svg>
         </div>
       </Link>
+      <div className="contentAboutUS">
+        <div className = "Hero-Logo-image">
+          <img
+              src="/assets/logo.jpg"
+              alt="GalaxyEDGE Safety Logo"
+              className="aboutus-logo"
+            />
+        </div>
+      </div>
 
       {/* Full-screen hero image */}
       <div className="parallax-image full-screen-image">
-        <img
-          src="/assets/MainPage/final.jpg"
-          alt="Main background"
-          className="parallax-image-img"
-        />
+      <video
+        className="parallax-image-img"
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        aria-label="Main background video"
+      >
+        <source src="/assets/MainPage/hero-video.mp4" type="video/mp4" />
+        Your browser doesn’t support HTML5 video.
+      </video>
 
-        {/* <div className="logo">
-          <img
-            src="/assets/logo.jpg"
-            alt="GalaxyEDGE Safety Inc."
-            className="logo-img"
-          />
-        </div> */}
 
-        <div className="content">
+        {/* <div className="content">
           <h1 className="heading">
             Advancing Global Health <br />
             <span className="sub-heading">
@@ -66,7 +74,7 @@ export default function Home() {
               </button>
             </NavLink>
           </div>
-        </div>
+        </div> */}
       </div>
 
       

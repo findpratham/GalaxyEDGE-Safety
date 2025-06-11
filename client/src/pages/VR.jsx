@@ -155,60 +155,7 @@ export default function VR() {
               </div>
             </div>
           </div>
-          {/* ── CARD 1 ── */}
-          <div className="vr-item" >
-            <div className="vr-item-image-wrapper">
-              <img src="/assets/VR-image1.jpg" alt = "" className="vr-item-image" />
-              <div className="vr-item-text">
-                <h3>Redefining Safety Through Tomorrow’s Innovations</h3>
-                <p>
-                Empowering workplaces worldwide with cutting-edge safety solutions that protect people and drive progress
-                </p>
-                <NavLink to="/our-mission" end>
-                  <button className="mission-buttons1">↓</button>
-                </NavLink>
-              </div>
-            </div>
-          </div>
 
-          {/* ── CARD 2 ── */}
-          <div className="vr-item">
-            <div className="vr-item-image-wrapper">
-              <img
-                src="/assets/image2.jpg"
-                alt="Scalable and Flexible Training"
-                className="vr-item-image"
-              />
-              <div className="vr-item-text">
-                <h3>The Visionary Shaping Tomorrow’s Workplaces</h3>
-                <p>
-                Lisa McGuire, ICD.D, CRSP: a safety visionary who slashed injury rates by 40% and grew an alliance from 800 to 3,000 members.                </p>
-                <NavLink to="/about-us" end>
-                  <button className="mission-buttons2">↓</button>
-                </NavLink>
-              </div>
-            </div>
-          </div>
-
-          {/* ── CARD 3 ── */}
-          <div className="vr-item">
-            <div className="vr-item-image-wrapper">
-              <img
-                src="/assets/image3.jpg"
-                alt="Real-Time Feedback"
-                className="vr-item-image"
-              />
-              <div className="vr-item-text">
-                <h3>Transform Your Safety Training Today</h3>
-                <p>
-                Take the first step toward a safer, smarter workplace—partner with us to revolutionize your safety training and protect what matters most!
-                </p>
-                <NavLink to="/contact" end>
-                  <button className="mission-buttons3">↓</button>
-                </NavLink>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>

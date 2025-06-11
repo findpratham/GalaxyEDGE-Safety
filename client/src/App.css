@@ -6,6 +6,8 @@
   
   }
 
+  
+
   /* Hide scrollbars in WebKit‐based browsers (Chrome, Safari, Opera, Edge) */
 ::-webkit-scrollbar {
   display: none;
@@ -98,14 +100,36 @@
   }
   
 
+  .Hero-Logo-image {
+    margin-top: 0rem;
+    position: relative;
+    /* You no longer need width/height here */
+    display: block;
+    left: 56%;
+    transform: translateX(-50%);
+  }
+  
+  .Hero-Logo-image img.aboutus-logo {
+    width: 87% !important;   /* scale the image to 150% of its parent’s width */
+    height: auto;             /* keep aspect ratio */
+    max-width: none !important;
+    display: block;           /* remove any inline spacing */
+    
+  }
+
 /* 
 -----------------------------------------------------------------------------------------------
 *************************************** PARALLAX STYLING **************************************
 -----------------------------------------------------------------------------------------------
 */
 
-.home-container {
+.hero-container {
   padding-top: 6rem;            /* match your header height */
+  height: 100vh;
+}
+
+.home-container {
+  padding-top: 6rem !important;            /* match your header height */
   height: 100vh;
 }
 
