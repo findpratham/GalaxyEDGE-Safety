@@ -20,26 +20,16 @@ export default function About() {
         
         <h2 className="about-title">Who we are...</h2>
         <p className="about-text">
-          At GalaxyEDGE Safety Inc. (GESI), we are redefining global health and
-          safety standards through innovation, digital transformation, and
-          immersive learning technologies.
+          At GalaxyEDGE Safety Inc. (GESI), we are redefining global health and safety standards through leading-edge innovation, strategic consultancy, and immersive digital transformation
           <br />
           <br />
-          Our mission is to lead the industry by integrating AI-powered safety
-          solutions, cutting-edge digital tools, and accessible training
-          programs to create safer, smarter workplaces worldwide.
+          Our mission is to lead the industry by integrating AI-powered safety solutions, advanced digital tools, and accessible training programs to build safer, smarter workplaces across the globe. Grounded in engineering, education, and strategic partnerships, we offer tailored consultancy services that empower organizations to navigate complex safety challenges with clarity and confidence.
           <br />
           <br />
-          With a strong foundation that incorporates various disciplines
-          incorporating engineering, education, and strategic partnerships,
-          through our customized client services—GESI is committed to
-          empowering businesses, professionals, and workers with the tools and
-          knowledge needed to navigate the rapidly evolving safety landscape.
+          Through our customized approach, GESI equips businesses, professionals, and frontline workers with the tools and knowledge needed to thrive in today’s rapidly evolving safety landscape.
           <br />
           <br />
-          Our approach integrates risk management, ESG-aligned strategies, and
-          digital safety technologies to deliver high-impact, scalable
-          solutions for organizations across various industries.
+          We align risk management with ESG principles and future-ready technologies to deliver scalable, high-impact solutions across diverse industries.
         </p>
         
 

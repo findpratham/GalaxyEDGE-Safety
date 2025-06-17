@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 import { NavLink } from 'react-router-dom';
+import '../styles/HeaderHome.css';
 
-export default function Header() {
+export default function HeaderHome() {
 
   const [scrolled, setScrolled] = useState(false);
 
@@ -16,7 +17,7 @@ export default function Header() {
 
 
   return (
-    <header className={`header-container${scrolled ? ' scrolled' : ''}`}>
+    <header className={`hero-container${scrolled ? ' scrolled' : ''}`}>
       <div className="logo">
           <img
             src="/assets/tablogo.jpg"

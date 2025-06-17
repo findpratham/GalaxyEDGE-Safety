@@ -50,36 +50,36 @@ export default function Header() {
           
           {/* PRODUCT/SERVICES TAB */}
           <li>
-            <Link to="product-services" smooth={true} duration={900}>
-              Products/Services
+            <Link to="services" smooth={true} duration={900}>
+              Services
             </Link>
           </li>
 
           {/* PARTNERSHIPS TAB */}
           <li>
-            <Link to="partnerships" smooth={true} duration={500}>
-              Partnerships
+            <Link to="training" smooth={true} duration={500}>
+              Training
             </Link>
           </li>
 
           {/* EDUCATION TAB */}
           <li>
-            <Link to="education" smooth={true} duration={500}>
-              Education
+            <Link to="innovations" smooth={true} duration={500}>
+              Innovations
             </Link>
           </li>
           
           {/* RESOURCES TAB */}
           <li>
-            <Link to="resources" smooth={true} duration={500}>
-              Prototype
+            <Link to="events" smooth={true} duration={500}>
+              Events
             </Link>
           </li>
 
           {/* EVENTS TAB */}
           <li>
-            <Link to="events" smooth={true} duration={500}>
-              Events
+            <Link to="partnerships" smooth={true} duration={500}>
+              Partnerships
             </Link>
           </li> 
         </ul>

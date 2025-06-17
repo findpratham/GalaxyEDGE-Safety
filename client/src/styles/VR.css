@@ -1,11 +1,24 @@
 
+.Globe-container{
+  position: relative; 
+  width: 1400px;
+  max-width: 1400px;
+  height: 1300px;
+  max-height: 1300px;
+  margin:  auto;
+
+}
+
+
+
 .vr-page-container {
   padding-top: 4vh;
   position: relative;
   overflow: visible;  /* allow the semi-circle to show */
   font-family: var(--apple-font-stack);
-  margin: 3% 4% 8% 4%;
-  height: auto;
+  margin: 3% 4% 15% 4%;
+  height: 1200px;
+  max-height: 1200px;
 }
 
 /* draw the semi-circle at the top edge */
@@ -22,6 +35,22 @@
   border-top: 6px solid rgb(255, 111, 0);
 }
 
+/* GLOBE IMAGE */
+/* Center the globe-image wrapper */
+.globe-image {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  /* optional sizing */
+  max-width: 1000px;    /* never wider than 90% of viewport */
+  width: 1000px;       /* or whatever fixed size you need */
+  height: 1500px;
+  max-height: 1500px;
+  top: -100px;          /* adjust vertical offset as needed */
+  z-index: 0;         /* sit above background but below overlays */
+}
+
+
 /* Subheading */
 .vr-subheading {
   font-family: var(--apple-system-stack);
@@ -34,48 +63,222 @@
   animation: slideInFromLeft 4s ease-out 0.5s forwards;
 }
 
-/* Full-screen background */
-.full-screen-background1 {
-  position: relative;
-  width: 90vw;            /* keeps your existing 90vw */
-  aspect-ratio: 16 / 7;   /* exactly 16∶6 = 8∶3 */
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 1.5rem;
-  margin: 0 1%;
-}
-
-
-
-/* Parallax-content section */
-.vr-section-parallax-content {
-  height: auto;
-}
-
-
-
 .vr-details {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
+  position: absolute;
+  width: 1400px;   /* match .Globe-container */
+  height: 1300px;  /* match .Globe-container */
+  margin: 0 auto;
+  filter: drop-shadow(-50px 20px 30px rgba(0, 0, 0, 0.341))
+  drop-shadow(-10px 10px 20px rgba(0,0,0,0.5)); 
+  transform: none;
+  zoom: 1;
 }
 
 .vr-item {
   flex: 0 1 30%;
   position: relative;
-  overflow: hidden;
   background-color: #f4f4f4;
   padding: 0 !important;             /* image will fill corner-to-corner */
-  border-radius: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.09);
-  aspect-ratio: 4 / 5;
+  
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.084);
+  aspect-ratio: 7 / 5.5;
+
+
+  
 }
+
+
+/* make each .vr-item absolutely positioned */
+.vr-details .vr-item {
+  position: absolute;
+  top: 0; left: 0; /* reset */
+  transform: translate(-50%, -50%);
+}
+
+/* index the 5 cards around the hexagon */
+.vr-details .vr-item:nth-child(1) {
+  top: 167px;         /* ≈ 15% of 1170px */
+  left: 700px;        /* Center of 1000px container */
+  transform: translate(-50%, -50%);  /* Perfect centering */
+
+  width: 303px;
+  max-width: 303px;
+  height: 256px;
+  max-height: 256px;
+
+  /* clip to a regular hexagon */
+  -webkit-clip-path: polygon(
+    25% 0%,
+    75% 0%,
+    100% 50%,
+    75% 100%,
+    25% 100%,
+    0% 50%
+  );
+  clip-path: polygon(
+    25.6% 0%,
+    74.5% 0%,
+    100% 50.5%,
+    74.5% 100%,
+    25.6% 100%,
+    0% 50.5%
+  );
+}
+
+.vr-details .vr-item:nth-child(2) {
+  /* top-right vertex */
+  top: 293px;         /* ≈ 15% of 1170px */
+  left: 919px;        /* Center of 1000px container */
+  transform: translate(-50%, -50%);  /* Perfect centering */
+
+  width: 284px;    /* card width */
+  max-width: 284px;
+  height: 246px;   /* card height */
+  max-height: 246px;
+
+  /* clip to a regular hexagon */
+  -webkit-clip-path: polygon(
+    25% 0%,
+    75% 0%,
+    100% 50%,
+    75% 100%,
+    25% 100%,
+    0% 50%
+  );
+  clip-path: polygon(
+    27% 0%,
+    74% 0%,
+    100% 50%,
+    74% 100%,
+    26.2% 100%,
+    0% 51%
+  );
+}
+
+.vr-details .vr-item:nth-child(3) {
+  /* top-right vertex */
+  top: 293.5px;         /* ≈ 15% of 1170px */
+  left: 481px;        /* Center of 1000px container */
+  transform: translate(-50%, -50%);  /* Perfect centering */
+
+  width: 285px;    /* card width */
+  max-width: 285px;
+  height: 244px;   /* card height */
+  max-height: 244px;
+
+  /* clip to a regular hexagon */
+  -webkit-clip-path: polygon(
+    25% 0%,
+    75% 0%,
+    100% 50%,
+    75% 100%,
+    25% 100%,
+    0% 50%
+  );
+  clip-path: polygon(
+    26.5% 0%,
+    73% 0%,
+    100% 51%,
+    73.5% 100%,
+    26.2% 100%,
+    0% 50%
+  );
+}
+
+.vr-details .vr-item:nth-child(4) {
+  top: 538px;         /* ≈ 15% of 1170px */
+  left: 481px;        /* Center of 1000px container */
+  transform: translate(-50%, -50%);  /* Perfect centering */
+
+  width: 285px;    /* card width */
+  max-width: 285px;
+  height: 240px;   /* card height */
+  max-height: 240px;
+
+  /* clip to a regular hexagon */
+  -webkit-clip-path: polygon(
+    25% 0%,
+    75% 0%,
+    100% 50%,
+    75% 100%,
+    25% 100%,
+    0% 50%
+  );
+  clip-path: polygon(
+    26% 0%,
+    73.7% 0%,
+    100% 50%,
+    74% 100%,
+    26.8% 100%,
+    0% 49%
+  );
+}
+.vr-details .vr-item:nth-child(5) {
+  top: 660px;         /* ≈ 15% of 1170px */
+  left: 700px;        /* Center of 1000px container */
+  transform: translate(-50%, -50%);  /* Perfect centering */
+
+  width: 295px;    /* card width */
+  max-width: 295px;
+  height: 238px;   /* card height */
+  max-height: 238px;
+
+  /* clip to a regular hexagon */
+  -webkit-clip-path: polygon(
+    25% 0%,
+    75% 0%,
+    100% 50%,
+    75% 100%,
+    25% 100%,
+    0% 50%
+  );
+  clip-path: polygon(
+    25% 0%,
+    75% 0%,
+    100% 50%,
+    75% 100%,
+    25% 100%,
+    0% 49%
+  );
+}
+
+.vr-details .vr-item:nth-child(6) {
+  top: 538px;         /* ≈ 15% of 1170px */
+  left: 919px;        /* Center of 1000px container */
+  transform: translate(-50%, -50%);  /* Perfect centering */
+
+  width: 285px;    /* card width */
+  max-width: 285px;
+  height: 240px;   /* card height */
+  max-height: 240px;
+
+  /* clip to a regular hexagon */
+  -webkit-clip-path: polygon(
+    25% 0%,
+    75% 0%,
+    100% 50%,
+    75% 100%,
+    25% 100%,
+    0% 50%
+  );
+  clip-path: polygon(
+    26% 0%,
+    74% 0%,
+    100% 49%,
+    73.5% 100%,
+    26% 100%,
+    0% 50.5%
+  );
+}
+
+
+
 
 .vr-item-image-wrapper {
   position: relative;
   width: 100%;
   height: 100%;
+  
 }
 
 .vr-item-image {
@@ -89,52 +292,79 @@
 }
 
 .vr-item-text {
-  position: absolute;              /* allow precise placement */
-  top: 46%;                        /* 30% down from the top of .vr-item */
-  bottom:0;
+  position: absolute;              /* allow precise placement */                        /* 30% down from the top of .vr-item */
+  bottom: 0%;
   left: 50%;                       /* center‐point horizontally */
   transform: translateX(-50%);     /* shift back by half its own width */
-  background-color: #fff;          /* white box */
-  border-radius: 0.5rem 0.5rem 0 0;           /* rounded corners, tweak as needed */
-  padding: 0.5rem;                   /* inner spacing */
-  width: 85%;                      /* make the box 80% of the card’s width—adjust as desired */
-  box-sizing: border-box;          /* include padding in that width */
-  z-index: 1;                      /* sit above the image */
+  width: 310px;                      /* make the box 80% of the card’s width—adjust as desired */
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.858);
+
+  /* clip to a regular hexagon */
+  -webkit-clip-path: polygon(
+    24% 0%,
+    77% 0%,
+    100% 50%,
+    77% 100%,
+    28% 100%,
+    0% 46%
+  );
+  
+  clip-path: polygon(
+    22% 0%,
+    78% 0%,
+    100% 90%,
+    76% 100%,
+    25% 100%,
+    0.5% 90%
+  );
+
+}
+.vr-item:nth-child(1) .vr-item-text {
+  height: 88px;
 }
 
-/* Once the viewport is wider than ≈1440px (e.g. a 14″ MacBook Pro or larger), 
-   bump the text box down to 56% from the top. Adjust 1440px if you need a slightly different cutoff. */
-   @media (min-width: 1520px) {
-    .vr-item-text {
-      top: 58%;
-    }
-  }
-  
-  /* On very small screens, let it expand full‐width */
-  @media (max-width: 600px) {
-    .vr-item-text {
-      width: 100%;
-      top: 10%; /* you can tweak this for phones */
-    }
-    
-  }
+.vr-item:nth-child(2) .vr-item-text {
+  height: 88px;
+}
+
+.vr-item:nth-child(3) .vr-item-text {
+  height: 68px;
+}
+
+.vr-item:nth-child(4) .vr-item-text {
+  height: 88px;
+}
+
+.vr-item:nth-child(5) .vr-item-text {
+  height: 68px;
+}
+
+.vr-item:nth-child(6) .vr-item-text {
+  height: 88px;
+}
+
+
 .vr-item-text h3 {
-  font-size: 1.6rem !important;
-  font-weight: 600 !important;
-  margin-bottom: 1rem !important;
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 0.8rem !important;
   line-height: 1.2 !important;
-  margin-top: 1rem;
-  margin-left:0.3rem;
-  margin-right:0.3rem;
-  
+  margin-top: 0.4rem;
+  margin-left:4rem;
+  margin-right:4rem;
+  color: rgb(0, 0, 0)
 
 }
 
 .vr-item-text p {
-  font-size: 1.2rem;
+  font-size: 1.1rem !important;
   color: #000000 !important;
-  margin-left:0.3rem;
-  margin-right:0.3rem;  
+  margin-left:3.9rem;
+  margin-right:2.2rem;
+  color: rgb(0, 0, 0)!important;
+  font-weight: 500 !important;
+  line-height: 1.18 !important;
 }
 
 
@@ -157,11 +387,11 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-weight: 600;
-  font-size: 3rem;
+  font-size: 4rem !important;
   line-height: 1.1;
   letter-spacing: -0.02em;
   margin: 0 auto 2rem;
-  max-width: 90%;
+  max-width: 100%;
   color: #000;
   text-align: center;
 }
@@ -264,6 +494,22 @@
   color: var(--apple-grey-9);
   margin-bottom: 1.5rem;
 }
+.section-header p{
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+  Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 100px;
+  margin-top: -5px;
+}
+
+.section-header{
+  width: 1350px;
+  max-width: 1350px;
+  margin: 0 auto !important;
+}
 
 /* Testimonials */
 .vr-testimonials {
@@ -357,33 +603,50 @@
 /* CARD 1: */
 .mission-buttons1 {
   position: absolute;       /* allow bottom positioning */
-  bottom: 0.5rem;             /* 1rem up from the parent’s bottom */
+  bottom: 0.25rem;             /* 1rem up from the parent’s bottom */
   left: 50%;                /* center horizontally */
   transform: translateX(-50%);
   width: 3rem;
-  height: 3rem;
-  background-color: #fff;
-  color: #000;
-
+  height: 1.2rem;
+  background-color: #ffffff15;
+  color: rgb(0, 0, 0);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
                Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  font-weight: 250;
-  font-size: 2rem;
+  font-weight: 350;
+  font-size: 1.35rem;
   overflow: hidden;
   transition:
     width 0.4s ease,
     border-radius 0.4s ease,
     background-color 0.4s ease,
     box-shadow 0.1s ease;
+
+
+  /* clip to a regular hexagon */
+  -webkit-clip-path: polygon(
+    25% 0%,
+    75% 0%,
+    100% 50%,
+    75% 100%,
+    25% 100%,
+    0% 50%
+  );
+  clip-path: polygon(
+    25% 0%,
+    75% 0%,
+    100% 50%,
+    75% 100%,
+    25% 100%,
+    0% 50%
+  );
 }
 
-
 .mission-buttons1::after {
-  content: "Learn more about our mission....";
+  content: "Learn more";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -391,52 +654,92 @@
   opacity: 0;
   white-space: nowrap;
   transition: opacity 0.3s ease;
-  font-size: 1.3rem;
+  font-size: 1rem;
   color: white;
-  font-weight: 450;
+  font-weight: 400;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+
   
 }
 
 .mission-buttons1:hover {
-  width: 21rem;
-  border-radius: 2rem;
+  width: 7rem;
+  color: transparent;      /* hides the “↓” */
+  transform: translateX(-50%) scale(1.1);  /* scale up from center */
   background-color: #000;
+
+  clip-path: polygon(
+    5%    0%,    /* top-left (5% across, 0% down) */
+    95%   0%,    /* top-right (95% across, 0% down) */
+    100%  50%,   /* right midpoint */
+    95%   100%,  /* bottom-right (95% across, 100% down) */
+    5%    100%,  /* bottom-left (5% across, 100% down) */
+    0%    50%    /* left midpoint */
+  );
+  -webkit-clip-path: polygon(
+    10%    0%,
+    90%   0%,
+    100%  50%,
+    90%   100%,
+    10%    100%,
+    0%    50%
+  );
 }
 
 .mission-buttons1:hover::after {
   opacity: 1;
 }
 
+
+
 /* CARD 2 */
 .mission-buttons2 {
   position: absolute;       /* allow bottom positioning */
-  bottom: 0.5rem;             /* 1rem up from the parent’s bottom */
+  bottom: 0.25rem;             /* 1rem up from the parent’s bottom */
   left: 50%;                /* center horizontally */
   transform: translateX(-50%);
   width: 3rem;
-  height: 3rem;
-  background-color: #fff;
-  color: #000;
-
+  height: 1.2rem;
+  background-color: #ffffff15;
+  color: rgb(0, 0, 0);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
                Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  font-weight: 250;
-  font-size: 2rem;
+  font-weight: 350;
+  font-size: 1.35rem;
   overflow: hidden;
   transition:
     width 0.4s ease,
     border-radius 0.4s ease,
     background-color 0.4s ease,
     box-shadow 0.1s ease;
+
+
+  /* clip to a regular hexagon */
+  -webkit-clip-path: polygon(
+    25% 0%,
+    75% 0%,
+    100% 50%,
+    75% 100%,
+    25% 100%,
+    0% 50%
+  );
+  clip-path: polygon(
+    25% 0%,
+    75% 0%,
+    100% 50%,
+    75% 100%,
+    25% 100%,
+    0% 50%
+  );
 }
 
 
 .mission-buttons2::after {
-  content: "Learn more about our Founder....";
+  content: "Learn more";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -444,16 +747,35 @@
   opacity: 0;
   white-space: nowrap;
   transition: opacity 0.3s ease;
-  font-size: 1.3rem;
+  font-size: 1rem;
   color: white;
-  font-weight: 450;
-  
+  font-weight: 400;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+
 }
 
 .mission-buttons2:hover {
-  width: 21rem;
-  border-radius: 2rem;
+  width: 7rem;
+  color: transparent;      /* hides the “↓” */
+  transform: translateX(-50%) scale(1.1);  /* scale up from center */
   background-color: #000;
+
+  clip-path: polygon(
+    5%    0%,    /* top-left (5% across, 0% down) */
+    95%   0%,    /* top-right (95% across, 0% down) */
+    100%  50%,   /* right midpoint */
+    95%   100%,  /* bottom-right (95% across, 100% down) */
+    5%    100%,  /* bottom-left (5% across, 100% down) */
+    0%    50%    /* left midpoint */
+  );
+  -webkit-clip-path: polygon(
+    10%    0%,
+    90%   0%,
+    100%  50%,
+    90%   100%,
+    10%    100%,
+    0%    50%
+  );
 }
 
 .mission-buttons2:hover::after {
@@ -463,33 +785,51 @@
 /* CARD 3 */
 .mission-buttons3 {
   position: absolute;       /* allow bottom positioning */
-  bottom: 0.5rem;             /* 1rem up from the parent’s bottom */
+  bottom: 0.25rem;             /* 1rem up from the parent’s bottom */
   left: 50%;                /* center horizontally */
   transform: translateX(-50%);
   width: 3rem;
-  height: 3rem;
-  background-color: #fff;
-  color: #000;
-
+  height: 1.2rem;
+  background-color: #ffffff15;
+  color: rgb(0, 0, 0);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
                Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  font-weight: 250;
-  font-size: 2rem;
+  font-weight: 350;
+  font-size: 1.35rem;
   overflow: hidden;
   transition:
     width 0.4s ease,
     border-radius 0.4s ease,
     background-color 0.4s ease,
     box-shadow 0.1s ease;
+
+
+  /* clip to a regular hexagon */
+  -webkit-clip-path: polygon(
+    25% 0%,
+    75% 0%,
+    100% 50%,
+    75% 100%,
+    25% 100%,
+    0% 50%
+  );
+  clip-path: polygon(
+    25% 0%,
+    75% 0%,
+    100% 50%,
+    75% 100%,
+    25% 100%,
+    0% 50%
+  );
 }
 
 
 .mission-buttons3::after {
-  content: "Contact Us today !!!";
+  content: "Learn more";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -497,18 +837,51 @@
   opacity: 0;
   white-space: nowrap;
   transition: opacity 0.3s ease;
-  font-size: 1.3rem;
+  font-size: 1rem;
   color: white;
-  font-weight: 450;
-  
+  font-weight: 400;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .mission-buttons3:hover {
-  width: 14rem;
-  border-radius: 2rem;
+  width: 7rem;
+  color: transparent;      /* hides the “↓” */
+  transform: translateX(-50%) scale(1.1);  /* scale up from center */
   background-color: #000;
+
+  clip-path: polygon(
+    5%    0%,    /* top-left (5% across, 0% down) */
+    95%   0%,    /* top-right (95% across, 0% down) */
+    100%  50%,   /* right midpoint */
+    95%   100%,  /* bottom-right (95% across, 100% down) */
+    5%    100%,  /* bottom-left (5% across, 100% down) */
+    0%    50%    /* left midpoint */
+  );
+  -webkit-clip-path: polygon(
+    10%    0%,
+    90%   0%,
+    100%  50%,
+    90%   100%,
+    10%    100%,
+    0%    50%
+  );
 }
 
 .mission-buttons3:hover::after {
   opacity: 1;
+}
+
+
+/* HEXAGON CENTER CIRCULAR IMAGE */
+.vr-center-circle {
+  position: absolute;
+  top: 33.5%;
+  left: 50%;
+  width: 200px;           /* adjust to your desired size */
+  height: 180px;
+  border-radius: 50%;     /* make it perfectly round */
+  object-fit: cover;      /* or background-image if you prefer */
+  transform: translate(-50%, -56%);
+  z-index: 1;             /* sit “under” the cards if they’re z-indexed higher */
+  opacity: 0.95;
 }

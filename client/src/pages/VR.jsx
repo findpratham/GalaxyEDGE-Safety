@@ -3,12 +3,11 @@ import '../styles/VR.css'; // You can define additional specific styles for VR i
 import { Link } from 'react-scroll'; // Ensure you import Link from 'react-scroll'
 import { NavLink } from "react-router-dom";
 
+
 export default function VR() {
 
   const bgRef = useRef(null);
   const sectionRef = useRef(null);
-
-     
 
   useEffect(() => {
     if (!sectionRef.current || !bgRef.current) return;
@@ -79,83 +78,117 @@ export default function VR() {
           </div>
         </Link>
         
-        <div className="take-action-heading">Harnessing Virtual Reality for Workplace Safety</div>
-        <br/>
-        <h2 className="vr-subheading">Revolutionize your safety training with immersive VR solutions designed to engage employees and minimize risks</h2>
-        
-        <div
-          ref={bgRef}
-          className="full-screen-background1"
-          style={{ backgroundImage: "url('/assets/VR-background.jpg')" }}
-        >
-
-        
-      </div>
-
+      <div className="take-action-heading">Our Six Core Pillars of Impact </div>
       {/* VR Section for Employee Safety Training */}
       <div className="vr-section-parallax-content">
         <div className="section-header">
             <br/>
-            <br/>
-          <h2 className="typography-section-headline">Transform Safety Training with the pioneers of workplace safety</h2>
+          <p>
+          At GalaxyEDGE Safety Inc. (GESI), we’ve built a transformative model around six interconnected pillars designed to elevate occupational health and safety across every industry. From intelligence-led advisory to immersive training, AI innovation, and ESG alignment — and amplified through high-impact events and strategic partnerships — each pillar plays a vital role in shaping safer, smarter, and more sustainable workplaces.
+          </p>
           <br/>
         </div>
-        <div className="vr-details">
-          {/* ── CARD 1 ── */}
-          <div className="vr-item" >
-            <div className="vr-item-image-wrapper">
-              <img src="/assets/VR-image1.jpg" alt = "" className="vr-item-image" />
-              <div className="vr-item-text">
-                <h3>Redefining Safety Through Tomorrow’s Innovations</h3>
-                <p>
-                Empowering workplaces worldwide with cutting-edge safety solutions that protect people and drive progress
-                </p>
-                <NavLink to="/our-mission" end>
-                  <button className="mission-buttons1">↓</button>
-                </NavLink>
+        <div className= "Globe-container">
+          <div className="globe-image">
+            <img src="/assets/globe1.jpg" alt = "" className="globe-image" />
+          </div>
+          <div className="vr-details">
+            {/* ── CARD 1 ── */}
+            <div className="vr-item" >
+              <div className="vr-item-image-wrapper">
+                <img src="/assets/VR-image1.jpg" alt = "" className="vr-item-image" />
+                <div className="vr-item-text">
+                  <h3>Smart Safety starts with People-Centered Strategy </h3>
+
+                  <NavLink to="/our-services" end>
+                    <button className="mission-buttons1">↓</button>
+                  </NavLink>
+                </div>
+              </div>
+            </div>
+
+            {/* ── CARD 2 ── */}
+            <div className="vr-item">
+              <div className="vr-item-image-wrapper">
+                <img
+                  src="/assets/image2.jpg"
+                  alt="Scalable and Flexible Training"
+                  className="vr-item-image"
+                />
+                <div className="vr-item-text">
+                  <h3>Immersive Training That Transform's Behavior</h3>
+                  <NavLink to="/about-us" end>
+                    <button className="mission-buttons2">↓</button>
+                  </NavLink>
+                </div>
+              </div>
+            </div>
+
+            {/* ── CARD 3 ── */}
+            <div className="vr-item">
+              <div className="vr-item-image-wrapper">
+                <img
+                  src="/assets/image3.jpg"
+                  alt="Real-Time Feedback"
+                  className="vr-item-image"
+                />
+                <div className="vr-item-text">
+                  <h3>AI-Driven Safety Solutions</h3>
+                  <NavLink to="/contact" end>
+                    <button className="mission-buttons3">↓</button>
+                  </NavLink>
+                </div>
+              </div>
+            </div>
+
+            {/* ── CARD 4 ── */}
+            <div className="vr-item" >
+              <div className="vr-item-image-wrapper">
+                <img src="/assets/image4.jpg" alt = "" className="vr-item-image" />
+                <div className="vr-item-text">
+                  <h3>Building Safety into your ESG Commitments</h3>
+                 
+                  <NavLink to="/our-mission" end>
+                    <button className="mission-buttons1">↓</button>
+                  </NavLink>
+                </div>
+              </div>
+            </div>
+
+            {/* ── CARD 5 ── */}
+            <div className="vr-item" >
+              <div className="vr-item-image-wrapper">
+                <img src="/assets/image5.jpg" alt = "" className="vr-item-image" />
+                <div className="vr-item-text">
+                  <h3>Empowering Events That Shift Culture</h3>
+                  
+                  <NavLink to="/our-mission" end>
+                    <button className="mission-buttons1">↓</button>
+                  </NavLink>
+                </div>
+              </div>
+            </div>
+            
+            {/* ── CARD 6 ── */}
+            <div className="vr-item" >
+              <div className="vr-item-image-wrapper">
+                <img src="/assets/image6.jpg" alt = "" className="vr-item-image" />
+                <div className="vr-item-text">
+                  <h3>Partnerships That Drive Innovation Forward</h3>
+                  <NavLink to="/our-mission" end>
+                    <button className="mission-buttons1">↓</button>
+                  </NavLink>
+                </div>
               </div>
             </div>
           </div>
-
-          {/* ── CARD 2 ── */}
-          <div className="vr-item">
-            <div className="vr-item-image-wrapper">
-              <img
-                src="/assets/image2.jpg"
-                alt="Scalable and Flexible Training"
-                className="vr-item-image"
-              />
-              <div className="vr-item-text">
-                <h3>The Visionary Shaping Tomorrow’s Workplaces</h3>
-                <p>
-                Lisa McGuire, ICD.D, CRSP: a safety visionary who slashed injury rates by 40% and grew an alliance from 800 to 3,000 members.                </p>
-                <NavLink to="/about-us" end>
-                  <button className="mission-buttons2">↓</button>
-                </NavLink>
-              </div>
-            </div>
-          </div>
-
-          {/* ── CARD 3 ── */}
-          <div className="vr-item">
-            <div className="vr-item-image-wrapper">
-              <img
-                src="/assets/image3.jpg"
-                alt="Real-Time Feedback"
-                className="vr-item-image"
-              />
-              <div className="vr-item-text">
-                <h3>Transform Your Safety Training Today</h3>
-                <p>
-                Take the first step toward a safer, smarter workplace—partner with us to revolutionize your safety training and protect what matters most!
-                </p>
-                <NavLink to="/contact" end>
-                  <button className="mission-buttons3">↓</button>
-                </NavLink>
-              </div>
-            </div>
-          </div>
-
+          
+          {/* CENTER IMAGE */}
+            <img
+              src="/assets/center-image.jpg"
+              alt="Center"
+              className="vr-center-circle"
+            />
         </div>
       </div>
     </div>

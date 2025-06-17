@@ -36,9 +36,10 @@
 
 
 .margins{
-  margin-left: 4%;
-  margin-right: 4%;
-  margin-top: 1% !important;
+  margin: 1% auto  /* top, then horizontal auto, bottom remains whatever was before */ !important;
+
+  width: 1360px;
+  max-width: 1400px
 }
 
 /* Hero / Intro */

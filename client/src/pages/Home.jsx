@@ -47,21 +47,21 @@ export default function Home() {
       </video>
 
 
-        {/* <div className="content">
-          <h1 className="heading">
+        <div className="content">
+          {/* <h1 className="heading">
             Advancing Global Health <br />
             <span className="sub-heading">
               {" "}
               & Safety Through Innovation
             </span>
-          </h1>
-          <p className="subtext">
+          </h1> */}
+          {/* <p className="subtext">
             Leveraging groundbreaking research, technology, partnerships, and
             <br />
             <span className="sub-subtext">
               innovation to transform occupational health & safety worldwide
             </span>
-          </p>
+          </p> */}
           <div className="cta-buttons">
             <Link to="learn_more" smooth duration={900}>
               <button className="cta-button learn-more">
@@ -74,7 +74,7 @@ export default function Home() {
               </button>
             </NavLink>
           </div>
-        </div> */}
+        </div>
       </div>
 
       

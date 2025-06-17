@@ -13,11 +13,12 @@ import VR from "./pages/VR";
 import ActionApproach from "./pages/ActionApproach";
 import ContactUs from "./pages/ContactUs";
 import Footer from "./pages/footer";
-import SuccessStories from "./pages/successStories";
+import HeaderHome from "./components/HeaderHome";
 import RequestDemo from "./pages/demo";
 import ReachOutNow from "./pages/ReachOut";
 import AboutUS from "./pages/AboutUs";  
 import Mission from "./pages/Mission";
+import Services from "./pages/Services";  
 
 export default function App() {
   
@@ -51,6 +52,7 @@ export default function App() {
       {/* STANDALONE ABOUT-US PAGE */}
       <Route path="/about-us" element={<AboutUS />} />
       <Route path="/our-mission" element={<Mission />} />
+      <Route path="/our-services" element={<Services />} />
       <Route path="/contact" element={
           <div id="contact-us"> 
             <ContactUs />
