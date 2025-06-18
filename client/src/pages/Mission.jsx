@@ -7,8 +7,8 @@ import { animateScroll as scroll } from 'react-scroll';
 
 import TakeAction from "./TakeAction";
 import TakeAction1 from "./TakeAction1";
-import Footer from './footer';
 import ReachOutNow from "./ReachOut";
+import Footer from "../pages/footer";
 
 export default class AboutUS extends Component {
   componentDidMount() {
@@ -142,19 +142,9 @@ export default class AboutUS extends Component {
         <TakeAction1 />
 
 
-
-        {/* Footer Contact */}
-        <footer className="aboutus-footer">
-          <div className="contact-item">
-            <span className="contact-label">Email</span>
-            <span className="contact-value">l.mcguire@galaxyedgesafety.com</span>
-          </div>
-          <div className="contact-item">
-            <span className="contact-label">Phone</span>
-            <span className="contact-value">604-308-4537</span>
-          </div>
-        </footer>
+        
       </div>
+      <Footer/> 
       </div>
     );
   }

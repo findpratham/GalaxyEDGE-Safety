@@ -31,6 +31,14 @@
   .contact-container {
     padding-top: 5rem !important;            /* match your header height */
   }
+
+  .Services-container{
+    padding-top: 6rem !important;
+  }
+
+  .Training-container{
+    padding-top: 6rem !important;
+  }
 .scroll-up-link {
     position: absolute;
     top: 1rem;

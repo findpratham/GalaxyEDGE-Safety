@@ -96,7 +96,7 @@ export default function VR() {
             {/* ── CARD 1 ── */}
             <div className="vr-item" >
               <div className="vr-item-image-wrapper">
-                <img src="/assets/VR-image1.jpg" alt = "" className="vr-item-image" />
+                <img src="/assets/image1.jpg" alt = "" className="vr-item-image" />
                 <div className="vr-item-text">
                   <h3>Smart Safety starts with People-Centered Strategy </h3>
 
@@ -117,7 +117,7 @@ export default function VR() {
                 />
                 <div className="vr-item-text">
                   <h3>Immersive Training That Transform's Behavior</h3>
-                  <NavLink to="/about-us" end>
+                  <NavLink to="/training" end>
                     <button className="mission-buttons2">↓</button>
                   </NavLink>
                 </div>
