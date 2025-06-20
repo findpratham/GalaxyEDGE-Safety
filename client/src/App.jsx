@@ -20,6 +20,10 @@ import AboutUS from "./pages/AboutUs";
 import Mission from "./pages/Mission";
 import Services from "./pages/Services";  
 import Training from "./pages/Training";
+import AIDriven from "./pages/AIDriven-Safety-solutions";
+import ESG from "./pages/ESG";
+import EventsCultureShifts from "./pages/Events-Culture-shifts";
+import Partnership from "./pages/Partnership";
 
 export default function App() {
   
@@ -46,6 +50,10 @@ export default function App() {
       <Route path="/our-mission" element={<Mission />} />
       <Route path="/our-services" element={<Services />} />
       <Route path="/training" element={<Training />} />
+      <Route path="/ESG_Stratergy_Performance" element={<ESG />} />
+      <Route path="/ai-driven-safety-solutions" element={<AIDriven />} />
+      <Route path="/EventsCultureShifts" element={<EventsCultureShifts />} />
+      <Route path="/partnerships" element={<Partnership />} />
       <Route path="/contact" element={
           <div id="contact-us"> 
             <ContactUs />

@@ -216,3 +216,95 @@
     transition: opacity 0.3s ease;
   }
   
+  /* CTA 1  */
+
+  .Services-CTA1{
+    position: relative;
+    overflow: hidden;
+    display: block;                  /* Makes the button take up full line */
+    margin: 1.8rem auto 1rem auto;        /* Horizontally centers it */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-weight: 550; 
+    padding: 0.8rem 2rem; /* Padding inside buttons */
+    font-size: 1.6rem; /* Font size */
+    color: rgb(0, 0, 0); /* Black text color */
+    border: none; /* Remove default border */
+    border-radius: 1.3rem !important;
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: 
+    background-color 0.3s ease, 
+    transform 0.3s ease, 
+    color 0.5s ease; /* Smooth color transition */  
+    
+}
+
+  .Services-CTA1::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 0;
+    height: 200%;
+    background-color: rgb(0, 0, 0);  /* your hover blue */
+    border-radius: 0 100% 100% 0;
+    transform: translateY(-50%);
+    transition: width 0.5s ease;
+    z-index: -1;
+  }
+
+  .Services-CTA1:hover::before {
+    width: 200%;
+  }
+
+  .Services-CTA1:hover {
+    color: white;
+    transform: scale(1.15);
+    box-shadow: -12px 12px 28px rgba(0, 0, 0, 0.25); /* 3D lift from bottom-left */
+  }
+
+  /* CTA 2 */
+  .Services-CTA2{
+    position: relative;
+    overflow: hidden;
+    display: block;                  /* Makes the button take up full line */
+    margin: 1.8rem auto 1rem auto;        /* Horizontally centers it */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-weight: 550; 
+    padding: 0.8rem 2rem; /* Padding inside buttons */
+    font-size: 1.6rem; /* Font size */
+    color: rgb(0, 0, 0); /* Black text color */
+    border: none; /* Remove default border */
+    border-radius: 1.3rem !important;
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: 
+    background-color 0.3s ease, 
+    transform 0.3s ease, 
+    color 0.5s ease; /* Smooth color transition */  
+    
+}
+
+  .Services-CTA2::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 0;
+    height: 200%;
+    background-color: rgb(0, 0, 0);  /* your hover blue */
+    border-radius: 0 100% 100% 0;
+    transform: translateY(-50%);
+    transition: width 0.5s ease;
+    z-index: -1;
+  }
+
+  .Services-CTA2:hover::before {
+    width: 200%;
+  }
+
+  .Services-CTA2:hover {
+    color: white;
+    transform: scale(1.15);
+    box-shadow: -12px 12px 28px rgba(0, 0, 0, 0.25); /* 3D lift from bottom-left */
+  }

@@ -193,8 +193,20 @@ export default function Services() {
                   <li key={idx}>{pt}</li>
                 ))}
               </ul>
+
+              {/* Button based on expandedIndex */}
+              {expandedIndex === 0 ? (
+                <NavLink to="/targeted_support" smooth duration={900}>
+                  <button className="Services-CTA1">Get Targeted Support</button>
+                </NavLink>
+              ) : expandedIndex === 1 ? (
+                <NavLink to="/system_assessment" smooth duration={900}>
+                  <button className="Services-CTA2">Request a System Assessment</button>
+                </NavLink>
+              ) : null}
           </div>
         )}
+        
 
       </div>
         <Footer/> 

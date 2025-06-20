@@ -134,7 +134,7 @@ export default function VR() {
                 />
                 <div className="vr-item-text">
                   <h3>AI-Driven Safety Solutions</h3>
-                  <NavLink to="/contact" end>
+                  <NavLink to="/ai-driven-safety-solutions" end>
                     <button className="mission-buttons3">↓</button>
                   </NavLink>
                 </div>
@@ -148,7 +148,7 @@ export default function VR() {
                 <div className="vr-item-text">
                   <h3>Building Safety into your ESG Commitments</h3>
                  
-                  <NavLink to="/our-mission" end>
+                  <NavLink to="/ESG_Stratergy_Performance" end>
                     <button className="mission-buttons1">↓</button>
                   </NavLink>
                 </div>
@@ -162,7 +162,7 @@ export default function VR() {
                 <div className="vr-item-text">
                   <h3>Empowering Events That Shift Culture</h3>
                   
-                  <NavLink to="/our-mission" end>
+                  <NavLink to="/EventsCultureShifts" end>
                     <button className="mission-buttons1">↓</button>
                   </NavLink>
                 </div>

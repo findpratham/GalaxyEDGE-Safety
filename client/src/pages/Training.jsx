@@ -131,14 +131,14 @@ export default function Training() {
         </div>
 
         {/* Cards Grid */}
-        <div className="services-cards-container"> 
+        <div className="Training-cards-container"> 
           {cards.map((card, i) => {
             const isActive = expandedIndex === i;
             return (
               <div
                 key={i}
                 className={[
-                  "services-card",
+                  "Training-card",
                   visible && "fade-in",
                   isActive && "hovered",
                 ]
@@ -147,7 +147,7 @@ export default function Training() {
                 style={{ animationDelay: `${i * 0.5}s` }}
               >
                 <div
-                  className="services-card-image"
+                  className="Training-card-image"
                   style={{ backgroundImage: `url(${card.img})` }}
                 />
                 <div className="card-content">
@@ -197,6 +197,17 @@ export default function Training() {
                   <li key={idx}>{pt}</li>
                 ))}
               </ul>
+
+              {/* Button based on expandedIndex */}
+              {expandedIndex === 0 ? (
+                <NavLink to="/contact" smooth duration={900}>
+                  <button className="Training-CTA1">Contact Us for a Consultation</button>
+                </NavLink>
+              ) : expandedIndex === 1 ? (
+                <NavLink to="/contact" smooth duration={900}>
+                  <button className="Training-CTA2">Contact Us for More Information</button>
+                </NavLink>
+              ) : null}
           </div>
         )}
 

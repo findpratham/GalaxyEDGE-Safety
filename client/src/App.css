@@ -19,9 +19,19 @@
   -ms-overflow-style: none;    /* IE 10+ */
 }
 
+  .Partnership-container{
+    padding-top: 6rem !important;
+  }
 
-
-
+  .EventsCultureShifts-container{
+    padding-top: 6rem !important;
+  }
+  .ESG-container{
+    padding-top: 6rem !important;
+  }
+  .AIDriven-container{
+    padding-top: 6rem !important;
+  }
   .aboutus-container {
     padding-top: 2rem !important;            /* match your header height */
   }

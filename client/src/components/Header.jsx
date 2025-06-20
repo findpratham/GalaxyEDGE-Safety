@@ -64,23 +64,23 @@ export default function Header() {
 
           {/* EDUCATION TAB */}
           <li>
-            <Link to="innovations" smooth={true} duration={500}>
+            <NavLink to="ai-driven-safety-solutions" smooth={true} duration={500}>
               Innovations
-            </Link>
+            </NavLink>
           </li>
           
           {/* RESOURCES TAB */}
           <li>
-            <Link to="events" smooth={true} duration={500}>
+            <NavLink to="EventsCultureShifts" smooth={true} duration={500}>
               Events
-            </Link>
+            </NavLink>
           </li>
 
           {/* EVENTS TAB */}
           <li>
-            <Link to="partnerships" smooth={true} duration={500}>
+            <NavLink to="partnerships" smooth={true} duration={500}>
               Partnerships
-            </Link>
+            </NavLink>
           </li> 
         </ul>
       </nav>

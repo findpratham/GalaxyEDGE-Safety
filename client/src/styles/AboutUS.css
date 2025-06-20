@@ -221,9 +221,9 @@
   transform: translateX(-50%);  /* shift left by half its own width */
   text-align: left;
   z-index: 1000; /* Ensure content is above the background */
- 
-}
-.Logo-image {
+ }
+
+ .Logo-image {
   position: relative;
   /* You no longer need width/height here */
   display: block;
