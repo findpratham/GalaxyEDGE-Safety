@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-scroll';
 import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 
 export default function Header() {
 
@@ -42,11 +43,17 @@ export default function Header() {
           </li>
           
           {/* ABOUT US TAB */}
-          <li>
-            <NavLink to="/about-us" smooth={true} duration={900} end>
+          <li className="nav-item">
+            <NavLink to="/about-us" end>
               About Us
             </NavLink>
+            <ul className="dropdown">
+              <li><NavLink to="/about-us">Our Founder</NavLink></li>
+              <li><NavLink to="/our-mission">Our Vision & Mission</NavLink></li>
+              <li><Link to="/our-mission" state={{ scrollDown: true }}>Our Core Values</Link></li>
+            </ul>
           </li>
+
           
           {/* PRODUCT/SERVICES TAB */}
           <li>

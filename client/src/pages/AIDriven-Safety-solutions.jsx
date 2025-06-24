@@ -11,7 +11,7 @@ import Footer from "../pages/footer";
 const cards = [
   {
     title: "Empowering people with intelligent safety support ",
-    img: "/assets/Training1.jpg",
+    img: "/assets/AIDriven1.jpg",
     subtitle: "An intelligent AI assistant delivering real-time insights to power proactive safety decisions",
     info1: [
       "Transform the way your teams learn and lead. GESI’s immersive training—powered by UP360—brings real-world safety scenarios to life through cutting-edge virtual environments. Engage your workforce with high-impact experiences that build confidence, improve retention, and drive behavior change at every level"
@@ -19,7 +19,7 @@ const cards = [
   },
   {
     title: "Customized AI Solutions for Businesses",
-    img: "/assets/Training2.jpg",
+    img: "/assets/AIDriven2.jpg",
     subtitle: "Build AI tools around your business needs to boost safety, efficiency, and performance",
     info1: [
       "We design scenario-based learning solutions customized for every organizational tier—from executives shaping culture to frontline workers managing daily risk. Using real-life context and role-specific challenges, we help your teams develop practical skills that translate into immediate safety performance"
@@ -150,7 +150,7 @@ export default function AIDriven() {
                 style={{ animationDelay: `${i * 0.5}s` }}
               >
                 <div
-                  className="Training-card-image"
+                  className="AIDriven-card-image"
                   style={{ backgroundImage: `url(${card.img})` }}
                 />
                 <div className="card-content">

@@ -33,10 +33,10 @@
     padding-top: 6rem !important;
   }
   .aboutus-container {
-    padding-top: 2rem !important;            /* match your header height */
+    padding-top: 3rem !important;            /* match your header height */
   }
   .mission-container {
-    padding-top: 2rem !important;            /* match your header height */
+    padding-top: 3rem !important;            /* match your header height */
   }
   .contact-container {
     padding-top: 5rem !important;            /* match your header height */
@@ -213,12 +213,12 @@
 }
 /* Content in Home Section */
 .content {
-    position: absolute;
-    transform: translateX(-50%); /* No vertical translation, let it stay at 250px from top */
-    left: 50%;
-    text-align: left;
-    z-index: 2000; /* Ensure content is above the background */
-    width: 100%; /* Adjust the width for the content */
+  position: absolute;
+  transform: translateX(-50%); /* No vertical translation, let it stay at 250px from top */
+  left: 50%;
+  text-align: left;
+  z-index: 2000; /* Ensure content is above the background */
+  width: 100%; /* Adjust the width for the content */
 
 }
 
@@ -485,7 +485,53 @@
   width: 100%;
 }
 
+/* DROPDOWN CSS */
+
+/* Container for nav item */
+.nav-item {
+  position: relative;
+}
+
+/* Hidden dropdown menu by default */
+.nav-item .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgb(0, 0, 0);
+  min-width: 200px;
+  z-index: 1000;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  padding: 0.5rem 0;
   
+}
+
+/* Each item inside dropdown */
+.nav-item .dropdown li {
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+}
+
+.nav-item .dropdown li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  
+}
+
+/* Show dropdown on hover */
+.nav-item:hover .dropdown {
+  display: block;
+}
+
+.nav-links .dropdown a:hover {
+  color: rgb(255, 111, 0);
+}
+
+.dropdown a {
+  font-size: 1rem;  /* You can also use px like 16px */
+}
+
 
 
 /* 

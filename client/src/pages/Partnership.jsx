@@ -9,6 +9,7 @@ import "../styles/AboutUS.css"
 import Footer from "../pages/footer";
 
 const cards = [
+    // CARD 1:
   {
     title: "Empowering people with intelligent safety support ",
     img: "/assets/Partnership1.jpg",

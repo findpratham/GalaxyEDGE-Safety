@@ -79,7 +79,7 @@
     transition: transform 0.3s ease;
   }
   
-  .Training-card.hovered {
+  .AIDriven-card.hovered {
     transform: scale(1.035);
     box-shadow: 0px 1px 44px rgba(0, 0, 0, 0.168);
   }
@@ -93,7 +93,7 @@
     }
   }
   
-  .Training-card-image {
+  .AIDriven-card-image {
     width: 100%;
     aspect-ratio: 16/10;
     background-size: cover;
