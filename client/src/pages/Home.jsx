@@ -9,6 +9,21 @@ export default function Home() {
   }, []);
   return (
     <div className="home-container">
+              
+        {/* ── UP ARROW (only lives inside this section) ── */}
+        <Link to="home" smooth duration={1000} className="scroll-up-link">
+          <div className="scroll-up-arrow">
+            <svg viewBox="0 0 16 16" aria-hidden="true">
+              <path 
+                d="M4 10l4-4 4 4" 
+                fill="none" 
+                stroke="currentColor" 
+                strokeWidth="2"
+              />
+            </svg>
+          </div>
+        </Link>
+
       <Link to="about-us" smooth duration={1000}>
         <div className="scroll-down-arrow">
           <svg viewBox="0 0 16 16" aria-hidden="false">
@@ -32,7 +47,7 @@ export default function Home() {
       </div>
 
       {/* Full-screen hero image */}
-      <div className="parallax-image full-screen-image">
+      <div className="parallax-image">
       <video
         className="parallax-image-img"
         autoPlay
@@ -48,20 +63,6 @@ export default function Home() {
 
 
         <div className="content">
-          {/* <h1 className="heading">
-            Advancing Global Health <br />
-            <span className="sub-heading">
-              {" "}
-              & Safety Through Innovation
-            </span>
-          </h1> */}
-          {/* <p className="subtext">
-            Leveraging groundbreaking research, technology, partnerships, and
-            <br />
-            <span className="sub-subtext">
-              innovation to transform occupational health & safety worldwide
-            </span>
-          </p> */}
           <div className="cta-buttons">
             <Link to="learn_more" smooth duration={900}>
               <button className="cta-button learn-more">

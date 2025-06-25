@@ -64,20 +64,7 @@ export default function ActionApproach() {
   return (
 
     <div id="vr-section" className="ActionApproachpage-container" ref={sectionRef}>
-        
-        {/* ── UP ARROW (only lives inside this section) ── */}
-        <Link to="home" smooth duration={1000} className="scroll-up-link">
-          <div className="scroll-up-arrow">
-            <svg viewBox="0 0 16 16" aria-hidden="true">
-              <path 
-                d="M4 10l4-4 4 4" 
-                fill="none" 
-                stroke="currentColor" 
-                strokeWidth="2"
-              />
-            </svg>
-          </div>
-        </Link>
+
         
         <div className="main-heading">Turning Values Into Results</div>
         <br/>

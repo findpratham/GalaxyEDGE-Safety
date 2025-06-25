@@ -73,6 +73,7 @@ export default function Partnership() {
         {/* SCROLL UP ARROW */}
         <button
           className="scroll-up-arrow"
+          onClick={scrollToTop}
           aria-label="Scroll to top"
         >
           <svg viewBox="0 0 16 16" aria-hidden="true">

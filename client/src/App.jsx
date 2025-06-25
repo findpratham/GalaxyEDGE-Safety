@@ -13,7 +13,6 @@ import VR from "./pages/VR";
 import ActionApproach from "./pages/ActionApproach";
 import ContactUs from "./pages/ContactUs";
 import Footer from "./pages/footer";
-import HeaderHome from "./components/HeaderHome";
 import RequestDemo from "./pages/demo";
 import ReachOutNow from "./pages/ReachOut";
 import AboutUS from "./pages/AboutUs";  

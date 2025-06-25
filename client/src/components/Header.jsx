@@ -12,7 +12,6 @@ export default function Header() {
       setScrolled(window.scrollY > 450);
     };
     window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
 
@@ -25,6 +24,7 @@ export default function Header() {
             className="tablogo-img"
           />
         </div>
+        
         <div className="logo">
           <img
             src="/assets/logo updated.jpg"
@@ -32,7 +32,9 @@ export default function Header() {
             className="tablogo_text-img"
           />
         </div>
+
       {/* NAVIGATION LINKS */}
+      
       <nav className="nav-links">
         <ul>
 

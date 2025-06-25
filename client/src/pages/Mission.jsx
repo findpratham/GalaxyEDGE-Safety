@@ -30,7 +30,9 @@ export default function OurMission() {
     }
   }, [location.key]); // ✅ listen to `location.key`, not just `location`
 
- 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -61,8 +63,25 @@ export default function OurMission() {
         </svg>
       </button>
 
-      <div className="parallax-image full-screen-image">
-        <img src="/assets/mission.jpg" alt="Main background" className="aboutUS-image-img" />
+      <div className="parallax-image">
+        <video
+        className="aboutUS-image-img"
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        aria-label="Hero background video"
+      >
+        <source src="/assets/Mission.mp4" type="video/mp4" />
+        Your browser doesn’t support HTML5 video.
+      </video>
+      </div>
+
+      <div className = "Hero-Mission-text">
+          <h1 className="Mission-heading">
+            Our Vision & Mission<br />
+          </h1>
       </div>
 
       <div className="missionHeading">

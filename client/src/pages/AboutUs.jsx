@@ -60,12 +60,19 @@ export default class Mission extends Component {
           </svg>
         </button>
 
-      <div className="parallax-image full-screen-image">
-        <img
-          src="/assets/AboutUSImages/heroImage.jpg"
-          alt="Main background"
-          className="aboutUS-image-img"
-        />
+      <div className="parallax-image">
+        <video
+        className="aboutUS-image-img"
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        aria-label="Hero background video"
+      >
+        <source src="/assets/HeroAboutUS.mp4" type="video/mp4" />
+        Your browser doesn’t support HTML5 video.
+      </video>
       </div>
 
       <div className="contentAboutUS">
@@ -80,7 +87,7 @@ export default class Mission extends Component {
 
       <div className = "Hero-text">
           <h1 className="heading">
-          Pioneering the Future of Workplace Safety... <br />
+          Pioneering the Future of Workplace Safety <br />
           </h1>
       </div>
 
