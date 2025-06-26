@@ -36,7 +36,7 @@
     line-height: 1.1; /* Line height for readability */
     padding: 10px 10px;
     opacity: 0;
-    text-shadow: 2px 4px 8px rgba(0, 247, 255, 0.869);
+    text-shadow: -4px 8px 11px rgb(0, 0, 0);
     animation: slideInFromLeft 4s ease-out forwards;
   }
 
@@ -86,6 +86,8 @@
     font-weight: 500;
     margin-left: 1%;
     margin-bottom: 2rem;
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.181);
+
   }
 
   .aboutus-hero-content{

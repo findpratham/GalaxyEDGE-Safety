@@ -101,12 +101,19 @@ export default function Training() {
         </button>
 
 
-      <div className="parallax-image">
-        <img
-          src="/assets/image2.jpg"
-          alt="Main background"
-          className="aboutUS-image-img"
-        />
+        <div className="parallax-image">
+          <video
+            className="aboutUS-image-img"
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            aria-label="Hero background video"
+          >
+          <source src="/assets/Training.mp4" type="video/mp4" />
+          Your browser doesn’t support HTML5 video.
+        </video>
       </div>
 
 

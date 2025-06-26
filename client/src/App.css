@@ -292,7 +292,9 @@
     border-radius: 1.3rem !important;
     cursor: pointer; /* Pointer cursor on hover */
     transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
-}
+    text-shadow: -4px 8px 11px rgba(0, 0, 0, 0.548);
+
+  }
 
 .cta-buttons .cta-button {
     opacity: 0;

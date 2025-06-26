@@ -75,7 +75,7 @@ export default function OurMission() {
       >
         <source src="/assets/MainPage/Mission.mp4" type="video/mp4" />
         Your browser doesn’t support HTML5 video.
-      </video>
+        </video>
       </div>
 
       <div className = "Hero-Mission-text">
