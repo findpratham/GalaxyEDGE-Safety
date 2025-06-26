@@ -1,96 +1,97 @@
 import React, { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
-import { Link } from 'react-router-dom';
-
+import { NavLink, Link } from 'react-router-dom';
 
 export default function Header() {
-
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 450);
     };
     window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  const closeMenu = () => setMenuOpen(false); // Optional: auto-close on link click
 
   return (
     <header className={`header-container${scrolled ? ' scrolled' : ''}`}>
+      {/* LOGOS */}
       <div className="logo">
-          <img
-            src="/assets/tablogo.jpg"
-            alt="GalaxyEDGE Safety Inc."
-            className="tablogo-img"
-          />
-        </div>
-        
-        <div className="logo">
-          <img
-            src="/assets/logo updated.jpg"
-            alt="GalaxyEDGE Safety Inc."
-            className="tablogo_text-img"
-          />
-        </div>
+        <img
+          src="/assets/tablogo.jpg"
+          alt="GalaxyEDGE Safety Inc."
+          className="tablogo-img"
+        />
+        <img
+          src="/assets/logo updated.jpg"
+          alt="GalaxyEDGE Safety Inc."
+          className="tablogo_text-img"
+        />
+      </div>
+
+
+      {/* HAMBURGER ICON (only shows on mobile) */}
+      <button
+        className={`menu-toggle ${menuOpen ? 'open' : ''}`}
+        onClick={() => setMenuOpen(!menuOpen)}
+        aria-label="Toggle menu"
+      >
+        <span className="bar top"></span>
+        <span className="bar middle"></span>
+        <span className="bar bottom"></span>
+      </button>
 
       {/* NAVIGATION LINKS */}
-      
-      <nav className="nav-links">
+      <nav className={`nav-links ${menuOpen ? 'open' : ''}`}>
         <ul>
-
           <li>
-          <NavLink to="/home" end>
+            <NavLink to="/home" end onClick={closeMenu}>
               Home
-          </NavLink>
+            </NavLink>
           </li>
-          
-          {/* ABOUT US TAB */}
+
           <li className="nav-item">
-            <NavLink to="/about-us" end>
+            <NavLink to="/about-us" end onClick={closeMenu}>
               About Us
             </NavLink>
             <ul className="dropdown">
-              <li><NavLink to="/about-us">Our Founder</NavLink></li>
-              <li><NavLink to="/our-mission">Our Vision & Mission</NavLink></li>
-              <li><Link to="/our-mission" state={{ scrollDown: true }}>Our Core Values</Link></li>
+              <li><NavLink to="/about-us" onClick={closeMenu}>Our Founder</NavLink></li>
+              <li><NavLink to="/our-mission" onClick={closeMenu}>Our Vision & Mission</NavLink></li>
+              <li><Link to="/our-mission" state={{ scrollDown: true }} onClick={closeMenu}>Our Core Values</Link></li>
             </ul>
           </li>
 
-          
-          {/* PRODUCT/SERVICES TAB */}
           <li>
-            <NavLink to="our-services" smooth={true} duration={900}>
+            <NavLink to="/our-services" onClick={closeMenu}>
               Services
             </NavLink>
           </li>
 
-          {/* PARTNERSHIPS TAB */}
           <li>
-            <NavLink to="training" smooth={true} duration={500}>
+            <NavLink to="/training" onClick={closeMenu}>
               Training
             </NavLink>
           </li>
 
-          {/* EDUCATION TAB */}
           <li>
-            <NavLink to="ai-driven-safety-solutions" smooth={true} duration={500}>
+            <NavLink to="/ai-driven-safety-solutions" onClick={closeMenu}>
               Innovations
             </NavLink>
           </li>
-          
-          {/* RESOURCES TAB */}
+
           <li>
-            <NavLink to="EventsCultureShifts" smooth={true} duration={500}>
+            <NavLink to="/EventsCultureShifts" onClick={closeMenu}>
               Events
             </NavLink>
           </li>
 
-          {/* EVENTS TAB */}
           <li>
-            <NavLink to="partnerships" smooth={true} duration={500}>
+            <NavLink to="/partnerships" onClick={closeMenu}>
               Partnerships
             </NavLink>
-          </li> 
+          </li>
         </ul>
       </nav>
     </header>

@@ -47,19 +47,19 @@ export default function Home() {
       </div>
 
       {/* Full-screen hero image */}
-      <div className="parallax-image">
-      <video
-        className="parallax-image-img"
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="auto"
-        aria-label="Main background video"
-      >
-        <source src="/assets/MainPage/hero-video.mp4" type="video/mp4" />
-        Your browser doesn’t support HTML5 video.
-      </video>
+      <div className="Home-image">
+        <video
+          className="parallax-image-img"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          aria-label="Main background video"
+        >
+          <source src="/assets/MainPage/hero-video.mp4" type="video/mp4" />
+          Your browser doesn’t support HTML5 video.
+        </video>
 
 
         <div className="content">
