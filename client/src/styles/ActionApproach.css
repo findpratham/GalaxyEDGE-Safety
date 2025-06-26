@@ -1,4 +1,5 @@
 /* Success Stories Section */
+
 .vr-case-studies {
     margin: 3% 4%;
     font-family: var(--apple-font-stack);
@@ -395,5 +396,99 @@
   /* Scale up on hover */
   .margin-button:hover {
     transform: scale(1.01);
+  }
+  
+
+  @media only screen and (max-width: 430px) {
+    .vr-case-studies,
+    .ActionApproachpage-container {
+      margin: 6% 5% !important;
+      width: 80% !important;
+    }
+  
+    .ActionApproachpage-container::before {
+      top: -5vh;
+      left: -5%;
+      width: calc(100% + 10%);
+      height: 8vh;
+      border-top-width: 4px;
+    }
+  
+    .main-heading {
+      font-size: 2rem;
+      line-height: 1.2;
+      padding: 0 1rem;
+    }
+  
+    .vr-subheading {
+      font-size: 1.2rem;
+      margin: -1rem auto 2rem;
+      padding: 0 1rem;
+    }
+  
+    .hero-background {
+      width: 100%;
+      border-radius: 1rem;
+      aspect-ratio: 16 / 9;
+    }
+  
+    .vr-content {
+      top: 20%;
+      left: 6%;
+      width: 88%;
+      font-size: 1rem;
+    }
+  
+    .vr-section {
+      padding: 2rem 1rem;
+    }
+  
+    .vr-details {
+      flex-direction: column;
+      gap: 1.5rem;
+      align-items: center;
+    }
+  
+    .vr-item {
+      flex: 1 1 100%;
+      padding: 1rem;
+      font-size: 1rem;
+    }
+  
+    .vr-item h3 {
+      font-size: 1.5rem;
+    }
+  
+    .vr-item p,
+    .vr-item li {
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+  
+    .vr-testimonials {
+      column-count: 1;
+      padding: 0 1rem;
+    }
+  
+    .vr-testimonial {
+      font-size: 1rem;
+      padding: 1rem;
+    }
+  
+    .request-demo-container {
+      padding: 3rem 1.5rem;
+      font-size: 2rem;
+    }
+  
+    .request-demo-button {
+      font-size: 1.3rem;
+      padding: 0.6rem 1.2rem;
+    }
+  
+    .margin-button {
+      padding: 0.6rem 3rem;
+      font-size: 1.3rem;
+      margin-top: 3rem;
+    }
   }
   

@@ -10,10 +10,10 @@ export default function About() {
           alt="GalaxyEDGE logo" 
           className="about-image"
         />
-
         <NavLink to="/about-us" end>
           <button className="about-button">↓</button>
         </NavLink>
+
       </div>
 
       <div className="about-container">
@@ -31,6 +31,7 @@ export default function About() {
           <br />
           We align risk management with ESG principles and future-ready technologies to deliver scalable, high-impact solutions across diverse industries.
         </p>
+
         
 
 
