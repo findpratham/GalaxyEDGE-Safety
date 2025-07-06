@@ -95,10 +95,10 @@
   
   .Training-card-image {
     width: 100%;
-    aspect-ratio: 16/9;
+    aspect-ratio: 16/10;
     background-size: cover;
     background-position: center;
-  }
+    }
   
   .card-content {
     text-align: center;
@@ -260,6 +260,7 @@
     background-color 0.3s ease, 
     transform 0.3s ease, 
     color 0.5s ease; /* Smooth color transition */  
+ 
     
 }
 

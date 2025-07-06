@@ -14,16 +14,22 @@ const cards = [
     img: "/assets/AIDriven1.jpg",
     subtitle: "An intelligent AI assistant delivering real-time insights to power proactive safety decisions",
     info1: [
-      "Transform the way your teams learn and lead. GESI’s immersive training—powered by UP360—brings real-world safety scenarios to life through cutting-edge virtual environments. Engage your workforce with high-impact experiences that build confidence, improve retention, and drive behavior change at every level"
+      "GalaxyEDGE Safety Inc. is proud to introduce the early development of an AI-powered prototype designed to support the future of occupational health and safety system performance. Currently in its concept and validation phase, this emerging innovation will align with the PRIME360™ governance framework, offering organizations a new way to navigate complex regulatory landscapes and system-level risk",
+      "Without disclosing technical specifics, we can share that this solution is being shaped to complement PRIME360’s five interconnected framework—Planning, Resilience, Integration, Measurement, and Engagement—which also align with COR, ISO 45001, and the CSA Z1003 standards"
     ],    
+    info2: [
+      " <strong> Interested inContributing to Innovation?</strong><br/><br/>GalaxyEDGE is actively seeking forward-thinking organizations to participate in early-stage prototype collaboration and validation. If you're passionate about advancing OHS strategy, system resilience, and performance, we’d welcome the opportunity to connect.<br/><br/>"
+
+    ],
   },
   {
     title: "Customized AI Solutions for Businesses",
     img: "/assets/AIDriven2.jpg",
     subtitle: "Build AI tools around your business needs to boost safety, efficiency, and performance",
     info1: [
-      "We design scenario-based learning solutions customized for every organizational tier—from executives shaping culture to frontline workers managing daily risk. Using real-life context and role-specific challenges, we help your teams develop practical skills that translate into immediate safety performance"
-    ],    
+      "Explore how GESI can help tailor AI-enabled solutions to your organization’s unique safety and compliance challenges. Whether you're advancing an existing OHS program or building a system from the ground up, we collaborate to design adaptive tools that align with your strategy, workforce, and risk profile"
+    ],
+
   }
 ]
 export default function AIDriven() {
@@ -129,7 +135,7 @@ export default function AIDriven() {
 
         <div className = "AIDriven-sub-heading">
             <h1>
-                Harness the power of machine learning, automation, and predictive insight to revolutionize how safety is understood, managed, and improved           
+            Revolutionize how safety is understood, managed, and improved           
             </h1>
         </div>
 
@@ -201,14 +207,23 @@ export default function AIDriven() {
                 ))}
               </ul>
 
+              {current.info2 && (
+                <p
+                  className="card-info2"
+                  dangerouslySetInnerHTML={{ __html: current.info2[0] }}
+                />
+              )}
+
                 {/* Button based on expandedIndex */}
                 {expandedIndex === 0 ? (
+
                 <NavLink to="/targeted_support" smooth duration={900}>
-                    <button className="AIDriven-CTA1">Get Targeted Support</button>
+                    <button className="AIDriven-CTA1">Explore Prototype Concept</button>
                 </NavLink>
+
                 ) : expandedIndex === 1 ? (
                 <NavLink to="/system_assessment" smooth duration={900}>
-                    <button className="AIDriven-CTA2">Partner with us to transform your business</button>
+                    <button className="AIDriven-CTA2">Contact us to explore  AI solutions to improve your business</button>
                 </NavLink>
                 ) : null}
           </div>

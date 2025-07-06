@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -63,16 +62,23 @@ export default function Header() {
             </ul>
           </li>
 
-          <li>
+          <li className="nav-item">
             <NavLink to="/our-services" onClick={closeMenu}>
               Services
             </NavLink>
+            <ul className="dropdown">
+              <li><NavLink to="/prime360" onClick={closeMenu}>PRIME360™</NavLink></li>
+            </ul>
           </li>
 
-          <li>
+
+          <li className="nav-item">
             <NavLink to="/training" onClick={closeMenu}>
               Training
             </NavLink>
+            <ul className="dropdown">
+              <li><NavLink to="/Immersive-Learning" onClick={closeMenu}>Immersive-Learning</NavLink></li>
+            </ul>
           </li>
 
           <li>
@@ -81,10 +87,13 @@ export default function Header() {
             </NavLink>
           </li>
 
-          <li>
+          <li className="nav-item">
             <NavLink to="/EventsCultureShifts" onClick={closeMenu}>
               Events
             </NavLink>
+            <ul className="dropdown">
+              <li><NavLink to="/news" onClick={closeMenu}>News</NavLink></li>
+            </ul>
           </li>
 
           <li>

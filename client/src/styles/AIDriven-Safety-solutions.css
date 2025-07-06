@@ -196,7 +196,23 @@
     font-family: var(--sf-stack);
     color: #000;
     text-align: left;
+    position:relative;
+
   }
+
+  /* Style for your info2 paragraph */
+.card-info2 {
+  position: relative;
+  left: 50%;                /* start at the horizontal midpoint of the parent */
+  transform: translateX(-50%); /* shift back by half its own width */
+  top:1rem;
+  bottom: 0rem;             /* 1rem above the bottom of the detail section */
+  width: 98%;               /* or whatever max width you need */
+  text-align: center;       /* center the text itself */
+  font-size: 1.5rem;          /* adjust as desired */
+  line-height: 1.4;         /* comfortable line spacing */
+  color: #000000;              /* adjust color to match your theme */
+}
 
   
   

@@ -5,11 +5,10 @@ const cards = [
   {
     title: "Innovation",
     img: "/assets/TakeActionImages/Proactive-risk.jpg",
-    detail1: "We embrace cutting-edge technology to transform occupational health and safety. By leveraging AI-driven risk analytics, immersive VR/AR simulations, smart wearable integrations, and automated workflows, we continuously improve hazard prevention, streamline compliance, and deliver personalized, data-driven training. ",
+    detail1: "We embrace cutting-edge technology to transform occupational health and safety. Through collaboration with leading technology partners, we are developing next-generation solutions that leverage AI and immersive technologies to drive proactive safety improvements and organizational excellence. ",
     info1: [
       "Cutting-edge, photorealistic 3D replicas of equipment and facilities that let operators practice in truly immersive VR environments.",
-      "Adaptive emergency-response drills that dynamically adjust scenarios (fire, spill, lockout/tagout) on the fly, powered by real-time analytics and AI-driven randomness.",
-      "Blended learning options—live, instructor-led virtual seminars plus self-paced VR modules—designed to maximize engagement and retention across any learning style.",
+      "AI-powered auditor assistant designed to streamline OHS system audits, identify compliance gaps, and provide real-time, tailored guidance aligned with COR, ISO 45001, and CSA Z1003 standards.",
       "Next-generation performance analytics with AI-backed scoring, instant session playback, and timestamped insights to continuously refine training effectiveness."
     ],    
     image1: "/assets/TakeActionImages/AdditionalinfoImages/risk11.jpg",
@@ -20,10 +19,10 @@ const cards = [
 
     detail1: "Safety is at the core of everything we do. We are dedicated to developing solutions that reduce workplace risks, protect employees, and create a culture of proactive safety and well-being.",
     info1:[
-      "Machine learning–driven analytics leveraging incident, environmental, and operational data to forecast and prevent hazards before they occur.",
-      "Interactive “what-if” simulations that evaluate process modifications, facility layouts, and staffing scenarios under diverse operational conditions.",
-      "Dynamic risk heatmaps highlighting emerging hotspots on floor plans, equipment zones, and workflow areas to guide targeted safety interventions.",
-      "Configurable risk thresholds and real-time alerts that automatically notify stakeholders when safety or well-being parameters are exceeded.",
+      "Culture-driven safety diagnostics assessing leadership & behavior.",
+      "Integrated OHSMS aligned with COR, ISO 45001.",
+      "Executive programs embedding safety into leadership.",
+      "Strategies integrating well-being, psychosocial risk, and mental health.",
     ],
     image1: "/assets/TakeActionImages/AdditionalinfoImages/resilience1.jpg",
   },
@@ -31,12 +30,12 @@ const cards = [
     title: "Accessibility",
     img: "/assets/TakeActionImages/safety-gear.jpg",
 
-    detail1: "We believe that safety knowledge should be available to everyone—from executives to frontline workers. Our commitment is to provide cost-effective, engaging, and inclusive training that ensures equal access to safety resources worldwide.",
+    detail1: "We believe safety knowledge must be accessible to everyone—from executives to frontline workers. We deliver customized, harmonized solutions aligned to your operations, embedding accountability at every levele.",
     info1: [
-      "Unified training framework that maps and reconciles provincial, federal, and international safety standards into a single, accessible curriculum for all users.",
-      "Centralized knowledge repository with version control, audit trails, and permission-based access to ensure transparent record-keeping and equal access to safety resources.",
-      "Role-specific training workflows and automated distribution channels that streamline collaboration and engagement from executives to frontline workers, regardless of location.",
-      "Modular, template-driven training modules and interactive checklists designed to accelerate deployment, minimize customization, and guarantee inclusive access to safety knowledge worldwide.",
+      "Tailored Safety Assessments: In-depth evaluations that align with your unique operational landscape to deliver relevant, actionable safety strategies.",
+      "Unified Training Frameworks: Streamlined curricula integrating provincial, federal, and international safety standards—accessible across all organizational levels.",
+      "Governance-integrated Knowledge Systems: Role-specific training workflows and automated distribution channels that streamline collaboration and engagement from executives to frontline workers, regardless of location.",
+      "Immersive Learning Solutions: Custom VR/AR training experiences developed with tech partners to boost workforce engagement, retention, and real-world readiness.",
     ],
     image1: "/assets/TakeActionImages/AdditionalinfoImages/risk1.jpg",
   },

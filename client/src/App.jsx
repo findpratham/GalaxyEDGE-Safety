@@ -17,8 +17,10 @@ import RequestDemo from "./pages/demo";
 import ReachOutNow from "./pages/ReachOut";
 import AboutUS from "./pages/AboutUs";  
 import Mission from "./pages/Mission";
-import Services from "./pages/Services";  
+import Services from "./pages/Services";
+import Prime360 from "./pages/Prime360";
 import Training from "./pages/Training";
+import ImmersiveLearning from "./pages/ImmersiveLearning";
 import AIDriven from "./pages/AIDriven-Safety-solutions";
 import ESG from "./pages/ESG";
 import EventsCultureShifts from "./pages/Events-Culture-shifts";
@@ -48,7 +50,9 @@ export default function App() {
       <Route path="/about-us" element={<AboutUS />} />
       <Route path="/our-mission" element={<Mission />} />
       <Route path="/our-services" element={<Services />} />
+      <Route path="/prime360" element={<Prime360 />} />
       <Route path="/training" element={<Training />} />
+      <Route path="/Immersive-Learning" element={<ImmersiveLearning />} />
       <Route path="/ESG_Stratergy_Performance" element={<ESG />} />
       <Route path="/ai-driven-safety-solutions" element={<AIDriven />} />
       <Route path="/EventsCultureShifts" element={<EventsCultureShifts />} />

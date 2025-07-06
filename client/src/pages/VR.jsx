@@ -84,8 +84,7 @@ export default function VR() {
               <div className="vr-item-image-wrapper">
                 <img src="/assets/image1.jpg" alt = "" className="vr-item-image" />
                 <div className="vr-item-text">
-                  <h3>Smart Safety starts with People-Centered Strategy </h3>
-
+                  <h3>Advisory Solutions that Deliver Impact</h3>
                   <NavLink to="/our-services" end>
                     <button className="mission-buttons1">↓</button>
                   </NavLink>
@@ -97,12 +96,12 @@ export default function VR() {
             <div className="vr-item">
               <div className="vr-item-image-wrapper">
                 <img
-                  src="/assets/image2.jpg"
+                  src="/assets/Training2.jpg"
                   alt="Scalable and Flexible Training"
                   className="vr-item-image"
                 />
                 <div className="vr-item-text">
-                  <h3>Immersive Training That Transform's Behavior</h3>
+                  <h3>Training Solutions That Transforms Behavior</h3>
                   <NavLink to="/training" end>
                     <button className="mission-buttons2">↓</button>
                   </NavLink>
@@ -133,7 +132,6 @@ export default function VR() {
                 <img src="/assets/image4.jpg" alt = "" className="vr-item-image" />
                 <div className="vr-item-text">
                   <h3>Building Safety into your ESG Commitments</h3>
-                 
                   <NavLink to="/ESG_Stratergy_Performance" end>
                     <button className="mission-buttons1">↓</button>
                   </NavLink>
@@ -158,7 +156,7 @@ export default function VR() {
             {/* ── CARD 6 ── */}
             <div className="vr-item" >
               <div className="vr-item-image-wrapper">
-                <img src="/assets/image6.jpg" alt = "" className="vr-item-image" />
+                <img src="/assets/imageHero.jpg" alt = "" className="vr-item-image" />
                 <div className="vr-item-text">
                   <h3>Partnerships That Drive Innovation Forward</h3>
                   <NavLink to="/our-mission" end>
@@ -167,6 +165,7 @@ export default function VR() {
                 </div>
               </div>
             </div>
+            
           </div>
           
           {/* CENTER IMAGE */}

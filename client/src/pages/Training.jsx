@@ -11,10 +11,10 @@ import Footer from "../pages/footer";
 const cards = [
   {
     title: "Immersive Learning",
-    img: "/assets/Training1.jpg",
-    subtitle: "Step into safer decisions with immersive learning that feels real",
+    img: "/assets/ImmersiveHero.jpg",
+    subtitle: "Immersive learning that empowers action and transforms safety culture",
     info1: [
-      "Transform the way your teams learn and lead. GESI’s immersive training—powered by UP360—brings real-world safety scenarios to life through cutting-edge virtual environments. Engage your workforce with high-impact experiences that build confidence, improve retention, and drive behavior change at every level"
+      "Transform the way your teams learn and lead. GESI’s immersive training- brings real-world safety scenarios to life through cutting-edge virtual environments at a price that works within your budget. Engage your workforce with high-impact experiences that build confidence, improve retention, and drive behavior change at every level."
     ],    
   },
   {
@@ -26,6 +26,7 @@ const cards = [
     ],    
   }
 ]
+
 export default function Training() {
   // Scroll to top on mount
   useEffect(() => {
@@ -111,7 +112,7 @@ export default function Training() {
             preload="auto"
             aria-label="Hero background video"
           >
-          <source src="/assets/Training.mp4" type="video/mp4" />
+          <source src="/assets/ImmersiveLearningHero.mp4" type="video/mp4" />
           Your browser doesn’t support HTML5 video.
         </video>
       </div>
@@ -207,8 +208,8 @@ export default function Training() {
 
               {/* Button based on expandedIndex */}
               {expandedIndex === 0 ? (
-                <NavLink to="/contact" smooth duration={900}>
-                  <button className="Training-CTA1">Contact Us for a Consultation</button>
+                <NavLink to="/Immersive-Learning" smooth duration={900}>
+                  <button className="Training-CTA1">Learn more about Immersive Learning</button>
                 </NavLink>
               ) : expandedIndex === 1 ? (
                 <NavLink to="/contact" smooth duration={900}>

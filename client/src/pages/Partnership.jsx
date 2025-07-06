@@ -11,9 +11,9 @@ import Footer from "../pages/footer";
 const cards = [
     // CARD 1:
   {
-    title: "Empowering people with intelligent safety support ",
+    title: "Partnership that Power Progress",
     img: "/assets/Partnership1.jpg",
-    subtitle: "Fueling innovation with trusting collaboration",
+    subtitle: "Fueling innovation with trusting collaboration",    
     info1: [
       "Transform the way your teams learn and lead. GESI’s immersive training—powered by UP360—brings real-world safety scenarios to life through cutting-edge virtual environments. Engage your workforce with high-impact experiences that build confidence, improve retention, and drive behavior change at every level"
     ],    
@@ -105,7 +105,7 @@ export default function Partnership() {
 
       <div className="parallax-image">
         <img
-          src="/assets/image6.jpg"
+          src="/assets/imageHero.jpg"
           alt="Main background"
           className="aboutUS-image-img"
         />

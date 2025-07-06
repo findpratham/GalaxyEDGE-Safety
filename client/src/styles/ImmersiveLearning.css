@@ -1,0 +1,491 @@
+.ImmersiveLearning-container {
+    margin:  auto  /* top, then horizontal auto, bottom remains whatever was before */ !important;
+}
+
+.ImmersiveLearning-Page-container{
+    margin:  auto  /* top, then horizontal auto, bottom remains whatever was before */ !important;
+    width: 1450px;
+    max-width: 1450px
+}
+
+
+.ImmersiveLearningmain-heading {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* Heading Styling */
+.ImmersiveLearningmain-heading h1{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-weight: 550;              /* semibold like Apple’s headlines */
+    letter-spacing: -0.02em;
+    font-size: 3.2rem; /* Slightly smaller font size for better fit */
+    color: rgb(0, 0, 0); /* White color for heading */
+    line-height: 1.1; /* Line height for readability */
+    padding: 10px 10px;
+    opacity: 0;
+    animation: slideInFromLeft 4s ease-out forwards;
+}
+
+.ImmersiveLearning-third-heading {
+    text-align: center;
+}
+
+/* Heading Styling */
+.ImmersiveLearning-third-heading h1{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-weight: 550;              /* semibold like Apple’s headlines */
+    letter-spacing: -0.02em;
+    font-size: 3.2rem; /* Slightly smaller font size for better fit */
+    color: rgb(0, 0, 0); /* White color for heading */
+    line-height: 1.1; /* Line height for readability */
+    padding: 10px 10px;
+    opacity: 0;
+    animation: slideInFromLeft 4s ease-out forwards;
+    margin-bottom: 5px;
+    margin-top: -10px;
+}
+
+.ImmersiveLearning-sub-heading {
+    margin-bottom: 5rem;
+    width: 1050px;
+    max-width: 1050px;
+    text-align: center;
+    margin-left: auto;  
+    margin-right: auto; 
+  }
+  
+/* Heading Styling */
+.ImmersiveLearning-sub-heading h1{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-weight: 550;              /* semibold like Apple’s headlines */
+    letter-spacing: -0.02em;
+    font-size: 2.8rem; /* Slightly smaller font size for better fit */
+    color: rgb(0, 0, 0); /* White color for heading */
+    line-height: 1.1; /* Line height for readability */
+    padding: 10px 10px;
+    opacity: 0;
+    animation: slideInFromLeft 4s ease-out forwards;
+}
+
+.Immersive-image1 {
+    margin: -25px auto 50px /* top, then horizontal auto, bottom remains whatever was before */ !important;
+    z-index: 1;
+    position: relative;
+    width: 1340px;
+    height:540px; 
+    border-radius: 1.5rem !important;   
+    overflow: hidden;    /* ← add this */
+
+  }
+
+.Immersive-image {
+    margin: -25px auto 80px /* top, then horizontal auto, bottom remains whatever was before */ !important;
+    z-index: 1;
+    position: relative;
+    width: 750px;
+    height: 500px; 
+    border-radius: 1.5rem !important;   
+    overflow: hidden;    /* ← add this */
+    
+
+  }
+
+  .Immersive-image2 {
+    margin: 0px auto 0px /* top, then horizontal auto, bottom remains whatever was before */ !important;
+    z-index: 1;
+    position: relative;
+    width: 850px;
+    height: 500px; 
+    border-radius: 1.5rem !important;   
+    overflow: hidden;    /* ← add this */
+  }
+  .Prime360-Structure-image {
+    margin: -130px auto 50px /* top, then horizontal auto, bottom remains whatever was before */ !important;
+    z-index: 1;
+    position: relative;
+    width: 1350px;
+    height: 850px; 
+    border-radius: 1.5rem !important;   
+    overflow: hidden;    /* ← add this */
+    transform: scale(0.7);
+  }
+
+
+  .Immersive-section-header p{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 100px;
+    margin-top: -55px;
+  }
+  
+  .Immersive-section-header{
+    width: 1340px;
+    /* max-width: 745px; */
+    margin: 50px auto -80px !important;
+  }
+
+  
+  .inline-icon {
+    float: left;          /* Makes text wrap around it */
+    width: 250px;         /* Adjust the size to fit your layout */
+    height: auto;         /* Maintain aspect ratio */
+    margin-top: -10px;
+    margin-right: 1.5rem;   /* Space between image and text */
+    margin-bottom: 0.5rem;/* Optional: adds spacing below image */
+  }
+
+/* -------CARDS------- */
+  
+.Prime360-cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0rem;
+    justify-items: center;
+  }
+  
+  
+.Prime360-card {
+    position: relative;
+    background: #fff;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    width: 100%;
+    max-width: 630px;
+    box-shadow: 1px 4px 16px rgba(0, 0, 0, 0.092);
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 2s ease-out forwards;
+    transform-origin: center center;
+    transition: transform 0.3s ease;
+  }
+  
+  .services-card.hovered {
+    transform: scale(1.04);
+    box-shadow: 0px 1px 44px rgba(0, 0, 0, 0.168);
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .services-card-image {
+    width: 100%;
+    aspect-ratio: 16/11;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .card-content {
+    text-align: center;
+  }
+  
+  .card-content h3 {
+    margin: 1.8rem 0 0.75rem;
+    font-size: 1.9rem;
+    font-weight: 600;
+    color: #111;
+    padding-bottom: 1.6rem;
+  }
+  
+  .card-content p {
+    margin: -0.9rem 2rem 4rem;
+    font-size: 1.2rem;
+    color: #000000;
+    line-height: 1.4;
+  }
+  
+  /* Centered “+” button in the bottotm-right of each card */
+  .card-cta {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    font-size: 1.4rem;
+    color: #000;
+    background-color: transparent;
+    cursor: pointer;
+    overflow: hidden;
+  
+    transition:
+      background-color 0.4s ease,
+      color 0.3s ease,
+      transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transform-origin: center center;
+  }
+  
+  /* ARROW SVG STYLING */
+  
+  .scroll-down-arrow-card {
+    position: relative;
+    
+    
+  
+  }
+  
+  .scroll-down-arrow-card svg {
+    width: 30px;
+    height: 30px;
+    
+  }
+  
+  .card-cta:hover {
+    transform: scale(1.4);
+  }
+  
+  /* Ensure the span is inline-block so it can rotate */
+  .card-cta .icon {
+    display: inline-block;
+    transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+  
+  .card-cta.active .icon {
+    transform: rotate(45deg) scale(1.2);
+  }
+  
+  .card-cta.active {
+    background-color: #000;
+    color: #f5f5f7;
+    transform: scale(1.5) ;
+    right: 0;
+    width: 100%;
+    bottom:0;
+    padding-bottom:0.5rem ;
+  }
+  
+  /* Detail panel below cards */
+  .card-detail-section {
+    margin: 3.5rem 2rem 0rem;
+    padding: 1rem;
+    max-width: 94.4%;
+    background: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInDetail 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    font-family: var(--sf-stack);
+    color: #000;
+    text-align: left;
+  }
+
+  
+  
+  @keyframes fadeInDetail {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Detail list styling */
+  .card-detail-list {
+    flex: 1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .card-detail-list li {
+    position: relative;
+    padding-left: 1.75rem;
+    font-weight: 200;
+    margin-bottom: 0.75rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+  
+
+  
+  /* Fade helpers */
+  .fade-in {
+    opacity: 1 !important;
+    transition: opacity 0.3s ease;
+  }
+  .fade-out {
+    opacity: 0 !important;
+    transition: opacity 0.3s ease;
+  }
+
+
+  .ImmersiveLearning-adoption {
+    position: relative;        /* Make sure this sits above other sections */
+    z-index: 1;                /* Prevents it from going behind other elements */
+    padding: 2rem;             /* Add spacing if needed */
+    background: white;         /* Or your desired background color */
+  }
+  
+  .Immersive-inline-container {
+    display: flex;             /* This makes image + text side by side */
+    flex-direction: row;
+    align-items: flex-start;   /* Top-aligns image and text */
+    gap: 2rem;                 /* Space between image and text */
+    flex-wrap: wrap;           /* Makes it wrap on smaller screens */
+  }
+  
+  .Immersive-image3 img {
+    max-width: 200px;          /* Adjust image size */
+    width: 100%;               /* Make it responsive */
+    height: 250px;              /* Keep aspect ratio */
+    display: block;
+    transform: scale(0.8)
+  }
+  
+  .Immersive-inline-container p {
+    flex: 1;                   /* Make paragraph take remaining space */
+    margin: 0;                 /* Reset default margins */
+  }
+
+  .Text-container {
+    position: absolute;
+    flex: 1;                   /* Make paragraph take remaining space */
+    margin: 0;                 /* Reset default margins */
+    width: 1200px !important;
+    align-self: right;
+    left: 60%;
+    transform: translateX(-50%);
+  }
+
+/* Heading Styling */
+.ImmersiveLearning-adoption h1{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-weight: 550;              /* semibold like Apple’s headlines */
+    letter-spacing: -0.02rem;
+    font-size: 3.2rem; /* Slightly smaller font size for better fit */
+    color: rgb(0, 0, 0); /* White color for heading */
+    line-height: 1.1; /* Line height for readability */
+    padding: 10px 10px;
+    opacity: 0;
+    animation: slideInFromLeft 4s ease-out forwards;
+    text-align: center;
+}
+
+.ImmersiveLearning-adoption p{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-weight: 550;              /* semibold like Apple’s headlines */
+    letter-spacing: -0.02em;
+    font-size: 1.5rem; /* Slightly smaller font size for better fit */
+    color: rgb(0, 0, 0); /* White color for heading */
+    line-height: 1.1; /* Line height for readability */
+    padding: 10px 10px;
+    opacity: 0;
+    animation: slideInFromLeft 4s ease-out forwards;
+    text-align: left;
+    margin-top: 0px;
+}
+  
+  /* CTA 1  */
+
+  .Services-CTA1{
+    position: relative;
+    overflow: hidden;
+    display: block;                  /* Makes the button take up full line */
+    margin: 11.8rem auto 1rem auto;        /* Horizontally centers it */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-weight: 550; 
+    padding: 0.8rem 2rem; /* Padding inside buttons */
+    font-size: 1.6rem; /* Font size */
+    color: rgb(0, 0, 0); /* Black text color */
+    border: none; /* Remove default border */
+    border-radius: 1.3rem !important;
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: 
+    background-color 0.3s ease, 
+    transform 0.3s ease, 
+    color 0.5s ease; /* Smooth color transition */  
+    
+}
+
+  .Services-CTA1::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 0;
+    height: 200%;
+    background-color: rgb(0, 0, 0);  /* your hover blue */
+    border-radius: 0 100% 100% 0;
+    transform: translateY(-50%);
+    transition: width 0.5s ease;
+    z-index: -1;
+  }
+
+  .Services-CTA1:hover::before {
+    width: 200%;
+  }
+
+  .Services-CTA1:hover {
+    color: white;
+    transform: scale(1.15);
+    box-shadow: -12px 12px 28px rgba(0, 0, 0, 0.25); /* 3D lift from bottom-left */
+  }
+
+  /* CTA 2 */
+  .Services-CTA2{
+    position: relative;
+    overflow: hidden;
+    display: block;                  /* Makes the button take up full line */
+    margin: 1.11rem auto 1rem auto;        /* Horizontally centers it */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-weight: 550; 
+    padding: 0.8rem 2rem; /* Padding inside buttons */
+    font-size: 1.6rem; /* Font size */
+    color: rgb(0, 0, 0); /* Black text color */
+    border: none; /* Remove default border */
+    border-radius: 1.3rem !important;
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: 
+    background-color 0.3s ease, 
+    transform 0.3s ease, 
+    color 0.5s ease; /* Smooth color transition */  
+    
+}
+
+  .Services-CTA2::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 0;
+    height: 200%;
+    background-color: rgb(0, 0, 0);  /* your hover blue */
+    border-radius: 0 100% 100% 0;
+    transform: translateY(-50%);
+    transition: width 0.5s ease;
+    z-index: -1;
+  }
+
+  .Services-CTA2:hover::before {
+    width: 200%;
+  }
+
+  .Services-CTA2:hover {
+    color: white;
+    transform: scale(1.15);
+    box-shadow: -12px 12px 28px rgba(0, 0, 0, 0.25); /* 3D lift from bottom-left */
+  }

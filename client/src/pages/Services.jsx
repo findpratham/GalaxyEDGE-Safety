@@ -19,9 +19,10 @@ const cards = [
   {
     title: "Build a Safer System from the Ground Up",
     img: "/assets/services2.jpg",
-    subtitle: "Assess and align your safety systems with governance frameworks for lasting cultural impact",
+    subtitle: "Assess and align your safety systems with PRIME360-a leading edge framework that delivers cultural impact",
     info1: [
-      "Our comprehensive assessments evaluate your full health and safety ecosystem—policies, processes, leadership practices, and cultural alignment—against recognized frameworks like ISO 45001, COR, and ESG requirements. We provide actionable roadmaps that strengthen governance, enhance accountability, and embed resilience at every level"
+      "We deliver more than safety consulting—we build integrated systems that lead performance. At the core of our Safety Intelligence & Advisory services is PRIME360™, a strategic governance model that unites health, safety, and psychological well-being with business objectives",
+      "Aligned with ISO 45001, CSA Z1003, and COR, PRIME360™ embeds executive accountability, risk controls, and continuous improvement into a single adaptable framework—ensuring safety becomes a driver of organizational resilience, culture, and strategic growth"
     ],    
   }
 ]
@@ -120,17 +121,17 @@ export default function Services() {
       <div className = "Page-container">
         <div className = "main-heading">
             <h1>
-            People-Powered Safety: Strategy That Starts From Within
+            Advisory Solutions that Deliver Impact
             </h1>
         </div>
         
         <div className="section-header">
         <br />
           <p>
-          We go beyond traditional consulting. Our Safety Intelligence & Advisory services deliver strategic guidance through tailored gap analyses aligned with national and international frameworks—such as ISO 45001, the National Standard for Psychological Health and Safety, and COR certification.
+          We deliver more than safety consulting—we build integrated systems that lead performance. At the core of our <strong>Safety Intelligence & Advisory services</strong> is <strong>PRIME360™</strong>, a strategic governance model that unites health, safety, and psychological well-being with business objectives.          
           <br />
           <br />  
-          But we don’t stop at systems and standards. We help organizations uncover hidden risks and define clear, people-centered roadmaps that embed safety into culture, leadership, and daily operations—enhanced by intelligent digital tools and emerging technologies. From frontline engagement to executive alignment, we empower leaders with the insights needed to drive meaningful, lasting change.
+          Aligned with ISO 45001, CSA Z1003, and COR, PRIME360™ embeds executive accountability, risk controls, and continuous improvement into a single adaptable framework—ensuring safety becomes a driver of organizational resilience, culture, and strategic growth.
           </p>
         </div>
 
@@ -208,8 +209,8 @@ export default function Services() {
                   <button className="Services-CTA1">Get Targeted Support</button>
                 </NavLink>
               ) : expandedIndex === 1 ? (
-                <NavLink to="/system_assessment" smooth duration={900}>
-                  <button className="Services-CTA2">Request a System Assessment</button>
+                <NavLink to="/prime360" smooth duration={900}>
+                  <button className="Services-CTA2">Learn More About PRIME360™</button>
                 </NavLink>
               ) : null}
           </div>
