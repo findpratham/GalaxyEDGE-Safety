@@ -41,14 +41,13 @@
   }
 
   .Prime360-Structure-image {
-    margin: -130px auto 50px /* top, then horizontal auto, bottom remains whatever was before */ !important;
+    margin: 100px auto -500px  !important/* top, then horizontal auto, bottom remains whatever was before */ !important;
     z-index: 1;
     position: relative;
     width: 1350px;
     height: 850px; 
     border-radius: 1.5rem !important;   
     overflow: hidden;    /* ← add this */
-    transform: scale(0.7);
   }
 
 
@@ -64,12 +63,156 @@
   }
   
   .Prime360-section-header{
-    width: 670px;
-    max-width: 670px;
-    margin: -150px auto -70px !important;
+    width:1000px;
+    max-width: 1000px;
+    margin-top: -150px;
+    margin-bottom: -70px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
   }
 
-  
+  /* container to give you any needed padding/margins */
+  .Prime360-table-container {
+    margin: 2rem;
+    overflow-x: auto; /* if you have many columns on small screens */
+    margin-bottom: 100px;
+  }
+
+  /* base table styling */
+  .Prime360-table {
+    width: 1000px;
+    margin:auto;
+    border-collapse: collapse;
+    font-family: sans-serif;
+  }
+
+  .Prime360-table th,
+  .Prime360-table td {
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    text-align: left;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    color: #333;
+  }
+
+  /* Use the colgroup classes to set individual widths */
+  .Prime360-table col.col-1 { width: 1%; }
+  .Prime360-table col.col-2 { width: 1%; }
+  .Prime360-table col.col-3 { width: 15%; }
+  .Prime360-table col.col-4 { width: 15%; }
+
+    /* center‐align columns 1 & 2 */
+  .Prime360-table th:nth-child(1),
+  .Prime360-table td:nth-child(1),
+  .Prime360-table th:nth-child(2),
+  .Prime360-table td:nth-child(2) {
+    text-align: center;
+    /* if you want vertical centering, too: */
+    vertical-align: middle;
+  }
+
+  .Prime360-table th:nth-child(1),
+  .Prime360-table td:nth-child(1) {
+    font-weight: bold;
+  }
+
+    /* base table styling */
+  .Prime360-table {
+    width: 1000px;
+    margin:auto;
+    border-collapse: collapse;
+    font-family: sans-serif;
+  }
+
+  .Prime360-table th,
+  .Prime360-table td {
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    text-align: left;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    color: #333;
+  }
+
+  /* Use the colgroup classes to set individual widths */
+  .Prime360-table col.col-1 { width: 1%; }
+  .Prime360-table col.col-2 { width: 1%; }
+  .Prime360-table col.col-3 { width: 15%; }
+  .Prime360-table col.col-4 { width: 15%; }
+
+    /* center‐align columns 1 & 2 */
+  .Prime360-table th:nth-child(1),
+  .Prime360-table td:nth-child(1),
+  .Prime360-table th:nth-child(2),
+  .Prime360-table td:nth-child(2) {
+    text-align: center;
+    /* if you want vertical centering, too: */
+    vertical-align: middle;
+  }
+
+  .Prime360-table th:nth-child(1),
+  .Prime360-table td:nth-child(1) {
+    font-weight: bold;
+  }
+
+  /* TABLE 2 */
+
+   /* container to give you any needed padding/margins */
+  .Prime360-table-container2 {
+    margin: 2rem;
+    overflow-x: auto; /* if you have many columns on small screens */
+    margin-bottom: 100px;
+  }
+
+  /* base table styling */
+  .Prime360-table2 {
+    width: 1000px;
+    margin:auto;
+    border-collapse: collapse;
+    font-family: sans-serif;
+  }
+
+  .Prime360-table2 th,
+  .Prime360-table2 td {
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    text-align: left;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    color: #333;
+  }
+
+  /* Use the colgroup classes to set individual widths */
+  .Prime360-table2 col.col-1 { width: 1%; }
+  .Prime360-table2 col.col-2 { width: 2%; }
+  .Prime360-table2 col.col-3 { width: 15%; }
+
+
+    /* center‐align columns 1 & 2 */
+  .Prime360-table2 th:nth-child(1),
+  .Prime360-table2 td:nth-child(1) {
+    text-align: center;
+    /* if you want vertical centering, too: */
+    vertical-align: middle;
+  }
+
+  .Prime360-table2 th{
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+
+  }
 
 /* -------CARDS------- */
   

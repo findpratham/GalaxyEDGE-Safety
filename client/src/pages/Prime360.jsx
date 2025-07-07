@@ -143,14 +143,133 @@ export default function Prime360() {
           <p>
             <strong>At the heart of PRIME360™ are five interconnected pillars:</strong>   
           <br />
-          <br />  
+          {/* <br />  
             ◦ PRIME360™ Acronym Graphic- Lisa to Forward           
            <br />  
             ◦ PRIME360™ Structural Table (5 Elements)- Lisa to Forward
             <br />
-            ◦ Summary Text Underneath Table Lisa to Forward          
+            ◦ Summary Text Underneath Table Lisa to Forward           */}
             </p>
         </div>
+
+        {/* TABLE */}
+        <div className="Prime360-table-container">
+          <table className="Prime360-table">
+            <colgroup>
+              {/* give each <col> a class so you can control its width in CSS */}
+              <col className="Prime360-col col-1" />
+              <col className="Prime360-col col-2" />
+              <col className="Prime360-col col-3" />
+              <col className="Prime360-col col-4" />
+              <col className="Prime360-col col-5" />
+            </colgroup>
+
+            <tbody>
+              <tr>
+                <td>P</td>
+                <td>Planning</td>
+                <td>Strategy &amp; Design (Element 2)</td>
+                <td>Establishes system scope, objectives, and integration into business strategy.</td>
+              </tr>
+              <tr>
+                <td>R</td>
+                <td>Resilience</td>
+                <td>Continuous Improvement &amp; Adaptation (Element 5)</td>
+                <td>Enhances adaptability by embedding feedback and improvement into system evolution.</td>
+              </tr>
+              <tr>
+                <td>I</td>
+                <td>Integration</td>
+                <td>Organizational Structure &amp; Integrity (Element 1)</td>
+                <td>Aligns health and safety with executive governance and organizational structure.</td>
+              </tr>
+              <tr>
+                <td>M</td>
+                <td>Measurement</td>
+                <td>Monitoring &amp; Evaluation (Element 4)</td>
+                <td>Uses audits, KPIs, and data analytics to assess and guide system performance.</td>
+              </tr>
+              <tr>
+                <td>E</td>
+                <td>Engagement</td>
+                <td>Implementation &amp; Execution (Element 3)</td>
+                <td>Mobilizes leadership and worker participation to activate plans and drive outcomes.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div className="Prime360-Structure-image">
+            <img
+            src="/assets/PRIME360_2.png"
+            alt="Main background"
+            className="aboutUS-image-img"
+            />
+        </div>
+
+        <div className="Prime360-section-header">
+        <br />
+          <p>
+            <strong>PRIME360 is composed of five interconnected elements that collectively form a comprehensive safety management system:</strong>   
+          <br />
+          {/* <br />  
+            ◦ PRIME360™ Acronym Graphic- Lisa to Forward           
+           <br />  
+            ◦ PRIME360™ Structural Table (5 Elements)- Lisa to Forward
+            <br />
+            ◦ Summary Text Underneath Table Lisa to Forward           */}
+            </p>
+        </div>
+
+          {/* TABLE */}
+          <div className="Prime360-table-container2">
+          <table className="Prime360-table2">
+            <colgroup>
+              {/* give each <col> a class so you can control its width in CSS */}
+              <col className="Prime360-col col-1" />
+              <col className="Prime360-col col-2" />
+              <col className="Prime360-col col-3" />
+              <col className="Prime360-col col-4" />
+              <col className="Prime360-col col-5" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th>Element</th>
+                <th>Title</th>
+                <th>Purpose</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Organizational Structure and Integrity</td>
+                <td>Establishes the leadership, governance, and ethical foundation for OHS and PHS accountability.</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Strategy and Design</td>
+                <td>Defines the system scope, policies, and compliance architecture based on legal, psychological, and physical safety needs.</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Implementation and Execution</td>
+                <td>Operationalizes controls, training, and communication to manage risks and ensure safe, inclusive practices.</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Monitoring and Evaluation</td>
+                <td>Measures system performance through audits, investigations, and outcome metrics to assess and verify system effectiveness.</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Monitoring and Evaluation</td>
+                <td>Ensures system evolution through formal management review, change management protocols, and renewal of objectives.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+
 
         <div className="section-header">
             <br />
@@ -161,6 +280,8 @@ export default function Prime360() {
             PRIME360™ is more than a compliance tool—it’s a strategic asset designed to future-proof organizational safety, strengthen leadership, and drive meaningful results across health, wellbeing, and performance
             </p>
         </div>
+
+        
 
         <NavLink to="/contact" smooth duration={900}>
             <button className="Training-CTA1"> Request a System Assessment Consultation</button>
