@@ -159,7 +159,7 @@ export default function VR() {
                 <img src="/assets/imageHero.jpg" alt = "" className="vr-item-image" />
                 <div className="vr-item-text">
                   <h3>Partnerships That Drive Innovation Forward</h3>
-                  <NavLink to="/our-mission" end>
+                  <NavLink to="/partnerships" end>
                     <button className="mission-buttons1">↓</button>
                   </NavLink>
                 </div>

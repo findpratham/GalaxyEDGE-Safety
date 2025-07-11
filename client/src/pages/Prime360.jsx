@@ -86,11 +86,18 @@ export default function Prime360() {
 
 
         <div className="parallax-image">
-        <img
-          src="/assets/services2.jpg"
-          alt="Main background"
-          className="aboutUS-image-img"
-        />
+          <video
+            className="aboutUS-image-img"
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            aria-label="Hero background video"
+          >
+          <source src="/assets/Option4.mp4" type="video/mp4" />
+          Your browser doesn’t support HTML5 video.
+        </video>
       </div>
 
       
