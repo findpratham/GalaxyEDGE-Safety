@@ -1,0 +1,355 @@
+.OHS-container {
+    padding-top: 7rem !important;
+    position: relative;  /* now absolute children are locked inside here */
+    margin:  auto  /* top, then horizontal auto, bottom remains whatever was before */ !important;
+    width: 1550px;
+    /* max-width: 1450px */
+    
+
+}
+
+.OHS-section-header p{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: #333;
+    margin-left: 2% !important;
+    margin-right: 5% !important;
+
+  }
+  
+.OHS-section-header{
+    display: flex;
+    flex-direction: row;   /* stack heading and paragraph vertically */
+    align-items: center;      /* horizontally centre children */
+    text-align: center;       /* centre text inside children */
+    width: 100%;              /* fill its parent */
+    max-width: 1400px;        /* cap at your desired max */
+    margin: 0 auto;           /* centre the container itself */
+    text-align: left;       /* centre the paragraph */
+
+}
+
+.apple-form {
+    position: relative;
+    max-width: 950px;
+    margin: 2rem auto ;
+    padding: 2rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+      Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    colour: #1d1d1f;
+    background: #ffffff;
+    /* border: 1px solid rgba(0, 200, 255, 0.364); */
+    /* border-right: 1px solid rgba(0, 200, 255, 0.364); */
+    border-radius: 1rem;
+    box-shadow: -10px 44px 4px rgba(0, 179, 255, 0.097) 
+}
+
+
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 2rem auto 2rem;
+  color: #000000;
+  text-align: center;
+
+}
+
+
+
+  .apple-form-question.text-inline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;   /* only 1rem between questions */
+    padding-bottom: 0;     /* no extra padding underneath */
+
+    
+  }
+  
+  .apple-form-question.text-inline .question-title {
+    flex: 0 0 250px;
+    margin: 0;
+    margin-right: 5px;
+  }
+
+
+  
+  .apple-form-question.text-inline .text-input {
+    flex: 1 1 60%;
+    margin-left: 1rem;
+    
+    
+  }
+
+  .apple-form-question {
+    margin-bottom: 2.5rem;
+  }
+  
+  .question-title {
+    font-size: 1.45rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  /* Radio‐options list */
+  .options-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .options-item {
+    margin: 0.5rem 0;
+  }
+  
+  .options-item label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.25rem;
+  }
+  
+  .options-item input[type='radio'] {
+    display: none;
+  }
+  
+  .custom-radio {
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid #6e6e73cd;
+    border-radius: 0;      /* square corners */
+    margin-right: 1rem;
+    position: relative;
+    transition: border-color 0.2s ease;
+  }
+  
+  .options-item input[type='radio']:checked + .custom-radio {
+    border-color: #0070c9;
+  }
+  
+  .options-item input[type='radio']:checked + .custom-radio::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0.5rem;
+    height: 0.5rem;
+    background: #0070c9;
+    border-radius: 0;      /* square fill */
+  }
+  
+  /* Text‐entry field */
+  .text-input {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  /* Submit button */
+  .submit-button {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    display: block;                  /* Makes the button take up full line */
+    margin: 1.8rem auto 1rem auto;        /* Horizontally centers it */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-weight: 550; 
+    padding: 0.8rem 2rem; /* Padding inside buttons */
+    font-size: 1.9rem; /* Font size */
+    color: rgb(0, 0, 0); /* Black text color */
+    border-radius: 1.3rem !important;
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: 
+    background-color 0.3s ease, 
+    transform 0.3s ease, 
+    color 0.5s ease; /* Smooth color transition */ 
+    /* box-shadow: -12px 12px 28px rgba(0, 0, 0, 0.067); */
+ 
+  }
+
+  .submit-button::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 0;
+    height: 200%;
+    background-color: #0084ff;  /* your hover blue */
+    border-radius: 0 100% 100% 0;
+    transform: translateY(-50%);
+    transition: width 0.5s ease;
+    z-index: -1;
+  }
+
+  .submit-button:hover::before {
+    width: 200%;
+  }
+  
+  .submit-button:hover {
+    color: white;
+    transform: scale(1.02);
+    box-shadow: -12px 12px 28px rgba(0, 0, 0, 0.25);
+  }
+  
+
+  /* SLIDESHOW */
+
+  .slideshow {
+    position: absolute;
+    overflow: hidden;
+    width: 625px;
+    height: 800px;
+    max-width: 625px; /* adjust as needed */
+    right: 6rem;
+    border-radius: 1rem;
+    margin-top: -50px;
+    
+  }
+  
+  .slideshow-slider {
+    display: flex;
+    transition: transform 0.8s ease;
+    height: 100%;
+  }
+  
+  .slide {
+    flex: 0 0 100%; /* ensure one slide visible at a time */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .slideshow-dots {
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+  
+  .slideshow-dot {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background: rgba(60, 60, 67, 0.3);
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .slideshow-dot.active {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  
+  .terms-section {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e0e0e0;
+  }
+  
+  .terms-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .terms-text {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+  }
+  
+  .terms-checkboxes {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .terms-checkboxes label {
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .terms-checkboxes input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  /* Hide the real checkbox */
+.options-item input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+
+/* Hide native checkbox */
+.options-item input[type='checkbox'] {
+    display: none;
+  }
+  
+  /* Outer square — same as .custom-radio */
+  .custom-checkbox {
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid #6e6e73cd;
+    border-radius: 0;             /* square corners */
+    margin-right: 1rem;
+    position: relative;
+    transition: border-color 0.2s ease, background 0.2s ease;
+  }
+  
+  /* Checked state border & background */
+  .options-item input[type='checkbox']:checked + .custom-checkbox {
+    border-color: #0070c9;
+    background: none;             /* keep fill transparent if you only want border change */
+  }
+  
+  /* Inner fill — same geometry as radio’s ::after */
+  .options-item input[type='checkbox']:checked + .custom-checkbox::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0.5rem;
+    height: 0.5rem;
+    background: #0070c9;
+    border-radius: 0;             /* square fill */
+  }
+
+
+  /* Add to your CSS */
+.terms-error {
+  border: 2px solid #ff3b30;      /* Apple‐style red outline */
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.error-text {
+  color: #ff3b30;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  font-weight: 600;
+
+}

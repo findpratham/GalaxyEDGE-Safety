@@ -68,6 +68,8 @@ export default function Header() {
             </NavLink>
             <ul className="dropdown">
               <li><NavLink to="/prime360" onClick={closeMenu}>PRIME360™</NavLink></li>
+              <li><NavLink to="/PRIME360-form" onClick={closeMenu}>PRIME360™ form</NavLink></li>
+              <li><NavLink to="/TargetedOHS" onClick={closeMenu}>Targeted OHS Form</NavLink></li>
             </ul>
           </li>
 

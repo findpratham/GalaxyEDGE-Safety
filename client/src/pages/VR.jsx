@@ -113,7 +113,7 @@ export default function VR() {
             <div className="vr-item">
               <div className="vr-item-image-wrapper">
                 <img
-                  src="/assets/image3.jpg"
+                  src="/assets/AIDriven1.jpg"
                   alt="Real-Time Feedback"
                   className="vr-item-image"
                 />
@@ -165,7 +165,7 @@ export default function VR() {
                 </div>
               </div>
             </div>
-            
+
           </div>
           
           {/* CENTER IMAGE */}

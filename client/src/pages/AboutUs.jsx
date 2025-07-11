@@ -70,7 +70,7 @@ export default class Mission extends Component {
         preload="auto"
         aria-label="Hero background video"
       >
-        <source src="/assets/Option4.mp4" type="video/mp4" />
+        <source src="/assets/HeroAboutUS.mp4" type="video/mp4" />
         Your browser doesn’t support HTML5 video.
       </video>
       </div>

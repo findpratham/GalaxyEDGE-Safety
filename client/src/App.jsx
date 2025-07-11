@@ -26,6 +26,10 @@ import ESG from "./pages/ESG";
 import EventsCultureShifts from "./pages/Events-Culture-shifts";
 import Partnership from "./pages/Partnership";
 
+// FORM IMPORTS
+import TargetedOHS from "./Forms/TargetedOHS";
+import PRIME360 from "./Forms/PRIME360";
+
 export default function App() {
   
   return (
@@ -46,12 +50,16 @@ export default function App() {
           </>
         }/>
 
+
+
       {/* STANDALONE ABOUT-US PAGE */}
       <Route path="/about-us" element={<AboutUS />} />
       <Route path="/our-mission" element={<Mission />} />
       <Route path="/our-services" element={<Services />} />
       <Route path="/prime360" element={<Prime360 />} />
+      <Route path="/PRIME360-form" element={<PRIME360 />} />
       <Route path="/training" element={<Training />} />
+      <Route path="/TargetedOHS" element={<TargetedOHS />} />
       <Route path="/Immersive-Learning" element={<ImmersiveLearning />} />
       <Route path="/ESG_Stratergy_Performance" element={<ESG />} />
       <Route path="/ai-driven-safety-solutions" element={<AIDriven />} />
