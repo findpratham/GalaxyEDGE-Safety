@@ -11,7 +11,7 @@ export default function Home() {
     <div className="home-container">
               
         {/* ── UP ARROW (only lives inside this section) ── */}
-        <Link to="home" smooth duration={1000} className="scroll-up-link">
+        {/* <Link to="home" smooth duration={1000} className="scroll-up-link">
           <div className="scroll-up-arrow">
             <svg viewBox="0 0 16 16" aria-hidden="true">
               <path 
@@ -22,7 +22,7 @@ export default function Home() {
               />
             </svg>
           </div>
-        </Link>
+        </Link> */}
 
       <Link to="about-us" smooth duration={1000}>
         <div className="scroll-down-arrow">

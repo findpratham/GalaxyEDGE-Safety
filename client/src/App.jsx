@@ -13,7 +13,7 @@ import VR from "./pages/VR";
 import ActionApproach from "./pages/ActionApproach";
 import ContactUs from "./pages/ContactUs";
 import Footer from "./pages/footer";
-import RequestDemo from "./pages/demo";
+// import RequestDemo from "./pages/demo";
 import ReachOutNow from "./pages/ReachOut";
 import AboutUS from "./pages/AboutUs";  
 import Mission from "./pages/Mission";
@@ -45,7 +45,7 @@ export default function App() {
           <div id="learn_more"><VR/></div>
           <ActionApproach/> 
           <ReachOutNow/>
-          <div id="learn_more"><RequestDemo/></div>
+          {/* <div id="learn_more"><RequestDemo/></div> */}
           <div id = "resources"><Footer/></div>
           </>
         }/>
