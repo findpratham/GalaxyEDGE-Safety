@@ -12,25 +12,25 @@ const cards = [
   {
     title: "Book a Speaking Engagement ",
     img: "/assets/Events1.jpg",
-    subtitle: "Bring Lisa McGuire or a GESI expert to your conference, leadership forum, or in-house event",
+    subtitle: "Invite us to attend your conference, leadership forum or in-house event",
     info1: [
     //   "Stay ahead of the curve with interactive webinars focused on safety strategy, ESG alignment, AI innovation, and more"
     ],    
   },
   {
-    title: " Reserve Your Spot",
+    title: "Upcoming Events",
     img: "/assets/Events2.jpg",
-    subtitle: "Stay ahead of the curve with interactive webinars focused on safety strategy, ESG alignment, AI innovation, and more",
+    subtitle: "Stay ahead of the curve with interactive webinars focused on safety strategy, ESG alignment, AI innovation, and more.",
     info1: [
-      "We design scenario-based learning solutions customized for every organizational tier—from executives shaping culture to frontline workers managing daily risk. Using real-life context and role-specific challenges, we help your teams develop practical skills that translate into immediate safety performance"
+      "COMING SOON"
     ],    
   },
   {
-    title: "See Where We’re Speaking",
+    title: "What is in the news at GESI",
     img: "/assets/Events3.jpg",
-    subtitle: "Browse upcoming appearances and find out where you can connect with GESI in person",
+    subtitle: "Browse the inventory on past events or read the latest news and initiatives we are working on…",
     info1: [
-      "We design scenario-based learning solutions customized for every organizational tier—from executives shaping culture to frontline workers managing daily risk. Using real-life context and role-specific challenges, we help your teams develop practical skills that translate into immediate safety performance"
+      "COMING SOON"
     ],    
   }
 ]
@@ -210,8 +210,8 @@ export default function EventsCultureShifts() {
 
                 {/* Button based on expandedIndex */}
                 {expandedIndex === 0 ? (
-                <NavLink to="/targeted_support" smooth duration={900}>
-                    <button className="AIDriven-CTA1">Get Targeted Support</button>
+                <NavLink to="/contact" smooth duration={900}>
+                    <button className="AIDriven-CTA1">Request Booking</button>
                 </NavLink>
                 ) : expandedIndex === 1 ? (
                 <NavLink to="/system_assessment" smooth duration={900}>

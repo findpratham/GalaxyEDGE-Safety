@@ -13,7 +13,7 @@ const cards = [
     img: "/assets/services1.jpg",
     subtitle: "Tackle pressing occupational health and safety issues with focused, data-informed strategies",
     info1: [
-      "We work closely with businesses to address specific OHS pain points—whether it's reducing incident rates, improving mental health response, or resolving compliance shortfalls. Our experts deliver tailored solutions backed by behavioral insights, digital diagnostics, and best-practice benchmarking to produce rapid, sustainable improvements"
+      "We collaborate with organizations to address critical occupational health and safety (OHS) challenges—ranging from incident reduction and enhanced psychological health response to resolving compliance gaps. We deliver customized, evidence-based solutions grounded in behavioral science, digital diagnostics, and industry benchmarking to drive measurable and lasting improvements."
     ],    
   },
   {
@@ -205,8 +205,8 @@ export default function Services() {
 
               {/* Button based on expandedIndex */}
               {expandedIndex === 0 ? (
-                <NavLink to="/targeted_support" smooth duration={900}>
-                  <button className="Services-CTA1">Get Targeted Support</button>
+                <NavLink to="/contact" smooth duration={900}>
+                  <button className="Services-CTA1">book a consultation</button>
                 </NavLink>
               ) : expandedIndex === 1 ? (
                 <NavLink to="/prime360" smooth duration={900}>

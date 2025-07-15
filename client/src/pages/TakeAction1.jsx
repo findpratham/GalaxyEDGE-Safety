@@ -1,5 +1,6 @@
 // src/pages/TakeAction.jsx
 import React, { useEffect, useState, useRef } from "react";
+import '../styles/TakeAction.css';
 
 const cards = [
   {
@@ -12,7 +13,7 @@ const cards = [
       "Partnerships with global organizations to rapidly disseminate emerging safety technologies, standards, and best practices across multiple regions.",
       "Cultivating a safety-driven innovation network that connects stakeholders, promotes joint research, and accelerates adoption of advanced safety measures.",
     ],    
-    image1: "/assets/TakeActionImages/AdditionalinfoImages/risk11.jpg",
+    image1: "/assets/TakeActionImages/AdditionalinfoImages/Partnershipsforhexagon.jpg",
   },
   {
     title: "Leadership for Sustainable Change",
@@ -25,7 +26,7 @@ const cards = [
       "Mentorship and coaching frameworks that foster accountability and continuous growth in leadership capabilities across all organizational levels.",
       "Innovative change management strategies enabling organizations to transition from compliance-driven to innovation-led approaches in occupational health and well-being.",
     ],
-    image1: "/assets/TakeActionImages/AdditionalinfoImages/resilience1.jpg",
+    image1: "/assets/TakeActionImages/AdditionalinfoImages/Leadershipandaccountability.jpg",
   },
   {
     title: "Integrity & Accountability",
@@ -38,7 +39,7 @@ const cards = [
       "Robust governance frameworks and regular audits to monitor compliance and uphold integrity in every project.",
       "Commitment to pioneering environmentally sustainable solutions that promote a safer, more responsible future for the industry.",
     ],
-    image1: "/assets/TakeActionImages/AdditionalinfoImages/risk1.jpg",
+    image1: "/assets/TakeActionImages/AdditionalinfoImages/Integrityandaccountabilitycorevalues.jpg",
   },
 ];
 

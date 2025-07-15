@@ -95,7 +95,7 @@ export default function Prime360() {
             preload="auto"
             aria-label="Hero background video"
           >
-          <source src="/assets/Option4.mp4" type="video/mp4" />
+          <source src="/assets/PRIME360header.mp4" type="video/mp4" />
           Your browser doesn’t support HTML5 video.
         </video>
       </div>
@@ -119,12 +119,10 @@ export default function Prime360() {
           </p>
         </div>
 
-        <div className="Prime360-image">
-            <img
-            src="/assets/Prime360.jpg"
-            alt="Main background"
-            className="aboutUS-image-img"
-            />
+        <div className = "Training-sub-heading">
+            <h1>
+            PRIME360 is composed of five  interconnected elements that collectively form a comprehensive safety management system:
+            </h1>
         </div>
         
         <div className="section-header">
@@ -291,7 +289,7 @@ export default function Prime360() {
         
 
         <NavLink to="/contact" smooth duration={900}>
-            <button className="Training-CTA1"> Request a System Assessment Consultation</button>
+            <button className="Training-CTA1"> Request more Information on PRIME360</button>
         </NavLink>
 
       </div>

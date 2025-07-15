@@ -1,5 +1,6 @@
 // src/pages/TakeAction.jsx
 import React, { useEffect, useState, useRef } from "react";
+import '../styles/TakeAction.css';
 
 const cards = [
   {
@@ -19,7 +20,7 @@ const cards = [
 
     detail1: "Safety is at the core of everything we do. We are dedicated to developing solutions that reduce workplace risks, protect employees, and create a culture of proactive safety and well-being.",
     info1:[
-      "Culture-driven safety diagnostics assessing leadership & behavior.",
+      "Culture-driven safety solutions assessing leadership & behavior.",
       "Integrated OHSMS aligned with COR, ISO 45001.",
       "Executive programs embedding safety into leadership.",
       "Strategies integrating well-being, psychosocial risk, and mental health.",

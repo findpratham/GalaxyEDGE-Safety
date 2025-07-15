@@ -129,7 +129,7 @@ export default function VR() {
             {/* ── CARD 4 ── */}
             <div className="vr-item" >
               <div className="vr-item-image-wrapper">
-                <img src="/assets/image4.jpg" alt = "" className="vr-item-image" />
+                <img src="/assets/Hex4.jpg" alt = "" className="vr-item-image" />
                 <div className="vr-item-text">
                   <h3>Building Safety into your ESG Commitments</h3>
                   <NavLink to="/ESG_Stratergy_Performance" end>
@@ -156,7 +156,7 @@ export default function VR() {
             {/* ── CARD 6 ── */}
             <div className="vr-item" >
               <div className="vr-item-image-wrapper">
-                <img src="/assets/imageHero.jpg" alt = "" className="vr-item-image" />
+                <img src="/assets/Partnership.jpg" alt = "" className="vr-item-image" />
                 <div className="vr-item-text">
                   <h3>Partnerships That Drive Innovation Forward</h3>
                   <NavLink to="/partnerships" end>

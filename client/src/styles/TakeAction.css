@@ -78,7 +78,7 @@
 
 .card-content h3 {
   margin: 0 0 0.75rem;
-  font-size: 1.7rem;
+  font-size: 1.7rem !important;
   font-weight: 600;
   color: #111;
   padding-bottom: 1.6rem;

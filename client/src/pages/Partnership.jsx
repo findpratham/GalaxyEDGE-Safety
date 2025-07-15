@@ -15,7 +15,10 @@ const cards = [
     img: "/assets/Partnership1.jpg",
     subtitle: "Fueling innovation with trusting collaboration",    
     info1: [
-      "Transform the way your teams learn and lead. GESI’s immersive training—powered by UP360—brings real-world safety scenarios to life through cutting-edge virtual environments. Engage your workforce with high-impact experiences that build confidence, improve retention, and drive behavior change at every level"
+      "AI-driven safety systems and analytics platforms",
+      "Research and evidence-based training programs",
+      "Policy innovation aligned with international safety standards",
+      "Scalable ESG-integrated solutions"
     ],    
   },
   {
@@ -23,7 +26,12 @@ const cards = [
     img: "/assets/Partnership2.jpg",
     subtitle: "Build AI tools around your business needs to boost safety, efficiency, and performance",
     info1: [
-      "Join us in shaping the future of safety"
+      <strong key="very-bold">Are you a leader in technology, research, workforce development, or ESG innovation? We’re always exploring new opportunities to build meaningful partnerships that:</strong>,
+  ,
+      "Expand safety innovation and accessibility",
+      "Strengthen evidence-based practices",
+      "Pilot and scale breakthrough safety solutions",
+      "Share knowledge through events, publications, and training"
     ],    
   }
 ]
@@ -103,12 +111,20 @@ export default function Partnership() {
         </button>
 
 
-      <div className="parallax-image">
-        <img
-          src="/assets/imageHero.jpg"
-          alt="Main background"
-          className="aboutUS-image-img"
-        />
+
+        <div className="parallax-image">
+          <video
+            className="aboutUS-image-img"
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            aria-label="Hero background video"
+          >
+          <source src="/assets/Partnershipsheader.mp4" type="video/mp4" />
+          Your browser doesn’t support HTML5 video.
+        </video>
       </div>
 
 
@@ -207,11 +223,11 @@ export default function Partnership() {
                 {/* Button based on expandedIndex */}
                 {expandedIndex === 0 ? (
                 <NavLink to="/targeted_support" smooth duration={900}>
-                    <button className="AIDriven-CTA1">Get Targeted Support</button>
+                    <button className="AIDriven-CTA1"> [Meet Our Partners]- COMING SOON</button>
                 </NavLink>
                 ) : expandedIndex === 1 ? (
                 <NavLink to="/system_assessment" smooth duration={900}>
-                    <button className="AIDriven-CTA2">Partner with us to transform your business</button>
+                    <button className="AIDriven-CTA2">Build Solutions Together</button>
                 </NavLink>
                 ) : null}
           </div>

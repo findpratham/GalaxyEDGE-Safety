@@ -6,6 +6,14 @@
   
   }
 
+  /* *,
+*::before,
+*::after {
+  border: 2px solid red !important;
+  box-sizing: border-box;
+} */
+
+
   
 
   /* Hide scrollbars in WebKit‐based browsers (Chrome, Safari, Opera, Edge) */
@@ -551,7 +559,7 @@ MEDIA QUERRIES:
 }
 
 .nav-links li {
-  margin-left: 1.5rem;
+  margin-left: 1.2rem;
 }
 
 /* Navigation link styles */
@@ -560,7 +568,7 @@ MEDIA QUERRIES:
   overflow: hidden;
   text-decoration: none;
   font-weight: 400 !important;
-  font-size: 1.6rem !important;
+  font-size: 1.5rem !important;
   color: #ffffff;
   transition: color 0.3s ease;
   cursor: pointer;
@@ -809,6 +817,20 @@ MEDIA QUERRIES HEADER:
   position: relative;        /* so the inner content can be absolutely positioned */
   overflow: hidden;          /* hide any overflow if text is too tall */
   margin-bottom: 2rem;
+  width: 1450px !important;
+}
+
+.about-us-section {
+  position: relative;
+  margin: 1% auto -2rem;  /* top, horizontal, bottom */
+  background-color: #ffffff;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 2rem;
+  width: 1400px;
+  max-width: 1400px
 }
 
 .about-container  {
@@ -883,18 +905,7 @@ MEDIA QUERRIES HEADER:
 }
 
 
-.about-us-section {
-  position: relative;
-  margin: 1% auto -2rem;  /* top, horizontal, bottom */
-  background-color: #ffffff;
-  padding: 3rem 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 2rem;
-  width: 1500px;
-  max-width: 1500px
-}
+
 
 .about-container {
   flex: 1 1 0;           /* allow this to grow & fill remaining space */
@@ -930,6 +941,7 @@ MEDIA QUERRIES HEADER:
 .about-image-container {
   flex: 0 0 auto;        /* shrink/grow disabled; size by content or max-width */
   margin: 80px auto 20px;  /* right + bottom gap */
+
 }
 
 .about-image {
@@ -979,13 +991,13 @@ MEDIA QUERRIES ABOUT:
     border-top: none !important;
     margin-bottom: 5rem;
     /* height: 800px; */
-    height: 1200px;
+    height: 800px;
   }
 
   .about-image-container {
     flex: 0 0 auto;
     margin: 0;
-    /* display: none !important; */
+    display: none !important;
   }
 
   .about-image {
