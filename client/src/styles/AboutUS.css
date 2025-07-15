@@ -390,7 +390,7 @@ MEDIA QUERRIES:
   }
 
   .Logo-image img.aboutus-logo {
-    width: 100px !important;
+    width: 85px !important;
     height: auto !important;
   }
 
@@ -402,7 +402,7 @@ MEDIA QUERRIES:
 
   .Hero-text {
     position: relative;      /* reset if needed */
-    top: -230px !important;       /* reset any earlier offset */
+    top: -210px !important;       /* reset any earlier offset */
     left: 50% !important;    
     transform: translateX(-50%) !important;
     margin: 1rem auto !important;
@@ -414,7 +414,7 @@ MEDIA QUERRIES:
 
   .Hero-text .heading {
     word-wrap: break-word;   /* ensure long text wraps */
-    font-size: 2.3rem !important;
+    font-size: 1.8rem !important;
     word-wrap: break-word;
     white-space: normal !important;
     margin: 0 auto !important;
