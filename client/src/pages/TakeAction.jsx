@@ -33,10 +33,10 @@ const cards = [
 
     detail1: "We believe safety knowledge must be accessible to everyone—from executives to frontline workers. We deliver customized, harmonized solutions aligned to your operations, embedding accountability at every levele.",
     info1: [
-      "Tailored Safety Assessments: In-depth evaluations that align with your unique operational landscape to deliver relevant, actionable safety strategies.",
-      "Unified Training Frameworks: Streamlined curricula integrating provincial, federal, and international safety standards—accessible across all organizational levels.",
-      "Governance-integrated Knowledge Systems: Role-specific training workflows and automated distribution channels that streamline collaboration and engagement from executives to frontline workers, regardless of location.",
-      "Immersive Learning Solutions: Custom VR/AR training experiences developed with tech partners to boost workforce engagement, retention, and real-world readiness.",
+      "Customized organizational assessments to understand each client’s specific environment and operational risk landscape, ensuring tailored and relevant safety solutions.",
+      "Harmonized training frameworks that unify provincial, federal, and international standards into a single, accessible curriculum aligned across the entire organization.",
+      "Governance-integrated knowledge systems with version control, audit trails, and role-based access to ensure transparency, compliance, and leadership oversight.",
+      "Customized immersive training programs delivered through GESI’s strategic technology partners, using cutting-edge VR/AR platforms to maximize engagement, retention, and real-world application.",
     ],
     image1: "/assets/TakeActionImages/AdditionalinfoImages/risk1.jpg",
   },

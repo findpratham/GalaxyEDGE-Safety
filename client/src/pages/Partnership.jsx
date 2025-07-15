@@ -12,7 +12,7 @@ const cards = [
     // CARD 1:
   {
     title: "Partnership that Power Progress",
-    img: "/assets/Partnership1.jpg",
+    img: "/assets/Partnership.jpg",
     subtitle: "Fueling innovation with trusting collaboration",    
     info1: [
       "AI-driven safety systems and analytics platforms",
@@ -22,9 +22,9 @@ const cards = [
     ],    
   },
   {
-    title: "Customized AI Solutions for Businesses",
+    title: "Lead the Change in Safety Innovation",
     img: "/assets/Partnership2.jpg",
-    subtitle: "Build AI tools around your business needs to boost safety, efficiency, and performance",
+    subtitle: "Join us in shaping the future of safety",
     info1: [
       <strong key="very-bold">Are you a leader in technology, research, workforce development, or ESG innovation? We’re always exploring new opportunities to build meaningful partnerships that:</strong>,
   ,

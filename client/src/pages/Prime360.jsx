@@ -135,13 +135,13 @@ export default function Prime360() {
           </p>
         </div>
 
-        <div className="Prime360-Structure-image">
+        {/* <div className="Prime360-Structure-image">
             <img
             src="/assets/PRIME360_2.png"
             alt="Main background"
             className="aboutUS-image-img"
             />
-        </div>
+        </div> */}
 
         <div className="Prime360-section-header">
         <br />

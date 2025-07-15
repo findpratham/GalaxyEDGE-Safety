@@ -473,7 +473,7 @@ MEDIA QUERRIES:
   }
 
   .Hero-Logo-image img.aboutus-logo {
-    width: 325px;           /* Scales proportionally for small screens */
+    width: 325px !important;           /* Scales proportionally for small screens */
     height: auto;
     display: block;
     margin: 0 auto;

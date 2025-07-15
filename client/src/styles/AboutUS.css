@@ -364,14 +364,10 @@ MEDIA QUERRIES:
 
 @media only screen and (max-width: 450px) {
 
-  
-
-
-
   .aboutus-container {
     padding-top: 4rem !important;            /* match your header height */
   }
-  .margins {
+  .aboutus-container .margins {
     width: 360px !important;
     margin: 1% auto !important;
     position: relative !important;
@@ -394,7 +390,7 @@ MEDIA QUERRIES:
   }
 
   .Logo-image img.aboutus-logo {
-    width: 140px !important;
+    width: 100px !important;
     height: auto !important;
   }
 
@@ -406,7 +402,7 @@ MEDIA QUERRIES:
 
   .Hero-text {
     position: relative;      /* reset if needed */
-    top: -260px !important;       /* reset any earlier offset */
+    top: -230px !important;       /* reset any earlier offset */
     left: 50% !important;    
     transform: translateX(-50%) !important;
     margin: 1rem auto !important;

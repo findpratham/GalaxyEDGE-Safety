@@ -88,7 +88,7 @@ export default function OurMission() {
         <h1 className="mission-heading"><br /></h1>
       </div>
 
-      <div className="margins">
+      <div className="Mission-margins">
         <section>
           <div className="vision-image">
             <img src="/assets/tablogo.jpg" alt="GalaxyEDGE Safety Logo" className="vision-logo" />
@@ -100,7 +100,7 @@ export default function OurMission() {
             </div>
           </div>
 
-          <div className="hero-heading">
+          <div className="Mission-hero-heading">
             <h1>A Transformational leap in Workplace Safety</h1>
           </div>
         </section>
