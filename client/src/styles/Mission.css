@@ -349,3 +349,122 @@
   animation: slideInFromLeft 4s ease-out forwards;
 
 }
+
+
+/* 
+-----------------------------------------------------------------------------------------------
+MEDIA QUERRIES:
+-----------------------------------------------------------------------------------------------
+*/
+
+@media only screen and (max-width: 450px) {
+
+  .mission-container {
+    padding-top: 4rem !important;            /* match your header height */
+  }
+/* Bring hero text up and wrap */
+.Hero-Mission-text {
+  top: 16% !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  max-width: 360px !important;
+  width: 100% !important;
+  white-space: normal !important;
+  text-align: center !important;
+}
+
+.Mission-heading {
+  font-size: 3rem !important;
+  line-height: 1.2 !important;
+}
+
+/* Shrink margins container */
+.margins {
+  margin-left: 4% !important;
+  margin-right: 4% !important;
+  margin-top: 1% !important;
+  position: relative !important;
+  top: 0px !important;
+}
+.hero-heading {
+  position: relative !important;
+  margin: 1.5rem auto !important;
+  text-align: center !important;
+  max-width: 560px !important;
+  width: 100% !important;
+  top: 150px !important
+}
+.hero-heading h1 {
+  font-size: 2.4rem !important;
+  line-height: 1.2 !important;
+  white-space: normal !important;
+  word-break: break-word !important;
+}
+/* Vision image & text stack */
+.vision-image {
+  flex-direction: column !important;
+  text-align: center !important;
+  gap: 1rem !important;
+}
+.vision-logo {
+  width: 160px !important;
+  margin: 0 auto !important;
+}
+.vision-title {
+  font-size: 2.2rem !important;
+}
+.vision-text {
+  font-size: 1.4rem !important;
+
+}
+
+/* Mission body stack */
+.mission-body {
+  flex-direction: column !important;
+  text-align: center !important;
+  gap: 1rem !important;
+  margin-top: 0 !important;
+}
+.mission-text p {
+  margin-top: 0 !important;
+  text-align: left !important;
+  margin: 0 auto !important;   /* keep it centered in its container */
+  width: 100% !important;       /* full width so left-align is obvious */
+}
+.mission-text h3 {
+  font-size: 1.6rem !important;
+}
+.mission-text p {
+  font-size: 1.2rem !important;
+}
+.mission-image img {
+  width: 280px !important;
+  margin: 2 auto !important;
+  display: none !important;
+}
+
+/* Tighten parallax height */
+.parallax-image {
+  height: 40vh !important;
+}
+.aboutUS-image-img {
+  height: 40vh !important;
+}
+
+/* Scroll arrows reposition */
+.scroll-up-arrow {
+  top: 4rem !important;
+  left: 1rem !important;
+}
+.scroll-down-arrow {
+  bottom: 10% !important;
+}
+
+/* Footer stack */
+.aboutus-footer {
+  flex-direction: column !important;
+  gap: 1rem !important;
+  text-align: center !important;
+}
+
+}

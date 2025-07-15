@@ -355,3 +355,130 @@
   opacity: 1;
   
 }
+
+/* 
+-----------------------------------------------------------------------------------------------
+MEDIA QUERRIES:
+-----------------------------------------------------------------------------------------------
+*/
+
+@media only screen and (max-width: 450px) {
+
+  
+
+
+
+  .aboutus-container {
+    padding-top: 4rem !important;            /* match your header height */
+  }
+  .margins {
+    width: 360px !important;
+    margin: 1% auto !important;
+    position: relative !important;
+    top: -150px !important;
+  }
+
+  .hero-heading h1 {
+    font-size: 2.8rem;
+    padding: 8px;
+    position: relative !important;
+    top: -145px !important;
+    
+  }
+
+  .Logo-image {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -30px;
+  }
+
+  .Logo-image img.aboutus-logo {
+    width: 140px !important;
+    height: auto !important;
+  }
+
+
+  .aboutus-logo {
+    width: 10px !important;
+    height: auto;
+  }
+
+  .Hero-text {
+    position: relative;      /* reset if needed */
+    top: -260px !important;       /* reset any earlier offset */
+    left: 50% !important;    
+    transform: translateX(-50%) !important;
+    margin: 1rem auto !important;
+    max-width: 360px !important;
+    width: 100% !important;
+    text-align: center !important;
+
+  }
+
+  .Hero-text .heading {
+    word-wrap: break-word;   /* ensure long text wraps */
+    font-size: 2.3rem !important;
+    word-wrap: break-word;
+    white-space: normal !important;
+    margin: 0 auto !important;
+    }
+
+    .founder-text h3{
+      font-size:1.75rem;
+      padding: 8px;
+    }
+  
+    .founder-text p {
+      text-align: left !important;
+      margin: 0 auto !important;   /* keep it centered in its container */
+      width: 100% !important;       /* full width so left-align is obvious */
+      font-size:1.2rem;
+    }
+
+  .aboutus-highlights {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .aboutus-founder {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  .founder-text h2 {
+    font-size: 2.5rem;
+    margin-left: 0;
+  }
+  .founder-image img {
+    width: 200px;
+    margin: 0 auto;
+  }
+  .founder-stats {
+    justify-content: center;
+    gap: 1rem;
+  }
+  .stat-number {
+    font-size: 1.5rem;
+  }
+  .stat-label {
+    font-size: 0.8rem;
+  }
+
+  /* Video height */
+  .parallax-image {
+    height: 50vh !important;
+  }
+  .aboutUS-image-img {
+    height: 50vh;
+  }
+
+  /* Footer → stack */
+  .aboutus-footer {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+
+}
