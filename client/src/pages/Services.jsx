@@ -18,7 +18,7 @@ const cards = [
   },
   {
     title: "Build a Safer System from the Ground Up",
-    img: "/assets/services2.jpg",
+    img: "/assets/AIDriven1.jpg",
     subtitle: "Assess and align your safety systems with PRIME360-a leading edge framework that delivers cultural impact",
     info1: [
       "We deliver more than safety consulting—we build integrated systems that lead performance. At the core of our Safety Intelligence & Advisory services is PRIME360™, a strategic governance model that unites health, safety, and psychological well-being with business objectives",

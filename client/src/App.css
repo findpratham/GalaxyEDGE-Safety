@@ -959,7 +959,24 @@ MEDIA QUERRIES HEADER:
   
 }
 
+.GlobalMovement-image-container {
+  flex: 0 0 auto;        /* shrink/grow disabled; size by content or max-width */
+  margin: 80px auto 20px;  /* right + bottom gap */
 
+}
+
+.GlobalMovement-image {
+  display: block;
+  height: 455px;
+  width: 525px;
+  max-width: 500px;
+  border-radius: 50%;
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: slideInFromLeft 2s ease-out forwards;
+  object-fit: cover;
+  margin-top: 1rem;
+}
 
 
 .about-container {

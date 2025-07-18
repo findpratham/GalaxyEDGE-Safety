@@ -35,14 +35,14 @@ export default function GlobalMovement() {
         </NavLink>
       </div>
 
-      <div className="about-image-container">
+      <div className="GlobalMovement-image-container">
       <img
-          src="/assets/AIDriven1.jpg"
+          src="/assets/center-image.jpg"
           alt="GalaxyEDGE logo" 
-          className="about-image"
+          className="GlobalMovement-image"
           style={{
             position: 'relative',  // necessary if you use top/left
-            top: '-90px'           // move up by 20px; tweak as needed
+            top: '-40px'           // move up by 20px; tweak as needed
             // or marginTop: '-20px'
           }}
         />
