@@ -9,6 +9,7 @@ import './styles/TakeAction.css';
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import GlobalMovement from "./pages/GlobalMovement";
 import VR from "./pages/VR";
 import ActionApproach from "./pages/ActionApproach";
 import ContactUs from "./pages/ContactUs";
@@ -43,6 +44,7 @@ export default function App() {
           <>
           <div id="home"><Home/></div>
           <div id="about-us"><About/></div>
+          <div id="about-us"><GlobalMovement/></div>
           <div id="learn_more"><VR/></div>
           <ActionApproach/> 
           <ReachOutNow/>

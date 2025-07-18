@@ -127,6 +127,12 @@ const images = [
 
 
 export default function TargetedOHS() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
     // FOR THE EMAIL:
 
     const [touched, setTouched] = useState(false);

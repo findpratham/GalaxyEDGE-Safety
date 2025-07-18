@@ -904,6 +904,61 @@ MEDIA QUERRIES HEADER:
   
 }
 
+.GlobalMovement-button {
+  display: block;
+  margin: 30px auto 10px;
+  position: relative;
+  width: 5rem;
+  height: 5rem;
+  background-color: #fff;
+  color: #000;
+  border: 0px solid #000;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+               Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 350;
+  font-size: 2.5rem;
+  overflow: hidden;
+  transition:
+    width 0.4s ease,
+    border-radius 0.4s ease,
+    background-color 0.4s ease,
+    box-shadow 0.1s ease;
+}
+
+
+.GlobalMovement-button::after {
+  content: "Join the Global Movement";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  white-space: nowrap;
+  transition: 
+    opacity 0.3s ease
+    transform 0.3s ease;
+  font-size: 2rem;
+  color: white;
+  font-weight: 450;
+}
+
+.GlobalMovement-button:hover {
+  width: 25rem;
+  border-radius: 2rem;
+  background-color: #000;
+  transform: scale(1.2);
+}
+
+.GlobalMovement-button:hover::after {
+  opacity: 1;
+  
+}
+
 
 
 

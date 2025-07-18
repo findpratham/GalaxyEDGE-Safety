@@ -1,6 +1,8 @@
 /* src/components/GlobalMovementForm.jsx */
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import './GlobalMovementForm.css';
+import { animateScroll as scroll } from 'react-scroll';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const images = [
   '/assets/image1.jpg',
@@ -107,7 +109,16 @@ const questions = [
   
 ];
 
+
+
 export default function GlobalMovementForm() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   const [answers, setAnswers] = useState({});
   const [touched, setTouched] = useState(false);
   const [current, setCurrent] = useState(0);
@@ -175,7 +186,6 @@ export default function GlobalMovementForm() {
       <div className="Partnership-sub-heading">
         <h1>
         <br />
-        
           Working Together to Expand Access to Immersive Health &amp; Safety Learning
         </h1>
       </div>

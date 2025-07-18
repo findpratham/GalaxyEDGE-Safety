@@ -31,7 +31,7 @@ const cards = [
     title: "Accessibility",
     img: "/assets/TakeActionImages/safety-gear.jpg",
 
-    detail1: "We believe safety knowledge must be accessible to everyone—from executives to frontline workers. We deliver customized, harmonized solutions aligned to your operations, embedding accountability at every levele.",
+    detail1: "We believe that safety knowledge must be accessible to everyone—from executives to frontline workers. Our commitment is to deliver customized, harmonized solutions that meet each organization’s unique environmental and operational needs, while embedding governance and accountability at every level.",
     info1: [
       "Customized organizational assessments to understand each client’s specific environment and operational risk landscape, ensuring tailored and relevant safety solutions.",
       "Harmonized training frameworks that unify provincial, federal, and international standards into a single, accessible curriculum aligned across the entire organization.",
