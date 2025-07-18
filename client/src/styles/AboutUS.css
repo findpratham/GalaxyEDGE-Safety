@@ -35,7 +35,7 @@
 
 .margins{
   margin: 1% auto  /* top, then horizontal auto, bottom remains whatever was before */ !important;
-  width: 1360px;
+  width: 1315px;
   max-width: 1360px
 }
 
@@ -258,7 +258,7 @@
   Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-weight: 550;              /* semibold like Apple’s headlines */
   letter-spacing: -0.02em;
-  font-size: 5rem; /* Slightly smaller font size for better fit */
+  font-size: 4.5rem; /* Slightly smaller font size for better fit */
   color: rgb(255, 255, 255); /* White color for heading */
   line-height: 1.1; /* Line height for readability */
   padding: 10px 10px;

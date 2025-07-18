@@ -29,6 +29,7 @@ import Partnership from "./pages/Partnership";
 // FORM IMPORTS
 import TargetedOHS from "./Forms/TargetedOHS";
 import PRIME360 from "./Forms/PRIME360";
+import GlobalMovementForm from "./Forms/GlobalMovementForm";
 
 export default function App() {
   
@@ -54,6 +55,7 @@ export default function App() {
 
       {/* STANDALONE ABOUT-US PAGE */}
       <Route path="/about-us" element={<AboutUS />} />
+      <Route path="/GlobalMovementForm" element={<GlobalMovementForm />} />
       <Route path="/our-mission" element={<Mission />} />
       <Route path="/our-services" element={<Services />} />
       <Route path="/prime360" element={<Prime360 />} />

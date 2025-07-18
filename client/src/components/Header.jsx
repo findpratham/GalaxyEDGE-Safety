@@ -59,6 +59,8 @@ export default function Header() {
               <li><NavLink to="/about-us" onClick={closeMenu}>Our Founder</NavLink></li>
               <li><NavLink to="/our-mission" onClick={closeMenu}>Our Vision & Mission</NavLink></li>
               <li><Link to="/our-mission" state={{ scrollDown: true }} onClick={closeMenu}>Our Core Values</Link></li>
+              <li><NavLink to="/GlobalMovementForm" onClick={closeMenu}>Global Movement Form</NavLink></li>
+
             </ul>
           </li>
 
