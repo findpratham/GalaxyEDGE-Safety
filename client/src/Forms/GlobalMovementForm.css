@@ -352,3 +352,112 @@
   font-weight: 600;
 
 }
+
+
+@media only screen and (max-width: 450px) {
+  .GlobalMovementForm-container {
+    padding-top: 4rem !important;
+    width: 100% !important;
+    margin: 0.5rem auto !important;
+    max-width: 95% !important;
+  }
+
+  .OHS-section-header {
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-start;
+    margin: 0.5rem auto;
+    padding: 0 1rem;
+  }
+  .OHS-section-header p {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    margin: 1rem 0 !important;
+  }
+
+  .apple-form {
+    padding: 1rem !important;
+    margin: 1rem auto !important;
+    max-width: 100% !important;
+  }
+  
+  .section-title {
+    font-size: 1.5rem !important;
+    margin: 1.5rem auto !important;
+  }
+
+  .apple-form-question.text-inline {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .apple-form-question.text-inline .question-title {
+    flex: none;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    text-align: left;
+  }
+  .apple-form-question.text-inline .text-input {
+    flex: none;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .apple-form-question {
+    margin-bottom: 1.5rem;
+  }
+
+  .text-input {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  .submit-button {
+    font-size: 1.6rem;
+    padding: 0.6rem 1.5rem;
+    margin: 1.2rem auto;
+  }
+
+  .slideshow {
+    position: static;
+    width: 100%;
+    height: auto;
+    margin: 1rem 0;
+    border-radius: 0.75rem;
+  }
+
+  /* if you want arrows or other absolute items to hide on small screens */
+  .slideshow-dots,
+  .slideshow-slider {
+    display: none;
+  }
+
+   /* shrink and centre your hero heading */
+   .hero-heading {
+    padding: 1.5rem 1rem;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: -170px;
+  }
+
+  .hero-heading h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  /* adjust sub‐heading below */
+  .Partnership-sub-heading {
+    padding: 1rem 1rem 2rem;
+    text-align: center;
+    max-width: 90%;
+    margin-bottom: -60px;
+  }
+  .Partnership-sub-heading h1 {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    margin: 0 auto;
+    max-width: 100%;
+    font-weight: 700;
+  }
+}

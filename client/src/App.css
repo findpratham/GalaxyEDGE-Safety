@@ -1063,10 +1063,16 @@ MEDIA QUERRIES ABOUT:
     border-top: none !important;
     margin-bottom: 5rem;
     /* height: 800px; */
-    height: 800px;
+    height: 650px;
   }
 
   .about-image-container {
+    flex: 0 0 auto;
+    margin: 0;
+    display: none !important;
+  }
+
+  .GlobalMovement-image-container {
     flex: 0 0 auto;
     margin: 0;
     display: none !important;
