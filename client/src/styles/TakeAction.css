@@ -284,14 +284,16 @@ MEDIA QUERRIES:
   .card {
     width: 100% !important;
     max-width: none !important;
+    height: 180px !important;
   }
 
   /* Shrink card images */
   .card-image {
     aspect-ratio: 1/1 !important;
-    height: auto !important;
+    height: 100px !important;
     padding-top: 15.25% !important; /* maintain 16:9 */
     background-size: cover !important;
+    margin-bottom: -30px !important;
   }
 
   /* Text resize */

@@ -425,7 +425,7 @@
     }
     .AIDriven-card {
       max-width: none !important;
-      height: 400px !important;
+      height: 360px !important;
     }
     .AIDriven-card-image {
       aspect-ratio: 4 / 3 !important;

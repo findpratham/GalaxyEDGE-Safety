@@ -354,7 +354,7 @@
     width: 100% !important;
     max-width: none !important;
     margin: 0 !important;              /* let grid do layout */
-    height: 400px !important;
+    height: 380px !important;
   }
 
   .services-card-image {
