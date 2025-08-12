@@ -399,26 +399,44 @@
   }
   
 
-  @media only screen and (max-width: 430px) {
-    .vr-case-studies,
-    .ActionApproachpage-container {
-      margin: 6% 5% !important;
-      width: 80% !important;
-    }
-  
-    .ActionApproachpage-container::before {
-      top: -5vh;
-      left: -5%;
-      width: calc(100% + 10%);
-      height: 8vh;
-      border-top-width: 4px;
-    }
-  
-    .main-heading {
-      font-size: 2rem;
-      line-height: 1.2;
-      padding: 0 1rem;
-    }
+  @media only screen and (max-width: 450px) {
+    /* Make main containers truly full-width */
+  /* Full-width container + its own stacking context */
+  .vr-case-studies,
+  .ActionApproachpage-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 1rem !important;          /* inner gutter */
+    box-sizing: border-box !important;
+    position: relative;                   /* needed for ::before positioning */
+    z-index: 0;                           /* create a baseline stacking context */
+  }
+
+  /* Decorative band goes BEHIND content */
+  .ActionApproachpage-container::before {
+    content: "";
+    position: absolute;
+    top: -5vh;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    height: 8vh;
+    border-top-width: 4px;
+    z-index: -1;                          /* <-- put it behind */
+    pointer-events: none;                 /* don’t block taps */
+  }
+
+  /* Ensure heading sits above */
+  .main-heading {
+    position: relative;                   /* allow z-index to apply */
+    z-index: 1;
+    font-size: 2rem;
+    line-height: 1.2;
+    padding: 0 1rem;
+    /* optional: push it down if you still see overlap */
+    /* margin-top: 0.5rem; */
+  }
   
     .vr-subheading {
       font-size: 1.2rem;
@@ -426,16 +444,23 @@
       padding: 0 1rem;
     }
   
+    /* Media fully spans width */
     .hero-background {
-      width: 100%;
+      display: block;
+      width: 100% !important;
+      max-width: 100% !important;
+      height: auto;
       border-radius: 1rem;
       aspect-ratio: 16 / 9;
     }
   
+    /* Overlay/content block respects full width */
     .vr-content {
       top: 20%;
-      left: 6%;
-      width: 88%;
+      left: 0 !important;
+      width: 100% !important;
+      padding: 0 1rem !important;
+      box-sizing: border-box;
       font-size: 1rem;
     }
   
@@ -491,4 +516,5 @@
       margin-top: 3rem;
     }
   }
+  
   

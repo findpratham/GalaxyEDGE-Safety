@@ -489,3 +489,184 @@
     transform: scale(1.15);
     box-shadow: -12px 12px 28px rgba(0, 0, 0, 0.25); /* 3D lift from bottom-left */
   }
+
+/* 
+--------------------------------------------------------------------------------------------------
+ MEDIA QUERY: Mobile layout optimization for max-width 450px
+--------------------------------------------------------------------------------------------------
+*/
+
+@media only screen and (max-width: 450px) {
+
+  .ImmersiveLearning-container {
+    padding-top: 4rem !important;
+  }
+
+  /* Page frame */
+  .ImmersiveLearning-Page-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 12px !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+  }
+
+  /* Headings */
+  .ImmersiveLearningmain-heading h1,
+  .ImmersiveLearning-third-heading h1 {
+    font-size: 1.9rem !important;
+    line-height: 1.25 !important;
+    padding: 4px 0 !important;
+    margin-bottom: -30px !important;
+  }
+
+  .ImmersiveLearning-sub-heading {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 1rem auto 1.5rem !important;
+    padding: 0 12px !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+  }
+  .ImmersiveLearning-sub-heading h1 {
+    font-size: 1.5rem !important;
+    line-height: 1.35 !important;
+    margin: 0 !important;
+  }
+
+  /* Intro / text blocks */
+  .section-header,
+  .Immersive-section-header {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0.75rem auto !important;
+    padding: 0 12px !important;
+    box-sizing: border-box !important;
+  }
+  .section-header p,
+  .Immersive-section-header p,
+  .ImmersiveLearning-adoption p {
+    font-size: 1rem !important;
+    line-height: 1.45 !important;
+    margin: 0 !important;
+  }
+
+  /* Hero video height */
+  .parallax-image { height: 220px !important; }
+  .parallax-image .aboutUS-image-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  .Training-sub-heading {
+    margin: 1rem auto 1.5rem !important;
+    width: 90% !important;
+    margin-left: 0px !important;
+  }
+  .Training-sub-heading h1 {
+    font-size: 1.3rem !important;
+    line-height: 1.35 !important;
+    margin: 0 !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+    word-break: break-word !important;
+    hyphens: auto !important;
+  }
+
+  /* Image panels */
+  .Immersive-image1,
+  .Immersive-image2,
+  .Immersive-image {
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 1rem 0 !important;
+    border-radius: 0.75rem !important;
+    overflow: hidden !important;
+  }
+
+  .Immersive-image1{
+    margin-bottom: 285px !important;
+  }
+  .Immersive-image1 .aboutUS-image-img,
+  .Immersive-image2 .aboutUS-image-img,
+  .Immersive-image .aboutUS-image-img {
+    width: 400px !important;
+    height: auto !important;
+    object-fit: cover !important;
+    margin-bottom: 20px !important;
+  }
+
+  .Immersive-image{
+    margin-left: -10px !important;
+  }
+
+  .Immersive-image2{
+    margin-bottom: 265px !important;
+  }
+
+
+  /* Inline icon inside paragraph */
+  .inline-icon {
+    float: none !important;
+    display: block !important;
+    width: 100px !important;
+    height: auto !important;
+    margin: 0 auto 0.75rem !important;
+    display: none !important;
+  }
+
+  /* Side-by-side inline container → stacked */
+  .Immersive-inline-container {
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+  .Immersive-image3 img {
+    max-width: 90% !important;
+    height: auto !important;
+    transform: none !important;
+  }
+
+  /* Absolute text panel → normal flow */
+  .Text-container {
+    position: static !important;
+    width: 100% !important;
+    left: auto !important;
+    transform: none !important;
+    margin: 0 !important;
+  }
+
+  /* Detail section */
+  .card-detail-section {
+    margin: 1rem 0 !important;
+    padding: 0.75rem !important;
+    max-width: 100% !important;
+  }
+  .card-detail-list li {
+    font-size: 1.05rem !important;
+    padding-left: 1.25rem !important;
+    line-height: 1.45 !important;
+  }
+
+  /* CTAs */
+  .Training-CTA1,
+  .Services-CTA2 {
+    width: 92% !important;
+    font-size: 1.3rem !important;
+    padding: 0.6rem 1rem !important;
+    margin: 1rem auto !important;
+    text-align: center !important;
+  }
+
+  /* Optional: hide scroll-down arrow on mobile */
+  .scroll-down-arrow { display: none !important; }
+
+  /* Footer spacing */
+  .ImmersiveLearning-container footer { margin-top: 50px !important; }
+}
+
+
+
+
+

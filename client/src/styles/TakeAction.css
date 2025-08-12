@@ -2,6 +2,8 @@
    TAKEACTION SECTION
 ───────────────────────────────────────────────────────────────────────────── */
 
+
+
 .take-action-container {
   position: relative;
   margin: 5% 1.5% 4% 1.5%;
@@ -52,9 +54,11 @@
   transition: transform 0.3s ease;
 }
 .card.hovered {
-  transform: scale(1.09);
+  transform: scale(1.1);
   box-shadow: 0px 1px 44px rgba(0, 0, 0, 0.168);
 }
+
+
 
 @keyframes fadeIn {
   from {
@@ -76,13 +80,14 @@
   text-align: center;
 }
 
-.card-content h3 {
-  margin: 0 0 0.75rem;
-  font-size: 1.7rem !important;
-  font-weight: 600;
-  color: #111;
-  padding-bottom: 1.6rem;
+
+
+.cards-container .card .card-content > h3 {
+  font-size: 0.9rem !important; /* force smaller */
+  line-height: 1.2 !important;
+  padding-top: 0.7rem !important;
 }
+
 
 .card-content p {
   margin: 0 0 1.5rem;
@@ -223,6 +228,9 @@
   margin-bottom: 0.75rem;
   font-size: 1.4rem;
   line-height: 1.5;
+  width: 100% !important;
+  display: block !important;
+  box-sizing: border-box;
 }
 
 .card-detail-list li::before {
@@ -252,6 +260,8 @@ MEDIA QUERRIES:
 
 @media only screen and (max-width: 450px) {
 
+
+
    /* Container padding */
    .take-action-container {
     margin: 3% 1rem 4% 1rem !important;
@@ -266,30 +276,31 @@ MEDIA QUERRIES:
 
   /* One-card grid */
   .cards-container {
-    grid-template-columns: 1fr !important;
-    gap: 2rem !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 1rem !important;
   }
 
   /* Full-width cards */
   .card {
-    width: 90% !important;
+    width: 100% !important;
     max-width: none !important;
   }
 
   /* Shrink card images */
   .card-image {
-    aspect-ratio: 16/9;
+    aspect-ratio: 1/1 !important;
     height: auto !important;
-    padding-top: 56.25% !important; /* maintain 16:9 */
+    padding-top: 15.25% !important; /* maintain 16:9 */
     background-size: cover !important;
   }
 
   /* Text resize */
   .card-content h3 {
-    font-size: 1.4rem !important;
+    margin-top: -10px !important;
+    font-size: 0.75rem !important;
   }
   .card-content p {
-    font-size: 0.9rem !important;
+    font-size: 0.7rem !important;
   }
 
   /* CTA button spacing */
@@ -300,8 +311,17 @@ MEDIA QUERRIES:
 
   /* Detail panel full width */
   .card-detail-section {
-    max-width: 95% !important;
-    padding: 1rem !important;
+    position: relative !important;
+    width: 95vw !important;                  /* Full screen width */
+    max-width: 95vw !important;              /* Prevent any inner constraints */
+    left: 50% !important;
+    transform: translateX(-50%) !important;   /* Properly center the box */
+    padding: 1rem !important;                 /* Consistent space inside the box */
+    box-sizing: border-box !important;        /* Ensure padding stays within width */
+    margin: 1rem 0 !important;                /* Optional vertical spacing */
+    border-radius: 0.75rem !important;        /* Optional: keep subtle corners */
+    background-color: white !important;       /* Reinforce background if needed */
+    z-index: 2 !important;                    /* Ensure it appears above other elements */
   }
   .card-detail-image {
     display: none !important; /* hide large detail image */
@@ -319,7 +339,37 @@ MEDIA QUERRIES:
     .card-wrapper .card-detail-section {
       display: block !important;
       margin: 1rem auto;
-      max-width: 90%;
+      max-width: 100%;
+    }
+
+    .card-detail-header {
+      font-size: 1.2rem !important;
+      font-weight: 450 !important;
+      width: 105% !important;
+
+    }
+
+    .card-detail-list li {
+      font-size: 1rem !important;
+      width: 120% !important;
+      display: block !important;
+      box-sizing: border-box;
+    }
+
+    .scroll-down-arrow-card svg {
+      width: 20px !important;
+      height: 20px !important;
+      stroke-width: 1.2 !important; /* If your SVG uses stroke */
+    }
+  
+    /* Optional: reduce hover scale on smaller screens */
+    .card-cta:hover {
+      transform: scale(1.1) !important;
+    }
+  
+    /* Optional: reduce rotate/scale on active */
+    .card-cta.active .icon {
+      transform: rotate(45deg) scale(1.1) !important;
     }
 
 }

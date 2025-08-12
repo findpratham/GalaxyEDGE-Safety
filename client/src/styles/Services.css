@@ -307,3 +307,127 @@
     transform: scale(1.15);
     box-shadow: -12px 12px 28px rgba(0, 0, 0, 0.25); /* 3D lift from bottom-left */
   }
+
+  /* 
+--------------------------------------------------------------------------------------------------
+ MEDIA QUERY: Mobile layout optimization for max-width 450px
+--------------------------------------------------------------------------------------------------
+*/
+@media only screen and (max-width: 450px) {
+
+  .Services-container{
+    padding-top: 4rem !important;
+  }
+
+  .Page-container {
+    width: 100% !important;
+    padding: 0 0.75rem !important; /* tighter gutters for 2-up grid */
+  }
+
+  .main-heading h1 {
+    font-size: 1.9rem !important;
+    line-height: 1.3;
+    padding: 1rem 0.5rem;
+    text-align: center;
+  }
+
+  .section-header p {
+    font-size: 1rem !important;
+    line-height: 1.4;
+    margin: 0 0.5rem;
+    /* padding-top: -50px !important;  <-- invalid */
+    margin-top: -50px !important;      /* use margin instead */
+  }
+
+  /* ✅ Two cards per row */
+  .services-cards-container {
+    display: grid; /* keep explicit */
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 0.75rem !important;           /* small gap to fit two cards nicely */
+    justify-items: stretch !important; /* cards fill column width */
+    align-items: stretch;
+    margin-top: 50px !important;
+  }
+
+  /* Make each card fill its grid column cleanly */
+  .services-card {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;              /* let grid do layout */
+    height: 400px !important;
+  }
+
+  .services-card-image {
+    aspect-ratio: 4/3.5 !important;               /* slightly taller for small screens */
+    background-size: cover;
+    background-position: center;
+  }
+
+  .card-content {
+    text-align: center;
+    margin-top: 20px !important;
+  }
+
+  .card-content h3 {
+    font-size: 1.1rem !important;      /* tighter to avoid wrapping in 2-up */
+    padding-bottom: 0.75rem !important;
+    margin: 0 0 0.5rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .card-content p {
+    font-size: 0.9rem !important;
+    margin: 0.25rem 0.6rem 1.2rem !important;
+    line-height: 1.35 !important;
+  }
+
+  .card-cta {
+    font-size: 1rem !important;
+    height: 1.4rem !important;
+  }
+
+  .scroll-down-arrow-card svg {
+    width: 22px !important;
+    height: 22px !important;
+    margin-top: 20px !important;
+    margin-bottom: 25px !important;
+
+  }
+
+  .card-detail-section {
+    margin: 1.2rem 0.25rem !important;
+    padding: 0.75rem !important;
+    font-size: 0.95rem !important;
+    width: 100% !important;
+  }
+
+  .card-detail-list li {
+    font-size: 0.95rem !important;
+    padding-left: 2rem !important;
+    line-height: 1.4 !important;
+    width: 100% !important;
+  }
+
+  .Services-CTA1,
+  .Services-CTA2 {
+    font-size: 1rem !important;
+    padding: 0.55rem 1.25rem !important;
+    margin: 1.2rem auto !important;
+    width: 92% !important;
+    text-align: center;
+  }
+
+  .scroll-up-arrow,
+  .scroll-down-arrow {
+    bottom: 1.5rem !important;
+    right: 0.75rem !important;
+    width: 2.3rem !important;
+    height: 2.3rem !important;
+  }
+
+  .aboutUS-image-img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}

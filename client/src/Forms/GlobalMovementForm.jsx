@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import './GlobalMovementForm.css';
 import { animateScroll as scroll } from 'react-scroll';
 import { useLocation, useNavigate } from 'react-router-dom';
+import Footer from "../pages/footer";
 
 const images = [
   '/assets/image1.jpg',
@@ -122,6 +123,7 @@ export default function GlobalMovementForm() {
   const [answers, setAnswers] = useState({});
   const [touched, setTouched] = useState(false);
   const [current, setCurrent] = useState(0);
+  
   const delay = 5000;
 
   // Slideshow auto-advance
@@ -185,76 +187,63 @@ export default function GlobalMovementForm() {
       </div>
       <div className="Partnership-sub-heading">
         <h1>
-        <br />
+          <br />
           Working Together to Expand Access to Immersive Health &amp; Safety Learning
         </h1>
       </div>
-
+  
       {/* Vision section */}
       <div className="OHS-section-header">
-        {/* <img src="/assets/tablogo.jpg" alt="GalaxyEDGE Safety Logo" className="vision-logo" /> */}
-        <br />
-          <p>
-            <strong>Our Vision</strong> <br />
-            We envision a future where immersive health and safety education becomes a catalyst for
-            lasting cultural transformation—helping to build strong, resilient safety communities
-            around the world. While this technology holds great promise, many regions and sectors still
-            face barriers to access, and not all communities are benefiting equally from its potential.
-            <br />
-            <br />
-            Through inclusive collaboration and shared learning, we aim to support a global effort that
-            connects immersive education to local culture, community needs, and safety
-            outcomes—empowering people where it matters most.
-            <br />
-            <br />
-            <strong>The Challenge</strong> <br />
-            We recognize that while interest in immersive learning is growing, cost, infrastructure, and
-            capacity remain barriers in many regions. Our global task force is coming together to
-            explore practical, scalable solutions that expand access and deliver meaningful
-            outcomes—especially where the need is greatest.
-            <br />
-            <br />
-            <strong>Our First Goal</strong> <br />
-            To co-develop a Global Immersive Strategy within the next 8–12 months, designed to
-            connect immersive education with community resilience, workforce safety, and cultural
-            transformation.
-            <br />
-            <br />
-            <br />
-            <br />
-          </p>
+        <p>
+          <strong>Our Vision</strong> <br />
+          We envision a future where immersive health and safety education becomes a catalyst for
+          lasting cultural transformation—helping to build strong, resilient safety communities
+          around the world. While this technology holds great promise, many regions and sectors still
+          face barriers to access, and not all communities are benefiting equally from its potential.
+          <br />
+          <br />
+          Through inclusive collaboration and shared learning, we aim to support a global effort that
+          connects immersive education to local culture, community needs, and safety
+          outcomes—empowering people where it matters most.
+          <br />
+        </p>
+        <div className="GlobalMovement-image-container">
+          <img
+            src="/assets/center-image.jpg"
+            alt="GalaxyEDGE logo"
+            className="GlobalMovement-image"
+            style={{
+              position: 'relative',
+              top: '-40px'
+            }}
+          />
         </div>
-
-
+      </div>
+  
+      <div className="OHS-section-header">
+        <p>
+          <strong>The Challenge</strong> <br />
+          We recognize that while interest in immersive learning is growing, cost, infrastructure, and
+          capacity remain barriers in many regions. Our global task force is coming together to
+          explore practical, scalable solutions that expand access and deliver meaningful
+          outcomes—especially where the need is greatest.
+          <br />
+          <br />
+          <strong>Our First Goal</strong> <br />
+          To co-develop a Global Immersive Strategy within the next 8–12 months, designed to
+          connect immersive education with community resilience, workforce safety, and cultural
+          transformation.
+          <br />
+          <br />
+          <br />
+          <br />
+        </p>
+      </div>
+  
       <div className="Partnership-sub-heading">
         <h1>Global Task Force – Interest &amp; Contribution Form</h1>
       </div>
-
-      {/* Optional slideshow (commented out) */}
-      {/*
-      <div className="slideshow">
-        <div
-          className="slideshow-slider"
-          style={{ transform: `translateX(${-current * 100}%)` }}
-        >
-          {images.map((src, idx) => (
-            <div className="slide" key={idx}>
-              <img src={src} alt={`Slide ${idx + 1}`} />
-            </div>
-          ))}
-        </div>
-        <div className="slideshow-dots">
-          {images.map((_, idx) => (
-            <div
-              key={idx}
-              className={`slideshow-dot${current === idx ? ' active' : ''}`}
-              onClick={() => goToSlide(idx)}
-            />
-          ))}
-        </div>
-      </div>
-      */}
-
+  
       {/* Form */}
       <form className="apple-form" onSubmit={onSubmit} noValidate>
         {questions.map(q =>
@@ -270,7 +259,7 @@ export default function GlobalMovementForm() {
               }`}
             >
               <h3 className="question-title">{q.text}</h3>
-
+  
               {q.options ? (
                 q.id === 10 ? (
                   <>
@@ -336,7 +325,7 @@ export default function GlobalMovementForm() {
             </div>
           )
         )}
-
+  
         {/* Terms & Conditions */}
         <div
           className={`terms-section${
@@ -384,11 +373,66 @@ export default function GlobalMovementForm() {
             </p>
           )}
         </div>
+  
+        {/* Not a Robot sweeping button */}
+        <div className="not-robot-container">
+          <button
+            type="button"
+            className={`not-robot-button ${
+              answers.notRobotStatus === 'confirmed'
+                ? 'confirmed'
+                : answers.notRobotStatus === 'failed'
+                ? 'failed'
+                : ''
+            }`}
+            onClick={() => {
+              if (answers.agreeTerms && answers.consentContact) {
+                handleChange('notRobot', true);
+                handleChange('notRobotStatus', 'confirmed');
+              } else {
+                handleChange('notRobot', false);
+                handleChange('notRobotStatus', 'failed');
+
+                // Auto-reset status and error after 2 seconds
+                setTimeout(() => {
+                  handleChange('notRobotStatus', '');
+                }, 2000);
+              }
+            }}
+          >
+            {answers.notRobotStatus === 'confirmed'
+              ? '✓ Confirmed'
+              : answers.notRobotStatus === 'failed'
+              ? '✕ Failed'
+              : 'I confirm I am not a robot'}
+          </button>
+
+          {/* Optional helper message when failed */}
+          {answers.notRobotStatus === 'failed' && (
+            <p className="not-robot-helper">
+              Please check required fields AND ensure both boxes are selected in Consent & Privacy Acknowledgement.
+              <br />
+               Please try again.
+            </p>
+          )}
+
+          {/* Fallback message if user tries to submit directly */}
+          {touched && !answers.notRobot && (
+            <p className="error-text">
+              Please confirm you are not a robot.
+            </p>
+          )}
+        </div>
+
+
+
+
 
         <button type="submit" className="submit-button">
           Submit
         </button>
       </form>
+      <Footer />
     </div>
-  );
+  ); 
 }

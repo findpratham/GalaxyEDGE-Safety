@@ -8,6 +8,7 @@ import "../styles/Services.css"
 import "../styles/AboutUS.css"
 import '../styles/Prime360.css'
 import '../styles/ImmersiveLearning.css'
+import '../styles/Training.css'
 import Footer from "./footer";
 
 export default function ImmersiveLearning() {

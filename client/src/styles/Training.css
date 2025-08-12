@@ -333,3 +333,164 @@
     transform: scale(1.15);
     box-shadow: -12px 12px 28px rgba(0, 0, 0, 0.25); /* 3D lift from bottom-left */
   }
+
+  /* -------------------------------------------
+   iPhone / small screens (max-width: 450px)
+-------------------------------------------- */
+@media only screen and (max-width: 450px) {
+
+  .Training-container{
+    padding-top: 4rem !important;
+  }
+
+  :root {
+    --hero-height-mobile: 325px; /* ← tweak this value */
+  }
+
+  /* High-specificity, global hammer */
+  .parallax-image,
+  body .parallax-image,
+  .parallax-image.parallax-image {
+    height: var(--hero-height-mobile) !important;
+    min-height: var(--hero-height-mobile) !important;
+    max-height: var(--hero-height-mobile) !important;
+    overflow: hidden !important;
+  }
+
+  /* Make the video fill the container consistently */
+  .parallax-image > video.aboutUS-image-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+  }
+
+  /* Page frame */
+  .Training-Page-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 12px !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+  }
+
+  /* Headings */
+  .Training-main-heading h1 {
+    font-size: 2rem !important;
+    line-height: 1.25 !important;
+    padding: 8px 0 !important;
+  }
+
+  .Training-sub-heading {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 1rem auto 1.5rem !important;
+    padding: 0 12px !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+  }
+  .Training-sub-heading h1 {
+    font-size: 1.5rem !important;
+    line-height: 1.35 !important;
+    margin: 0 !important;
+  }
+
+  /* Intro paragraph block (if using .section-header like in other pages) */
+  .section-header {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0.75rem auto !important;
+    padding: 0 12px !important;
+    box-sizing: border-box !important;
+  }
+  .section-header p {
+    font-size: 1rem !important;
+    line-height: 1.4 !important;
+    margin: 0 !important;
+  }
+
+  /* Hero video */
+  .parallax-image { height: 220px !important; }
+  .aboutUS-image-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  /* Cards */
+  .Training-cards-container {
+    display: grid; /* keep explicit */
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 0.75rem !important;           /* small gap to fit two cards nicely */
+    justify-items: stretch !important; /* cards fill column width */
+    align-items: stretch;
+    margin-top: 50px !important;
+  }
+
+  .Training-card {
+    max-width: none !important;
+    height: 360px !important;
+  }
+
+  .Training-card-image {
+    aspect-ratio: 4 / 3 !important;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+
+  .card-content h3 {
+    font-size: 1.2rem !important;
+    margin: 1rem 0 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+
+  .card-content p {
+    font-size: 1rem !important;
+    margin: 0.25rem 0.6rem 1rem !important;
+    line-height: 1.4 !important;
+  }
+
+  .card-cta {
+    font-size: 1rem !important;
+    height: 1.4rem !important;
+  }
+
+  .scroll-down-arrow-card svg {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  /* Detail section */
+  .card-detail-section {
+    margin: 1rem 0 !important;
+    padding: 0.75rem !important;
+    max-width: 100% !important;
+  }
+  .card-detail-list li {
+    font-size: 1.05rem !important;
+    padding-left: 1.25rem !important;
+    line-height: 1.45 !important;
+  }
+
+  /* CTAs */
+  .Training-CTA1,
+  .Training-CTA2 {
+    width: 92% !important;
+    font-size: 1rem !important;
+    padding: 0.6rem 1rem !important;
+    margin: 1rem auto !important;
+    text-align: center !important;
+  }
+
+  /* Scroll arrows */
+  .scroll-down-arrow-card svg {
+    width: 22px !important;
+    height: 22px !important;
+    margin-top: 20px !important;
+    margin-bottom: 25px !important;
+  }
+
+  /* Footer spacing on mobile */
+  .Training-container footer { margin-top: 50px !important; }
+}

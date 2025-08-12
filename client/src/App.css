@@ -670,135 +670,170 @@ MEDIA QUERRIES HEADER:
 */
 
 @media only screen and (max-width: 450px) {
-/* HEADER container */
-.header-container {
-  position: absolute;
-  height: 4.3rem;
-  padding: 0.5rem 1rem;
-  justify-content: space-between;
-}
+  /* HEADER container */
+  .header-container {
+    position: absolute;
+    height: 4.3rem;
+    padding: 0.5rem 1rem;
+    justify-content: space-between;
+  }
 
-.header-container.scrolled {
-  height: 3.4rem;
-  padding: 0rem 1rem;
-}
+  .header-container.scrolled {
+    height: 3.4rem;
+    padding: 0rem 1rem;
+  }
 
-/* LOGOS */
-.logo{
-  gap:0.8rem;
-}
-.tablogo-img {
-  width: 2.5rem;
-  margin-left: 0;
+  /* LOGOS */
+  .logo{
+    gap:0.8rem;
+  }
+  .tablogo-img {
+    width: 2.5rem;
+    margin-left: 0;
+  }
 
-}
+  .tablogo_text-img {
+    width: 18rem;
+    margin-left: 0rem !important;
+  }
 
-.tablogo_text-img {
-  width: 18rem;
-  margin-left: 0rem !important;
-}
+  .header-container.scrolled .tablogo-img {
+    width: 1rem;
+  }
 
-.header-container.scrolled .tablogo-img {
-  width: 1rem;
-}
+  .header-container.scrolled .tablogo_text-img {
+    width: 7.5rem;
+  }
 
-.header-container.scrolled .tablogo_text-img {
-  width: 7.5rem;
-}
-/* Hamburger container */
-.menu-toggle {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 24px;
-  height: 18px;
-  background: transparent;
-  border: none;
-  padding: 0;
-  z-index: 10001;
-  cursor: pointer;
-}
+  /* Hamburger container */
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    z-index: 10001;
+    cursor: pointer;
+  }
 
-/* Base line style */
-.bar {
-  height: 3px;
-  width: 100%;
-  background-color: white;
-  transition: all 0.3s ease;
-  transform-origin: center;
-}
+  /* Base line style */
+  .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    transition: all 0.3s ease;
+    transform-origin: center;
+  }
 
-/* OPEN STATE ANIMATIONS */
-.menu-toggle.open .top {
-  transform: rotate(45deg) translateY(11px);
-}
+  /* OPEN STATE ANIMATIONS */
+  .menu-toggle.open .top {
+    transform: rotate(45deg) translateY(11px);
+  }
+  .menu-toggle.open .middle {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  .menu-toggle.open .bottom {
+    transform: rotate(-45deg) translateY(-10.7px);
+  }
 
-.menu-toggle.open .middle {
-  opacity: 0;
-  transform: translateX(-10px);
-}
+  /* Collapse nav by default */
+  .nav-links {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition:
+      max-height 0.4s ease,
+      opacity 0.4s ease,
+      transform 0.4s ease;
 
-.menu-toggle.open .bottom {
-  transform: rotate(-45deg) translateY(-10.7px);
-}
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    background: #000;
+    padding: 0 2rem; /* no vertical padding when closed */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    z-index: 9999;
+  }
 
+  /* Expand when open — make it scrollable with a right scrollbar */
+  .nav-links.open {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
 
+    /* viewport-based max height so the menu can scroll */
+    max-height: calc(100vh - 4.3rem);
+    max-height: calc(100dvh - 4.3rem); /* override with dynamic viewport if supported */
 
-/* Collapse nav by default */
-.nav-links {
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transform: translateY(-10px);
-  transition:
-    max-height 0.4s ease,
-    opacity 0.4s ease,
-    transform 0.4s ease;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    scrollbar-gutter: stable;
 
-  position: absolute;
-  top: 100%;
-  right: 0;
-  width: 100%;
-  background: #000;
-  padding: 0 2rem; /* remove vertical padding so height is 0 when closed */
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
-  z-index: 9999;
-}
+    padding: 0rem 2rem;
+    padding-right: 1.25rem; /* space so text doesn't sit under scrollbar */
+  }
 
-/* Expand when open */
-.nav-links.open {
-  display: block;
-  max-height: 800px; /* adjust based on expected height */
-  opacity: 1;
-  transform: translateY(0);
-  padding: 0rem 2rem;
-}
+  /* When header shrinks on scroll, allow a bit more space */
+  .header-container.scrolled .nav-links.open {
+    max-height: calc(100vh - 3.4rem);
+    max-height: calc(100dvh - 3.4rem);
+  }
 
-.nav-links ul {
-  flex-direction: column;
-  align-items: flex-start;
-}
+  /* Optional: nicer/thinner scrollbar */
+  .nav-links.open {
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: rgba(255,255,255,0.45) transparent;
+    touch-action: pan-y;
+  }
+  .nav-links.open::-webkit-scrollbar {        /* WebKit */
+    width: 10px;
+  }
+  .nav-links.open::-webkit-scrollbar-track {
+    background: rgba(255,255,255,0.08);
+  }
+  .nav-links.open::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.45);
+    border-radius: 8px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+  .nav-links.open::-webkit-scrollbar-thumb:hover {
+    background: rgba(255,255,255,0.65);
+  }
 
-.nav-links li {
-  margin: 1rem 0;
-}
+  .nav-links ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-.nav-links a {
-  font-size: 1.15rem;
-  color: white;
-}
+  .nav-links li {
+    margin: 1rem 0;
+  }
 
-.nav-item .dropdown {
-  display: block !important;
-  position: static !important;   /* ✨ Makes it part of the flow */
-  padding-left: 1rem;
-  margin-top: 0rem;
-}
+  .nav-links a {
+    font-size: 1.15rem;
+    color: white;
+  }
 
-.dropdown a {
-  font-size: 1rem;
-  padding: 0 !important;
-}
+  .nav-item .dropdown {
+    display: block !important;
+    position: static !important;   /* Makes it part of the flow */
+    padding-left: 1rem;
+    margin-top: 0rem;
+  }
+
+  .dropdown a {
+    font-size: 1rem;
+    padding: 0 !important;
+  }
 }
 
 
@@ -845,7 +880,6 @@ MEDIA QUERRIES HEADER:
   animation: slideInFromLeft 4s ease-out forwards;
   color: rgb(0, 0, 0);
   text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.044);
-
 }
 
 
@@ -1049,27 +1083,26 @@ MEDIA QUERRIES ABOUT:
 */
 
 @media only screen and (max-width: 450px) {
-
+  .scroll-down-arrow {
+    display: none !important;
+  }
   .about-us-section {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 1rem;
-    gap: 1rem;
+    display: block !important;
+    padding: 1rem !important;
+    width: 100% !important;
+    margin-bottom: 2rem !important;
     box-sizing: border-box;
-    width: 100%;
     overflow-x: visible;
-    border-top: none !important;
-    margin-bottom: 5rem;
-    /* height: 800px; */
-    height: 650px;
   }
 
   .about-image-container {
-    flex: 0 0 auto;
-    margin: 0;
+    float: none !important;
+    display: block !important;
+    margin: 1rem auto !important;
+    max-width: 80% !important;
+    text-align: center;
     display: none !important;
+
   }
 
   .GlobalMovement-image-container {
@@ -1079,15 +1112,14 @@ MEDIA QUERRIES ABOUT:
   }
 
   .about-image {
-    height: 350px;
-    width: 350px;
-    max-width: 500px;
-    border-radius: 1%;
-    opacity: 0;
-    transform: translateX(-30px);
-    animation: slideInFromLeft 2s ease-out forwards;
+    width: 40%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 0.75rem;
     object-fit: cover;
-    margin-top: 1rem;
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
   }
 
   .about-container {
@@ -1100,8 +1132,6 @@ MEDIA QUERRIES ABOUT:
     word-wrap: break-word;
     overflow-wrap: break-word;
   }
-
-
 
   .about-title  {
     font-size: 3rem !important;
@@ -1124,8 +1154,6 @@ MEDIA QUERRIES ABOUT:
     font-size: 1rem;
   }
   
-
-
 }
 
 /* 
@@ -1266,6 +1294,7 @@ MEDIA QUERRIES ABOUT:
     .footer-container {
       position: relative;
       width: 90% !important;    
+      height: 120px;
   }
 
   .footer-item-text {

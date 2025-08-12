@@ -353,6 +353,99 @@
 
 }
 
+/* =============== Not a Robot Button =============== */
+
+.not-robot-container {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.not-robot-button {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  margin: 0 auto 1rem auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 550;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  color: rgb(0, 0, 0);
+  background-color: transparent;
+  border-radius: 1.3rem;
+  cursor: pointer;
+  border: none;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease,
+    color 0.5s ease,
+    box-shadow 0.4s ease;
+}
+
+/* Base animation layer */
+.not-robot-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 0;
+  height: 200%;
+  transform: translateY(-50%);
+  z-index: -1;
+  transition: width 0.6s ease-in-out;
+  border-radius: 0 100% 100% 0;
+}
+
+/* Sweep animation: Success (orange → blue) */
+.not-robot-button.confirmed::before {
+  background: linear-gradient(90deg, #ff6f00, #007aff);
+  width: 220%;
+}
+
+/* Sweep animation: Failure (red gradient) */
+.not-robot-button.failed::before {
+  background: linear-gradient(90deg, #ff0000, #ff4d4d);
+  width: 220%;
+}
+
+/* Confirmed visual style */
+.not-robot-button.confirmed {
+  color: white;
+  transform: scale(1.03);
+  box-shadow: -12px 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+/* Failed visual style */
+.not-robot-button.failed {
+  color: white;
+  transform: scale(1.02);
+  box-shadow: -12px 12px 28px rgba(255, 0, 0, 0.3);
+}
+
+/* Error message style (already present, optional tweak) */
+.error-text {
+  font-size: 0.9rem;
+  margin-top: 0.4rem;
+  color: red;
+}
+
+/* Helper error message after failed attempt */
+.not-robot-helper {
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+  color: rgb(255, 66, 66);
+  font-weight: 500;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Smooth fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-3px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 
 @media only screen and (max-width: 450px) {
   .GlobalMovementForm-container {
@@ -453,6 +546,7 @@
     max-width: 90%;
     margin-bottom: -60px;
   }
+
   .Partnership-sub-heading h1 {
     font-size: 1.5rem;
     line-height: 1.4;

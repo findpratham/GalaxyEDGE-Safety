@@ -378,7 +378,7 @@ MEDIA QUERRIES:
     font-size: 2.8rem;
     padding: 8px;
     position: relative !important;
-    top: -125px !important;
+    top: -80px !important;
     
   }
 
@@ -402,7 +402,7 @@ MEDIA QUERRIES:
 
   .Hero-text {
     position: relative;      /* reset if needed */
-    top: -210px !important;       /* reset any earlier offset */
+    top: -220px !important;       /* reset any earlier offset */
     left: 50% !important;    
     transform: translateX(-50%) !important;
     margin: 1rem auto !important;
@@ -427,7 +427,7 @@ MEDIA QUERRIES:
   
     .founder-text p {
       text-align: left !important;
-      margin: 0 auto !important;   /* keep it centered in its container */
+      margin: 100px auto !important;   /* keep it centered in its container */
       width: 100% !important;       /* full width so left-align is obvious */
       font-size:1.2rem;
     }
