@@ -1093,6 +1093,7 @@ MEDIA QUERRIES ABOUT:
     margin-bottom: 2rem !important;
     box-sizing: border-box;
     overflow-x: visible;
+    height: 700px !important;
   }
 
   .about-image-container {
